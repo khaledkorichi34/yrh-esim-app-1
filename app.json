@@ -7,11 +7,6 @@
     "userInterfaceStyle": "light",
     "icon": "./assets/icon.png",
     "backgroundColor": "#EEF2F5",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#102233"
-    },
     "android": {
       "package": "com.yrh.esim",
       "versionCode": 1,
@@ -21,6 +16,8 @@
       },
       "permissions": []
     },
-    "plugins": ["expo-localization"]
+    "plugins": [
+      "expo-localization"
+    ]
   }
 }
