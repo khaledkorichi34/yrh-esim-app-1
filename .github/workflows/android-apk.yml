@@ -34,7 +34,22 @@ jobs:
 
       - name: Build the APK
         working-directory: android
-        run: ./gradlew assembleRelease --no-daemon
+        run: |
+          set -o pipefail
+          ./gradlew assembleRelease --no-daemon 2>&1 | tee ../build.log
+
+      - name: Save the build log if the build fails
+        if: failure()
+        run: |
+          { grep -n -B5 -A60 "What went wrong" build.log || true; echo "=========== LAST 300 LINES ==========="; tail -n 300 build.log; } > /tmp/build-tail.log
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          git checkout -q --orphan build-logs
+          git rm -rfq --cached .
+          cp /tmp/build-tail.log build-tail.log
+          git add -f build-tail.log
+          git commit -q -m "Build log for run ${{ github.run_number }}"
+          git push -f origin build-logs
 
       - name: Name the APK
         run: cp android/app/build/outputs/apk/release/app-release.apk YRH-eSIM.apk
