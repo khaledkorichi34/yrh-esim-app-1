@@ -12,6 +12,9 @@ jobs:
   apk:
     runs-on: ubuntu-latest
     timeout-minutes: 60
+    defaults:
+      run:
+        shell: bash
     steps:
       - uses: actions/checkout@v4
 
@@ -26,17 +29,17 @@ jobs:
 
       - name: Install dependencies
         run: |
-          npm install
-          npx expo install --fix
+          set -o pipefail
+          { npm install && npx expo install --fix; } 2>&1 | tee build.log
 
       - name: Generate the Android project
-        run: npx expo prebuild --platform android --non-interactive
+        run: npx expo prebuild --platform android --non-interactive 2>&1 | tee -a build.log
 
       - name: Build the APK
         working-directory: android
         run: |
           set -o pipefail
-          ./gradlew assembleRelease --no-daemon 2>&1 | tee ../build.log
+          ./gradlew assembleRelease --no-daemon 2>&1 | tee -a ../build.log
 
       - name: Save the build log if the build fails
         if: failure()

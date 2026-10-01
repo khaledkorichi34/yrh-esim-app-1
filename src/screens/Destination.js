@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, Text, ScrollView, Pressable, StyleSheet } from 'react-native';
 import * as WebBrowser from 'expo-web-browser';
+import { useShopifyCheckoutSheet } from '@shopify/checkout-sheet-kit';
 import { C, T, dir } from '../theme';
 import { t, countryName } from '../i18n';
 import { checkoutUrl } from '../shopify';
@@ -8,25 +9,43 @@ import PlanTicket from '../components/PlanTicket';
 
 export default function Destination({ dest, lang, rtl, onBack, topInset }) {
   const d = dir(rtl);
+  const checkout = useShopifyCheckoutSheet();
   const [busyId, setBusyId] = useState(null);
-  const [notice, setNotice] = useState(null); // 'sent' | 'error'
+  const [notice, setNotice] = useState(null); // 'paid' | 'sent' | 'error'
+  const [paidEmail, setPaidEmail] = useState(null);
+
+  // Checkout runs in a sheet inside the app. These events tell us how it ended.
+  useEffect(() => {
+    const subs = [
+      checkout.addEventListener('completed', (event) => {
+        setPaidEmail((event && event.orderDetails && event.orderDetails.email) || null);
+        setNotice('paid');
+      }),
+      checkout.addEventListener('error', () => setNotice('error')),
+      checkout.addEventListener('close', () => setBusyId(null)),
+    ];
+    return () => subs.forEach((s) => s && s.remove && s.remove());
+  }, [checkout]);
 
   async function buy(plan) {
     setBusyId(plan.id);
     setNotice(null);
+    const url = checkoutUrl(plan.id);
     try {
-      // Shopify checkout opens in a secure browser tab. Payment, the order,
-      // and eSIM delivery all happen on the store side.
-      await WebBrowser.openBrowserAsync(checkoutUrl(plan.id), {
-        toolbarColor: C.navy,
-        controlsColor: C.yellow,
-        showTitle: true,
-      });
-      setNotice('sent');
+      // Payment happens here, inside the app. After payment the store's
+      // automation orders the eSIM and emails the install link.
+      checkout.present(url);
+      setTimeout(() => setBusyId(null), 1500);
     } catch (e) {
-      setNotice('error');
-    } finally {
-      setBusyId(null);
+      // If the in-app sheet is unavailable on this phone, fall back to a browser tab.
+      try {
+        await WebBrowser.openBrowserAsync(url, { toolbarColor: C.navy, controlsColor: C.yellow, showTitle: true });
+        setNotice('sent');
+      } catch (e2) {
+        setNotice('error');
+      } finally {
+        setBusyId(null);
+      }
     }
   }
 
@@ -35,6 +54,15 @@ export default function Destination({ dest, lang, rtl, onBack, topInset }) {
     dest.topUp != null && { k: t(lang, 'topUp'), v: t(lang, dest.topUp ? 'yes' : 'no') },
     dest.network && { k: t(lang, 'network'), v: dest.network.replace(/^[A-Z]{2}\s*-\s*/, '') },
   ].filter(Boolean);
+
+  const showCard = notice === 'paid' || notice === 'sent';
+  const cardTitle = notice === 'paid' ? t(lang, 'paidTitle') : t(lang, 'sentTitle');
+  const cardText =
+    notice === 'paid'
+      ? paidEmail
+        ? t(lang, 'paidTextEmail', { email: paidEmail })
+        : t(lang, 'paidText')
+      : t(lang, 'sentText');
 
   return (
     <ScrollView style={styles.screen} contentContainerStyle={styles.content}>
@@ -64,10 +92,10 @@ export default function Destination({ dest, lang, rtl, onBack, topInset }) {
       </View>
 
       <View style={styles.body}>
-        {notice === 'sent' ? (
+        {showCard ? (
           <View style={styles.sent} accessibilityLiveRegion="polite">
-            <Text style={[styles.sentTitle, d.text]}>{t(lang, 'sentTitle')}</Text>
-            <Text style={[styles.sentText, d.text]}>{t(lang, 'sentText')}</Text>
+            <Text style={[styles.sentTitle, d.text]}>{cardTitle}</Text>
+            <Text style={[styles.sentText, d.text]}>{cardText}</Text>
             <Pressable onPress={() => setNotice(null)} accessibilityRole="button" style={[styles.sentOk, rtl && styles.sentOkRtl]}>
               <Text style={styles.sentOkText}>{t(lang, 'ok')}</Text>
             </Pressable>

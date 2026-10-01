@@ -8,6 +8,7 @@
     "android": "expo start --android"
   },
   "dependencies": {
+    "@shopify/checkout-sheet-kit": "~3.9.1",
     "babel-preset-expo": "~54.0.0",
     "expo": "~54.0.0",
     "expo-localization": "~17.0.0",

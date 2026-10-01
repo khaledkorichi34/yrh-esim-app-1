@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { View, Text, Pressable, BackHandler, I18nManager, StyleSheet } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaProvider, useSafeAreaInsets } from 'react-native-safe-area-context';
+import { ShopifyCheckoutSheetProvider, ColorScheme } from '@shopify/checkout-sheet-kit';
 import { C } from './src/theme';
 import { t, deviceLang, isRTL } from './src/i18n';
 import { fetchDestinations } from './src/shopify';
@@ -106,10 +107,27 @@ function Root() {
   );
 }
 
+// In-app checkout sheet, coloured to match the app.
+const checkoutConfig = {
+  colorScheme: ColorScheme.light,
+  preloading: true,
+  colors: {
+    android: {
+      backgroundColor: C.paper,
+      progressIndicator: C.navy,
+      headerBackgroundColor: C.navy,
+      headerTextColor: C.onNavy,
+    },
+    ios: { backgroundColor: C.paper, tintColor: C.navy },
+  },
+};
+
 export default function App() {
   return (
     <SafeAreaProvider>
-      <Root />
+      <ShopifyCheckoutSheetProvider configuration={checkoutConfig}>
+        <Root />
+      </ShopifyCheckoutSheetProvider>
     </SafeAreaProvider>
   );
 }
