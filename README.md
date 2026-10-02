@@ -81,3 +81,11 @@ Shopify (Order payment) ← Make ← eSIM Access ← إيميل الزبون
 ```
 python3 store/make_graphics.py
 ```
+
+## ملف النشر على Google Play (AAB)
+
+- الإعداد `.github/workflows/play-bundle.yml` يبني ملف `YRH-eSIM-play.aab` موقّعاً بمفتاح الرفع `signing/upload.p12`، وينشره في Releases باسم `play-N`.
+- يحتاج سراً واحداً في المستودع: `UPLOAD_KEY_PASSWORD` (كلمة سر المفتاح). أضفه من Settings ← Secrets and variables ← Actions.
+- رقم الإصدار (versionCode) يزيد تلقائياً مع كل بناء.
+- للتشغيل: Actions ← Build Play Store bundle ← Run workflow.
+- احتفظ بنسخة من ملف المفتاح وكلمة سره خارج GitHub. إن ضاعا يمكن طلب مفتاح رفع جديد من Play Console.

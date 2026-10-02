@@ -1,0 +1,121 @@
+name: Build Play Store bundle
+
+# Builds the signed .aab to upload to Google Play Console.
+# Needs one repository secret: UPLOAD_KEY_PASSWORD (the password of signing/upload.p12).
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/play-build-trigger'
+
+permissions:
+  contents: write
+
+jobs:
+  bundle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    defaults:
+      run:
+        shell: bash
+    env:
+      EXPECTED_SHA256: '9E:D3:F5:5D:65:FC:A5:AF:09:E7:7B:E2:CF:FE:34:21:27:13:D0:9D:91:16:44:0A:27:44:D6:77:03:B5:2B:FB'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check the signing password is set
+        env:
+          UPLOAD_KEY_PASSWORD: ${{ secrets.UPLOAD_KEY_PASSWORD }}
+        run: |
+          if [ -z "$UPLOAD_KEY_PASSWORD" ]; then
+            echo "::error::Add the repository secret UPLOAD_KEY_PASSWORD (Settings > Secrets and variables > Actions)."
+            exit 1
+          fi
+          keytool -list -keystore signing/upload.p12 -storepass "$UPLOAD_KEY_PASSWORD" -alias upload > /dev/null \
+            || { echo "::error::UPLOAD_KEY_PASSWORD does not open signing/upload.p12."; exit 1; }
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Set the version code
+        run: |
+          node -e "
+            const fs = require('fs');
+            const app = JSON.parse(fs.readFileSync('app.json', 'utf8'));
+            app.expo.android.versionCode = Number(process.env.GITHUB_RUN_NUMBER);
+            fs.writeFileSync('app.json', JSON.stringify(app, null, 2));
+            console.log('versionCode', app.expo.android.versionCode, 'version', app.expo.version);
+          "
+
+      - name: Install dependencies
+        run: |
+          set -o pipefail
+          { npm install && npx expo install --fix; } 2>&1 | tee build.log
+
+      - name: Generate the Android project
+        run: |
+          set -o pipefail
+          npx expo prebuild --platform android --non-interactive 2>&1 | tee -a build.log
+
+      - name: Configure signing
+        env:
+          UPLOAD_KEY_PASSWORD: ${{ secrets.UPLOAD_KEY_PASSWORD }}
+        run: |
+          mkdir -p ~/.gradle
+          {
+            echo "android.injected.signing.store.file=$GITHUB_WORKSPACE/signing/upload.p12"
+            echo "android.injected.signing.store.password=$UPLOAD_KEY_PASSWORD"
+            echo "android.injected.signing.key.alias=upload"
+            echo "android.injected.signing.key.password=$UPLOAD_KEY_PASSWORD"
+          } >> ~/.gradle/gradle.properties
+
+      - name: Build the bundle
+        working-directory: android
+        run: |
+          set -o pipefail
+          ./gradlew bundleRelease --no-daemon 2>&1 | tee -a ../build.log
+
+      - name: Check the bundle is signed with the upload key
+        run: |
+          cp android/app/build/outputs/bundle/release/app-release.aab YRH-eSIM-play.aab
+          ACTUAL=$(keytool -printcert -jarfile YRH-eSIM-play.aab | grep "SHA256:" | head -1 | sed 's/.*SHA256: //')
+          echo "Signed with: $ACTUAL"
+          if [ "$ACTUAL" != "$EXPECTED_SHA256" ]; then
+            echo "::error::The bundle is not signed with the upload key."
+            exit 1
+          fi
+
+      - name: Save the build log if the build fails
+        if: failure()
+        run: |
+          [ -f build.log ] || echo "No build log: the job failed before the build started." > build.log
+          { grep -n -B5 -A60 "What went wrong" build.log || true; echo "=========== LAST 300 LINES ==========="; tail -n 300 build.log; } > /tmp/build-tail.log
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          git checkout -q --orphan build-logs
+          git rm -rfq --cached .
+          cp /tmp/build-tail.log build-tail.log
+          git add -f build-tail.log
+          git commit -q -m "Play bundle log for run ${{ github.run_number }}"
+          git push -f origin build-logs
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: YRH-eSIM-play-bundle
+          path: YRH-eSIM-play.aab
+
+      - name: Publish to Releases
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: play-${{ github.run_number }}
+          name: YRH eSIM Play bundle ${{ github.run_number }}
+          body: Upload YRH-eSIM-play.aab to Google Play Console. Version code ${{ github.run_number }}.
+          files: YRH-eSIM-play.aab
