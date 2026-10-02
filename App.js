@@ -9,6 +9,7 @@ import { fetchDestinations } from './src/shopify';
 import Home from './src/screens/Home';
 import Destination from './src/screens/Destination';
 import Help from './src/screens/Help';
+import { Guide, Faq } from './src/screens/HelpPages';
 
 // Layout direction is handled per screen so the language can change without restarting the app.
 try {
@@ -21,6 +22,7 @@ function Root() {
   const [lang, setLang] = useState(deviceLang());
   const [tab, setTab] = useState('dest');
   const [open, setOpen] = useState(null);
+  const [helpPage, setHelpPage] = useState(null); // 'guide' | 'faq'
   const [destinations, setDestinations] = useState([]);
   const [status, setStatus] = useState('loading');
   const rtl = isRTL(lang);
@@ -37,11 +39,15 @@ function Root() {
 
   useEffect(load, [load]);
 
-  // Android back button: close the destination first, then the Help tab.
+  // Android back button: close the destination or help page first, then the Help tab.
   useEffect(() => {
     const sub = BackHandler.addEventListener('hardwareBackPress', () => {
       if (open) {
         setOpen(null);
+        return true;
+      }
+      if (helpPage) {
+        setHelpPage(null);
         return true;
       }
       if (tab !== 'dest') {
@@ -51,13 +57,17 @@ function Root() {
       return false;
     });
     return () => sub.remove();
-  }, [open, tab]);
+  }, [open, tab, helpPage]);
 
   let screen;
   if (open) {
     screen = <Destination dest={open} lang={lang} rtl={rtl} onBack={() => setOpen(null)} topInset={insets.top} />;
+  } else if (tab === 'help' && helpPage === 'guide') {
+    screen = <Guide lang={lang} rtl={rtl} onBack={() => setHelpPage(null)} topInset={insets.top} />;
+  } else if (tab === 'help' && helpPage === 'faq') {
+    screen = <Faq lang={lang} rtl={rtl} onBack={() => setHelpPage(null)} topInset={insets.top} />;
   } else if (tab === 'help') {
-    screen = <Help lang={lang} rtl={rtl} topInset={insets.top} />;
+    screen = <Help lang={lang} rtl={rtl} topInset={insets.top} onOpenPage={setHelpPage} />;
   } else {
     screen = (
       <Home
@@ -81,7 +91,7 @@ function Root() {
 
   return (
     <View style={styles.app}>
-      <StatusBar style={tab === 'help' && !open ? 'dark' : 'light'} />
+      <StatusBar style={tab === 'help' && !open && !helpPage ? 'dark' : 'light'} />
       <View style={styles.screen}>{screen}</View>
       <View
         style={[styles.tabs, { paddingBottom: Math.max(insets.bottom, 8), flexDirection: rtl ? 'row-reverse' : 'row' }]}
@@ -92,6 +102,7 @@ function Root() {
             key={x.key}
             onPress={() => {
               setOpen(null);
+              setHelpPage(null);
               setTab(x.key);
             }}
             accessibilityRole="tab"

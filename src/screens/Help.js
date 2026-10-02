@@ -1,19 +1,15 @@
 import React from 'react';
 import { View, Text, ScrollView, Pressable, Linking, StyleSheet } from 'react-native';
-import * as WebBrowser from 'expo-web-browser';
 import { C, T, dir } from '../theme';
 import { t } from '../i18n';
-import { pageUrl } from '../shopify';
 import { SUPPORT_EMAIL, SUPPORT_WHATSAPP } from '../config';
 
-export default function Help({ lang, rtl, topInset }) {
+export default function Help({ lang, rtl, topInset, onOpenPage }) {
   const d = dir(rtl);
-  const open = (handle) =>
-    WebBrowser.openBrowserAsync(pageUrl(handle), { toolbarColor: C.navy, controlsColor: C.yellow }).catch(() => {});
 
   const actions = [
-    { label: t(lang, 'guide'), onPress: () => open('install-esim') },
-    { label: t(lang, 'faq'), onPress: () => open('support') },
+    { label: t(lang, 'guide'), onPress: () => onOpenPage('guide') },
+    { label: t(lang, 'faq'), onPress: () => onOpenPage('faq') },
     SUPPORT_EMAIL && { label: t(lang, 'email'), onPress: () => Linking.openURL(`mailto:${SUPPORT_EMAIL}`).catch(() => {}) },
     SUPPORT_WHATSAPP && {
       label: t(lang, 'whatsapp'),
