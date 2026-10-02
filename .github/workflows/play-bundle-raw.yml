@@ -1,0 +1,89 @@
+name: Build Play Store bundle (signed afterwards)
+
+# Builds the release .aab and saves it to the play-raw branch.
+# It is then signed with the upload key outside GitHub, so no secret is needed here.
+# The version code is the number in .github/play-build-trigger.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/play-build-trigger'
+
+permissions:
+  contents: write
+
+jobs:
+  bundle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Set the version code
+        run: |
+          node -e "
+            const fs = require('fs');
+            const code = parseInt(fs.readFileSync('.github/play-build-trigger', 'utf8').trim(), 10);
+            if (!code) throw new Error('.github/play-build-trigger must contain a number');
+            const app = JSON.parse(fs.readFileSync('app.json', 'utf8'));
+            app.expo.android.versionCode = code;
+            fs.writeFileSync('app.json', JSON.stringify(app, null, 2));
+            console.log('versionCode', code, 'version', app.expo.version);
+          "
+
+      - name: Install dependencies
+        run: |
+          set -o pipefail
+          { npm install && npx expo install --fix; } 2>&1 | tee build.log
+
+      - name: Generate the Android project
+        run: |
+          set -o pipefail
+          npx expo prebuild --platform android --non-interactive 2>&1 | tee -a build.log
+
+      - name: Build the bundle
+        working-directory: android
+        run: |
+          set -o pipefail
+          ./gradlew bundleRelease --no-daemon 2>&1 | tee -a ../build.log
+
+      - name: Save the bundle to the play-raw branch
+        run: |
+          cp android/app/build/outputs/bundle/release/app-release.aab /tmp/app-release.aab
+          cp .github/play-build-trigger /tmp/version-code.txt
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          git checkout -q --orphan play-raw
+          git rm -rfq --cached .
+          cp /tmp/app-release.aab app-release.aab
+          cp /tmp/version-code.txt version-code.txt
+          git add -f app-release.aab version-code.txt
+          git commit -q -m "Release bundle, version code $(cat version-code.txt)"
+          git push -f origin play-raw
+
+      - name: Save the build log if the build fails
+        if: failure()
+        run: |
+          [ -f build.log ] || echo "No build log: the job failed before the build started." > build.log
+          { grep -n -B5 -A60 "What went wrong" build.log || true; echo "=========== LAST 300 LINES ==========="; tail -n 300 build.log; } > /tmp/build-tail.log
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          git checkout -q --orphan build-logs
+          git rm -rfq --cached .
+          cp /tmp/build-tail.log build-tail.log
+          git add -f build-tail.log
+          git commit -q -m "Play bundle log"
+          git push -f origin build-logs
