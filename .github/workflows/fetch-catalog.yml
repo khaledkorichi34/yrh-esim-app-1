@@ -1,0 +1,35 @@
+name: Fetch store catalog
+
+# Saves the public product catalog of the store to the branch "catalog-data".
+# Runs when this branch is pushed.
+
+on:
+  push:
+    branches: [catalog-fetch]
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Download the catalog
+        run: |
+          mkdir out && cd out
+          for p in 1 2 3; do
+            curl -sS -f -A "Mozilla/5.0 (Linux; Android 14) YRH-eSIM" \
+              "https://07eqi1-zk.myshopify.com/products.json?limit=250&page=$p" -o "products-$p.json" \
+              || echo "{\"error\": \"page $p failed\"}" > "products-$p.json"
+          done
+          ls -la
+      - name: Save it to the catalog-data branch
+        run: |
+          cd out
+          git init -q -b catalog-data
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Store catalog snapshot"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" catalog-data
