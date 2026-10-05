@@ -1,0 +1,26 @@
+{
+ "queued": [
+  "es_package",
+  "tr_package",
+  "jp_package",
+  "us_package",
+  "ae_package",
+  "fr_package",
+  "it_package",
+  "gb_package",
+  "th_package",
+  "de_package",
+  "gr_package",
+  "pt_package",
+  "eu-42_package"
+ ],
+ "days": {
+  "2026-10-05": [
+   "th_package",
+   "de_package",
+   "gr_package",
+   "pt_package",
+   "eu-42_package"
+  ]
+ }
+}
