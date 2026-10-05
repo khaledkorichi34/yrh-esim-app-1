@@ -1,0 +1,62 @@
+name: Pinterest daily pins
+
+# Every morning: draws the pins for the next 5 destinations with the store's
+# current prices and saves them to the branch "pinterest-assets".
+# The Make scenario "Pinterest daily pins" publishes them later the same day.
+
+on:
+  schedule:
+    - cron: '23 3 * * *' # 05:23 in Madrid in summer, 04:23 in winter
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'marketing/pinterest/**'
+      - '.github/workflows/pinterest-daily.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pinterest-daily
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/checkout@v4
+        with:
+          ref: pinterest-assets
+          path: assets
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Pillow and the Poppins fonts
+        run: |
+          pip install --quiet "pillow>=11,<13"
+          mkdir fonts
+          for w in Bold Medium Regular; do
+            curl -sSfL --retry 3 -o "fonts/Poppins-$w.ttf" \
+              "https://raw.githubusercontent.com/google/fonts/main/ofl/poppins/Poppins-$w.ttf"
+          done
+
+      - name: Prepare today's pins
+        run: python marketing/pinterest/daily.py --out assets --fonts fonts
+
+      - name: Save them
+        working-directory: assets
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing new to save."
+          else
+            git commit -q -m "Pins for $(TZ=Europe/Madrid date +%F)"
+            git push
+          fi
