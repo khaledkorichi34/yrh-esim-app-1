@@ -368,14 +368,19 @@ def main():
     ap.add_argument('--catalog-file', help='saved products.json, instead of reading the store')
     ap.add_argument('--date', help='YYYY-MM-DD, default is today in Madrid')
     ap.add_argument('--per-day', type=int, default=PER_DAY)
+    ap.add_argument('--redo', metavar='NAME', help='draw again, with current prices, every destination that '
+                    'already has a pin; saved as days/redo-NAME.json for publishing by hand')
     args = ap.parse_args()
     FONT_DIR = args.fonts
 
     date = args.date or datetime.datetime.now(ZoneInfo(TIMEZONE)).strftime('%Y-%m-%d')
-    day_file = os.path.join(args.out, 'days', date + '.json')
+    if args.redo and not re.fullmatch(r'[A-Za-z0-9-]+', args.redo):
+        raise SystemExit('--redo NAME may only contain letters, digits and dashes')
+    batch = 'redo-' + args.redo if args.redo else date
+    day_file = os.path.join(args.out, 'days', batch + '.json')
     state_file = os.path.join(args.out, 'state.json')
     if os.path.exists(day_file):
-        print('Pins for', date, 'are already prepared. Nothing to do.')
+        print('Pins for', batch, 'are already prepared. Nothing to do.')
         return
 
     state = {'queued': list(ALREADY_PUBLISHED), 'days': {}}
@@ -388,28 +393,35 @@ def main():
         products = fetch_catalog()
     dests = [d for d in (to_destination(p) for p in products) if d]
     by_handle = {d['handle']: d for d in dests}
-    todo = [h for h in ordered_handles(dests) if h not in state['queued']]
-    today = todo[:args.per_day]
-    print('%d destinations in the store, %d still without a pin, preparing %d' % (len(dests), len(todo), len(today)))
+    if args.redo:
+        today = [h for h in state['queued'] if h in by_handle]
+        print('Drawing again the %d destinations that already have a pin' % len(today))
+    else:
+        todo = [h for h in ordered_handles(dests) if h not in state['queued']]
+        today = todo[:args.per_day]
+        print('%d destinations in the store, %d still without a pin, preparing %d' % (len(dests), len(todo), len(today)))
     if not today:
-        print('Every destination has a pin. Nothing to do.')
+        print('Nothing to prepare.')
         return
 
-    pin_dir = os.path.join(args.out, 'pins', date)
+    pin_dir = os.path.join(args.out, 'pins', batch)
     os.makedirs(pin_dir, exist_ok=True)
     os.makedirs(os.path.dirname(day_file), exist_ok=True)
     payloads = []
     for handle in today:
         dest = by_handle[handle]
         draw_pin(dest).save(os.path.join(pin_dir, dest['key'] + '.png'), 'PNG', optimize=True)
-        url = '%s/pins/%s/%s.png' % (ASSETS_URL, date, dest['key'])
-        payloads.append(pin_payload(dest, len(state['queued']) + len(payloads), url))
+        url = '%s/pins/%s/%s.png' % (ASSETS_URL, batch, dest['key'])
+        index = len(payloads) if args.redo else len(state['queued']) + len(payloads)
+        payloads.append(pin_payload(dest, index, url))
         print(' ', dest['name'], 'from', dest['min_price'], [(p['size'], p['days'], p['price']) for p in dest['plans']])
 
     # Each pin is stored as the exact JSON body for the Pinterest API, so Make can send it as is.
     with open(day_file, 'w', encoding='utf-8') as f:
-        json.dump({'date': date, 'pins': [json.dumps(p, ensure_ascii=False) for p in payloads]},
+        json.dump({'date': batch, 'pins': [json.dumps(p, ensure_ascii=False) for p in payloads]},
                   f, ensure_ascii=False, indent=1)
+    if args.redo:
+        return  # the daily queue is unchanged
     state['queued'] += today
     state['days'][date] = today
     with open(state_file, 'w', encoding='utf-8') as f:

@@ -6,8 +6,16 @@ name: Pinterest daily pins
 
 on:
   schedule:
-    - cron: '23 3 * * *' # 05:23 in Madrid in summer, 04:23 in winter
+    # GitHub often starts scheduled runs hours late, so this asks early and twice.
+    # A second run on the same day finds the pins already prepared and does nothing.
+    - cron: '7 0 * * *' # 02:07 in Madrid in summer, 01:07 in winter
+    - cron: '37 3 * * *'
   workflow_dispatch:
+    inputs:
+      redo:
+        description: 'Name for a batch that redraws every published pin with current prices (letters, digits, dashes). Empty = normal daily run.'
+        required: false
+        default: ''
   push:
     branches: [main]
     paths:
@@ -46,7 +54,14 @@ jobs:
           done
 
       - name: Prepare today's pins
-        run: python marketing/pinterest/daily.py --out assets --fonts fonts
+        env:
+          REDO: ${{ github.event.inputs.redo }}
+        run: |
+          if [ -n "$REDO" ]; then
+            python marketing/pinterest/daily.py --out assets --fonts fonts --redo "$REDO"
+          else
+            python marketing/pinterest/daily.py --out assets --fonts fonts
+          fi
 
       - name: Save them
         working-directory: assets
@@ -57,6 +72,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "Nothing new to save."
           else
-            git commit -q -m "Pins for $(TZ=Europe/Madrid date +%F)"
+            git commit -q -m "Pins prepared on $(TZ=Europe/Madrid date +%F)"
             git push
           fi
