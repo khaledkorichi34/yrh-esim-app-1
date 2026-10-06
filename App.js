@@ -1,5 +1,5 @@
-import React, { useCallback, useEffect, useState } from 'react';
-import { View, Text, Pressable, BackHandler, I18nManager, StyleSheet } from 'react-native';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
+import { View, Text, Pressable, BackHandler, AppState, I18nManager, StyleSheet } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaProvider, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { ShopifyCheckoutSheetProvider, ColorScheme } from '@shopify/checkout-sheet-kit';
@@ -17,6 +17,8 @@ try {
   I18nManager.forceRTL(false);
 } catch (e) {}
 
+const REFRESH_AFTER_MS = 5 * 60 * 1000;
+
 function Root() {
   const insets = useSafeAreaInsets();
   const [lang, setLang] = useState(deviceLang());
@@ -27,17 +29,38 @@ function Root() {
   const [status, setStatus] = useState('loading');
   const rtl = isRTL(lang);
 
-  const load = useCallback(() => {
-    setStatus('loading');
+  const loadedAt = useRef(0);
+
+  // quiet = refresh behind what is on screen; if it fails, the current list stays.
+  const load = useCallback((quiet) => {
+    if (quiet !== true) setStatus('loading');
     fetchDestinations()
       .then((list) => {
+        loadedAt.current = Date.now();
         setDestinations(list);
         setStatus('ready');
+        // An open destination keeps showing, with its plans and prices brought up to date.
+        setOpen((cur) => (cur ? list.find((d) => d.handle === cur.handle) || null : cur));
       })
-      .catch(() => setStatus('error'));
+      .catch(() => {
+        if (quiet !== true) setStatus('error');
+      });
   }, []);
 
-  useEffect(load, [load]);
+  useEffect(() => {
+    load();
+  }, [load]);
+
+  // Prices can change in the store at any time. When the app comes back to the
+  // front after a while, read the catalog again so nobody sees old prices.
+  useEffect(() => {
+    const sub = AppState.addEventListener('change', (state) => {
+      if (state === 'active' && loadedAt.current && Date.now() - loadedAt.current > REFRESH_AFTER_MS) {
+        load(true);
+      }
+    });
+    return () => sub.remove();
+  }, [load]);
 
   // Android back button: close the destination or help page first, then the Help tab.
   useEffect(() => {
@@ -76,7 +99,7 @@ function Root() {
         setLang={setLang}
         destinations={destinations}
         status={status}
-        onRetry={load}
+        onRetry={() => load()}
         onOpen={setOpen}
         topInset={insets.top}
       />

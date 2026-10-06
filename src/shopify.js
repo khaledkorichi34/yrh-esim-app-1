@@ -55,7 +55,11 @@ export function toDestination(p) {
 export async function fetchDestinations() {
   const all = [];
   for (let page = 1; page <= 5; page++) {
-    const res = await fetch(`${SHOP_URL}/products.json?limit=250&page=${page}`);
+    // Always ask the store, never a saved copy: prices must be the current ones.
+    const res = await fetch(`${SHOP_URL}/products.json?limit=250&page=${page}`, {
+      cache: 'no-store',
+      headers: { 'Cache-Control': 'no-cache' },
+    });
     if (!res.ok) throw new Error('HTTP ' + res.status);
     const json = await res.json();
     const items = json.products || [];
