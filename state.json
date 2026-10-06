@@ -12,12 +12,7 @@
   "de_package",
   "gr_package",
   "pt_package",
-  "eu-42_package",
-  "sa_package",
-  "eg_package",
-  "ma_package",
-  "id_package",
-  "kr_package"
+  "eu-42_package"
  ],
  "days": {
   "2026-10-05": [
@@ -26,13 +21,6 @@
    "gr_package",
    "pt_package",
    "eu-42_package"
-  ],
-  "2026-10-06": [
-   "sa_package",
-   "eg_package",
-   "ma_package",
-   "id_package",
-   "kr_package"
   ]
  }
 }
