@@ -12,18 +12,6 @@
 "price": "3.00"
 },
 {
-"handle": "yt_package",
-"sku": "YT_1_7",
-"title": "Mayotte 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "yt_package",
-"sku": "YT_3_15",
-"title": "Mayotte 3GB 15Days",
-"price": "3.00"
-},
-{
 "handle": "vn_package",
 "sku": "VN_0.1_7",
 "title": "Vietnam 100MB 7Days",
@@ -33,18 +21,6 @@
 "handle": "vn_package",
 "sku": "VN_0.5_7",
 "title": "Vietnam 500MB 7Days",
-"price": "3.00"
-},
-{
-"handle": "va_package",
-"sku": "VA_1_7",
-"title": "Vatican City 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "va_package",
-"sku": "VA_3_15",
-"title": "Vatican City 3GB 15Days",
 "price": "3.00"
 },
 {
@@ -63,7 +39,7 @@
 "handle": "uy_package",
 "sku": "UY_0.5_7",
 "title": "Uruguay 500MB 7Days",
-"price": "4.17"
+"price": "5.04"
 },
 {
 "handle": "us_package",
@@ -79,15 +55,9 @@
 },
 {
 "handle": "ua_package",
-"sku": "UA_1_7",
-"title": "Ukraine 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "ua_package",
 "sku": "UA_3_15",
 "title": "Ukraine 3GB 15Days",
-"price": "3.00"
+"price": "3.03"
 },
 {
 "handle": "tr_package",
@@ -144,18 +114,6 @@
 "price": "3.00"
 },
 {
-"handle": "th_package",
-"sku": "TH_1_7",
-"title": "Thailand 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "th_package",
-"sku": "TH_3_15",
-"title": "Thailand 3GB 15Days",
-"price": "3.00"
-},
-{
 "handle": "sv_package",
 "sku": "SV_0.1_7",
 "title": "El Salvador 100MB 7Days",
@@ -165,42 +123,6 @@
 "handle": "sn_package",
 "sku": "SN_0.1_7",
 "title": "Senegal 100MB 7Days",
-"price": "3.00"
-},
-{
-"handle": "sm_package",
-"sku": "SM_1_7",
-"title": "San Marino 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "sm_package",
-"sku": "SM_3_15",
-"title": "San Marino 3GB 15Days",
-"price": "3.00"
-},
-{
-"handle": "sk_package",
-"sku": "SK_1_7",
-"title": "Slovakia 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "sk_package",
-"sku": "SK_3_15",
-"title": "Slovakia 3GB 15Days",
-"price": "3.00"
-},
-{
-"handle": "si_package",
-"sku": "SI_1_7",
-"title": "Slovenia 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "si_package",
-"sku": "SI_3_15",
-"title": "Slovenia 3GB 15Days",
 "price": "3.00"
 },
 {
@@ -219,24 +141,6 @@
 "handle": "sg_package",
 "sku": "SG_1_7",
 "title": "Singapore 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "sg_package",
-"sku": "SG_3_15",
-"title": "Singapore 3GB 15Days",
-"price": "3.00"
-},
-{
-"handle": "se_package",
-"sku": "SE_1_7",
-"title": "Sweden 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "se_package",
-"sku": "SE_3_15",
-"title": "Sweden 3GB 15Days",
 "price": "3.00"
 },
 {
@@ -264,18 +168,6 @@
 "price": "3.00"
 },
 {
-"handle": "ro_package",
-"sku": "RO_1_7",
-"title": "Romania 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "ro_package",
-"sku": "RO_3_15",
-"title": "Romania 3GB 15Days",
-"price": "3.00"
-},
-{
 "handle": "re_package",
 "sku": "RE_0.1_7",
 "title": "Reunion 100MB 7Days",
@@ -288,58 +180,16 @@
 "price": "3.00"
 },
 {
-"handle": "re_package",
-"sku": "RE_1_7",
-"title": "Reunion 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "re_package",
-"sku": "RE_3_15",
-"title": "Reunion 3GB 15Days",
-"price": "3.00"
-},
-{
 "handle": "qa_package",
 "sku": "QA_0.1_7",
 "title": "Qatar 100MB 7Days",
 "price": "3.00"
 },
 {
-"handle": "qa_package",
-"sku": "QA_0.5_7",
-"title": "Qatar 500MB 7Days",
-"price": "3.00"
-},
-{
 "handle": "py_package",
 "sku": "PY_0.5_7",
 "title": "Paraguay 500MB 7Days",
-"price": "4.17"
-},
-{
-"handle": "pt_package",
-"sku": "PT_1_7",
-"title": "Portugal 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "pt_package",
-"sku": "PT_3_15",
-"title": "Portugal 3GB 15Days",
-"price": "3.00"
-},
-{
-"handle": "pl_package",
-"sku": "PL_1_7",
-"title": "Poland 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "pl_package",
-"sku": "PL_3_15",
-"title": "Poland 3GB 15Days",
-"price": "3.00"
+"price": "5.04"
 },
 {
 "handle": "pk_package",
@@ -372,12 +222,6 @@
 "price": "3.00"
 },
 {
-"handle": "pe_package",
-"sku": "PE_0.5_7",
-"title": "Peru 500MB 7Days",
-"price": "3.00"
-},
-{
 "handle": "nz_package",
 "sku": "NZ_0.1_7",
 "title": "New Zealand 100MB 7Days",
@@ -390,70 +234,10 @@
 "price": "3.00"
 },
 {
-"handle": "eu-35_package",
-"sku": "EU-35_1_7",
-"title": "Europe (35 areas) 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "eu-35_package",
-"sku": "EU-35_3_15",
-"title": "Europe (35 areas) 3GB 15Days",
-"price": "3.00"
-},
-{
-"handle": "eu-30_package",
-"sku": "EU-30_1_7",
-"title": "Europe(30+ areas) 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "eu-33_package",
-"sku": "EU-33_1_7",
-"title": "Europe (33 areas) 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "eu-33_package",
-"sku": "EU-33_3_15",
-"title": "Europe (33 areas) 3GB 15Days",
-"price": "3.00"
-},
-{
-"handle": "no_package",
-"sku": "NO_1_7",
-"title": "Norway 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "no_package",
-"sku": "NO_3_15",
-"title": "Norway 3GB 15Days",
-"price": "3.00"
-},
-{
-"handle": "nl_package",
-"sku": "NL_1_7",
-"title": "Netherlands 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "nl_package",
-"sku": "NL_3_15",
-"title": "Netherlands 3GB 15Days",
-"price": "3.00"
-},
-{
-"handle": "ni_package",
-"sku": "NI_0.1_7",
-"title": "Nicaragua 100MB 7Days",
-"price": "3.00"
-},
-{
 "handle": "ni_package",
 "sku": "NI_0.5_7",
 "title": "Nicaragua 500MB 7Days",
-"price": "4.17"
+"price": "5.04"
 },
 {
 "handle": "my_package",
@@ -468,87 +252,9 @@
 "price": "3.00"
 },
 {
-"handle": "my_package",
-"sku": "MY_1_7",
-"title": "Malaysia 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "my_package",
-"sku": "MY_3_15",
-"title": "Malaysia 3GB 15Days",
-"price": "3.00"
-},
-{
 "handle": "mx_package",
 "sku": "MX_0.1_7",
 "title": "Mexico 100MB 7Days",
-"price": "3.00"
-},
-{
-"handle": "mx_package",
-"sku": "MX_0.5_7",
-"title": "Mexico 500MB 7Days",
-"price": "3.00"
-},
-{
-"handle": "mt_package",
-"sku": "MT_1_7",
-"title": "Malta 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "mt_package",
-"sku": "MT_3_15",
-"title": "Malta 3GB 15Days",
-"price": "3.00"
-},
-{
-"handle": "mq_package",
-"sku": "MQ_1_7",
-"title": "Martinique 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "mq_package",
-"sku": "MQ_3_15",
-"title": "Martinique 3GB 15Days",
-"price": "3.00"
-},
-{
-"handle": "mo_package",
-"sku": "MO_1_7",
-"title": "Macao 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "mo_package",
-"sku": "MO_3_15",
-"title": "Macao 3GB 15Days",
-"price": "3.00"
-},
-{
-"handle": "mf_package",
-"sku": "MF_1_7",
-"title": "Saint Martin 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "mf_package",
-"sku": "MF_3_15",
-"title": "Saint Martin 3GB 15Days",
-"price": "3.00"
-},
-{
-"handle": "md_package",
-"sku": "MD_1_7",
-"title": "Moldova 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "md_package",
-"sku": "MD_3_15",
-"title": "Moldova 3GB 15Days",
 "price": "3.00"
 },
 {
@@ -561,42 +267,6 @@
 "handle": "ma_package",
 "sku": "MA_0.5_7",
 "title": "Morocco 500MB 7Days",
-"price": "3.00"
-},
-{
-"handle": "lv_package",
-"sku": "LV_1_7",
-"title": "Latvia 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "lv_package",
-"sku": "LV_3_15",
-"title": "Latvia 3GB 15Days",
-"price": "3.00"
-},
-{
-"handle": "lu_package",
-"sku": "LU_1_7",
-"title": "Luxembourg 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "lu_package",
-"sku": "LU_3_15",
-"title": "Luxembourg 3GB 15Days",
-"price": "3.00"
-},
-{
-"handle": "lt_package",
-"sku": "LT_1_7",
-"title": "Lithuania 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "lt_package",
-"sku": "LT_3_15",
-"title": "Lithuania 3GB 15Days",
 "price": "3.00"
 },
 {
@@ -615,19 +285,7 @@
 "handle": "lk_package",
 "sku": "LK_3_15",
 "title": "Sri Lanka 3GB 15Days",
-"price": "6.33"
-},
-{
-"handle": "li_package",
-"sku": "LI_1_7",
-"title": "Liechtenstein 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "li_package",
-"sku": "LI_3_15",
-"title": "Liechtenstein 3GB 15Days",
-"price": "3.00"
+"price": "7.66"
 },
 {
 "handle": "kz_package",
@@ -666,18 +324,6 @@
 "price": "3.00"
 },
 {
-"handle": "kr_package",
-"sku": "KR_1_7",
-"title": "South Korea 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "kr_package",
-"sku": "KR_3_15",
-"title": "South Korea 3GB 15Days",
-"price": "3.00"
-},
-{
 "handle": "kh_package",
 "sku": "KH_0.1_7",
 "title": "Cambodia 100MB 7Days",
@@ -708,57 +354,9 @@
 "price": "3.00"
 },
 {
-"handle": "jp_package",
-"sku": "JP_1_7",
-"title": "Japan 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "jp_package",
-"sku": "JP_3_15",
-"title": "Japan 3GB 15Days",
-"price": "3.00"
-},
-{
 "handle": "jo_package",
 "sku": "JO_0.1_7",
 "title": "Jordan 100MB 7Days",
-"price": "3.00"
-},
-{
-"handle": "je_package",
-"sku": "JE_1_7",
-"title": "Jersey 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "je_package",
-"sku": "JE_3_15",
-"title": "Jersey 3GB 15Days",
-"price": "3.00"
-},
-{
-"handle": "it_package",
-"sku": "IT_1_7",
-"title": "Italy 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "it_package",
-"sku": "IT_3_15",
-"title": "Italy 3GB 15Days",
-"price": "3.00"
-},
-{
-"handle": "is_package",
-"sku": "IS_1_7",
-"title": "Iceland 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "is_package",
-"sku": "IS_3_15",
-"title": "Iceland 3GB 15Days",
 "price": "3.00"
 },
 {
@@ -774,18 +372,6 @@
 "price": "3.00"
 },
 {
-"handle": "ie_package",
-"sku": "IE_1_7",
-"title": "Ireland 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "ie_package",
-"sku": "IE_3_15",
-"title": "Ireland 3GB 15Days",
-"price": "3.00"
-},
-{
 "handle": "id_package",
 "sku": "ID_0.1_7",
 "title": "Indonesia 100MB 7Days",
@@ -798,52 +384,10 @@
 "price": "3.00"
 },
 {
-"handle": "id_package",
-"sku": "ID_1_7",
-"title": "Indonesia 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "id_package",
-"sku": "ID_3_15",
-"title": "Indonesia 3GB 15Days",
-"price": "3.00"
-},
-{
-"handle": "hu_package",
-"sku": "HU_1_7",
-"title": "Hungary 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "hu_package",
-"sku": "HU_3_15",
-"title": "Hungary 3GB 15Days",
-"price": "3.00"
-},
-{
-"handle": "hr_package",
-"sku": "HR_1_7",
-"title": "Croatia 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "hr_package",
-"sku": "HR_3_15",
-"title": "Croatia 3GB 15Days",
-"price": "3.00"
-},
-{
-"handle": "hn_package",
-"sku": "HN_0.1_7",
-"title": "Honduras 100MB 7Days",
-"price": "3.00"
-},
-{
 "handle": "hn_package",
 "sku": "HN_0.5_7",
 "title": "Honduras 500MB 7Days",
-"price": "4.17"
+"price": "5.04"
 },
 {
 "handle": "hk_package",
@@ -855,18 +399,6 @@
 "handle": "hk_package",
 "sku": "HK_0.5_7",
 "title": "Hong Kong 500MB 7Days",
-"price": "3.00"
-},
-{
-"handle": "hk_package",
-"sku": "HK_1_7",
-"title": "Hong Kong 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "hk_package",
-"sku": "HK_3_15",
-"title": "Hong Kong 3GB 15Days",
 "price": "3.00"
 },
 {
@@ -882,42 +414,6 @@
 "price": "3.00"
 },
 {
-"handle": "gr_package",
-"sku": "GR_1_7",
-"title": "Greece 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "gr_package",
-"sku": "GR_3_15",
-"title": "Greece 3GB 15Days",
-"price": "3.00"
-},
-{
-"handle": "gp_package",
-"sku": "GP_1_7",
-"title": "Guadeloupe 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "gp_package",
-"sku": "GP_3_15",
-"title": "Guadeloupe 3GB 15Days",
-"price": "3.00"
-},
-{
-"handle": "gf_package",
-"sku": "GF_1_7",
-"title": "French Guiana 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "gf_package",
-"sku": "GF_3_15",
-"title": "French Guiana 3GB 15Days",
-"price": "3.00"
-},
-{
 "handle": "gb_package",
 "sku": "GB_0.1_7",
 "title": "United Kingdom 100MB 7Days",
@@ -930,57 +426,9 @@
 "price": "3.00"
 },
 {
-"handle": "gb_package",
-"sku": "GB_1_7",
-"title": "United Kingdom 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "gb_package",
-"sku": "GB_3_15",
-"title": "United Kingdom 3GB 15Days",
-"price": "3.00"
-},
-{
 "handle": "fr_package",
 "sku": "FR_0.1_7",
 "title": "France 100MB 7Days",
-"price": "3.00"
-},
-{
-"handle": "fr_package",
-"sku": "FR_1_7",
-"title": "France 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "fr_package",
-"sku": "FR_3_15",
-"title": "France 3GB 15Days",
-"price": "3.00"
-},
-{
-"handle": "fi_package",
-"sku": "FI_1_7",
-"title": "Finland 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "fi_package",
-"sku": "FI_3_15",
-"title": "Finland 3GB 15Days",
-"price": "3.00"
-},
-{
-"handle": "es_package",
-"sku": "ES_1_7",
-"title": "Spain 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "es_package",
-"sku": "ES_3_15",
-"title": "Spain 3GB 15Days",
 "price": "3.00"
 },
 {
@@ -993,18 +441,6 @@
 "handle": "eg_package",
 "sku": "EG_0.5_7",
 "title": "Egypt 500MB 7Days",
-"price": "3.00"
-},
-{
-"handle": "ee_package",
-"sku": "EE_1_7",
-"title": "Estonia 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "ee_package",
-"sku": "EE_3_15",
-"title": "Estonia 3GB 15Days",
 "price": "3.00"
 },
 {
@@ -1021,69 +457,9 @@
 },
 {
 "handle": "do_package",
-"sku": "DO_0.1_7",
-"title": "Dominican Republic 100MB 7Days",
-"price": "3.00"
-},
-{
-"handle": "do_package",
 "sku": "DO_0.5_7",
 "title": "Dominican Republic 500MB 7Days",
-"price": "5.17"
-},
-{
-"handle": "dk_package",
-"sku": "DK_1_7",
-"title": "Denmark 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "dk_package",
-"sku": "DK_3_15",
-"title": "Denmark 3GB 15Days",
-"price": "3.00"
-},
-{
-"handle": "de_package",
-"sku": "DE_1_7",
-"title": "Germany 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "de_package",
-"sku": "DE_3_15",
-"title": "Germany 3GB 15Days",
-"price": "3.00"
-},
-{
-"handle": "cz_package",
-"sku": "CZ_1_7",
-"title": "Czech Republic 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "cz_package",
-"sku": "CZ_3_15",
-"title": "Czech Republic 3GB 15Days",
-"price": "3.00"
-},
-{
-"handle": "cy_package",
-"sku": "CY_1_7",
-"title": "Cyprus 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "cy_package",
-"sku": "CY_3_15",
-"title": "Cyprus 3GB 15Days",
-"price": "3.00"
-},
-{
-"handle": "co_package",
-"sku": "CO_0.1_7",
-"title": "Colombia 100MB 7Days",
-"price": "3.00"
+"price": "6.25"
 },
 {
 "handle": "cn_package",
@@ -1116,18 +492,6 @@
 "price": "3.00"
 },
 {
-"handle": "ch_package",
-"sku": "CH_1_7",
-"title": "Switzerland 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "ch_package",
-"sku": "CH_3_15",
-"title": "Switzerland 3GB 15Days",
-"price": "3.00"
-},
-{
 "handle": "ca_package",
 "sku": "CA_0.1_7",
 "title": "Canada 100MB 7Days",
@@ -1143,7 +507,7 @@
 "handle": "ca_package",
 "sku": "CA_50_30",
 "title": "Canada 50GB 30Days",
-"price": "64.87"
+"price": "78.49"
 },
 {
 "handle": "br_package",
@@ -1158,57 +522,15 @@
 "price": "3.00"
 },
 {
-"handle": "bl_package",
-"sku": "BL_1_7",
-"title": "Saint Barthelemy 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "bl_package",
-"sku": "BL_3_15",
-"title": "Saint Barthelemy 3GB 15Days",
-"price": "3.00"
-},
-{
-"handle": "bg_package",
-"sku": "BG_1_7",
-"title": "Bulgaria 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "bg_package",
-"sku": "BG_3_15",
-"title": "Bulgaria 3GB 15Days",
-"price": "3.00"
-},
-{
 "handle": "bf_package",
 "sku": "BF_1_7",
 "title": "Burkina Faso 1GB 7Days",
-"price": "7.58"
-},
-{
-"handle": "be_package",
-"sku": "BE_1_7",
-"title": "Belgium 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "be_package",
-"sku": "BE_3_15",
-"title": "Belgium 3GB 15Days",
-"price": "3.00"
+"price": "9.18"
 },
 {
 "handle": "az_package",
 "sku": "AZ_0.1_7",
 "title": "Azerbaijan 100MB 7Days",
-"price": "3.00"
-},
-{
-"handle": "az_package",
-"sku": "AZ_0.5_7",
-"title": "Azerbaijan 500MB 7Days",
 "price": "3.00"
 },
 {
@@ -1224,33 +546,9 @@
 "price": "3.00"
 },
 {
-"handle": "au_package",
-"sku": "AU_1_7",
-"title": "Australia 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "at_package",
-"sku": "AT_1_7",
-"title": "Austria 1GB 7Days",
-"price": "3.00"
-},
-{
-"handle": "at_package",
-"sku": "AT_3_15",
-"title": "Austria 3GB 15Days",
-"price": "3.00"
-},
-{
 "handle": "ar_package",
 "sku": "AR_0.1_7",
 "title": "Argentina 100MB 7Days",
-"price": "3.00"
-},
-{
-"handle": "ar_package",
-"sku": "AR_0.5_7",
-"title": "Argentina 500MB 7Days",
 "price": "3.00"
 },
 {
@@ -1281,18 +579,12 @@
 "handle": "ai_package",
 "sku": "AI_3_15",
 "title": "Anguilla 3GB 15Days",
-"price": "22.83"
+"price": "27.63"
 },
 {
 "handle": "ae_package",
 "sku": "AE_0.1_7",
 "title": "United Arab Emirates 100MB 7Days",
-"price": "3.00"
-},
-{
-"handle": "ae_package",
-"sku": "AE_0.5_7",
-"title": "United Arab Emirates 500MB 7Days",
 "price": "3.00"
 }
 ]
