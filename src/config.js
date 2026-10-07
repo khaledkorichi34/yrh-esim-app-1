@@ -12,7 +12,7 @@
 export const SHOP_URL = 'https://07eqi1-zk.myshopify.com';
 
 export const SUPPORT_EMAIL = 'khaledkorichii@gmail.com';
-export const SUPPORT_WHATSAPP = ''; // digits only with country code, e.g. '34600000000'. Empty hides the button.
+export const SUPPORT_WHATSAPP = '34642377474'; // digits only with country code, e.g. '34600000000'. Empty hides the button.
 
 // Destinations shown first on the home screen (two-letter country codes).
 export const POPULAR = ['es', 'tr', 'ae', 'us', 'fr', 'it', 'gb', 'jp'];
