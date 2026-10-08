@@ -324,15 +324,19 @@ def ordered_handles(dests):
 
 # ---------- pin text ----------
 
+# Pinterest search reads the title and the first sentence most, so both lead with
+# the words people type: "<country> eSIM", "SIM card for <country>", "travel data".
 OPENERS = [
-    'Travelling to {name}? Get a prepaid {name} eSIM before you fly: {plans}.',
-    'Land in {name} already connected. Prepaid {name} eSIM data plans: {plans}.',
-    'Skip the airport SIM queue in {name}. Prepaid travel eSIM plans: {plans}.',
-    'Maps, rides and messages need data in {name}. Prepaid eSIM plans: {plans}.',
+    'Looking for a SIM card for {name}? This prepaid {name} eSIM gives you mobile data without roaming fees.',
+    '{name} eSIM for tourists: prepaid travel data that works from the moment you land.',
+    'Travel data for {name} without a physical SIM: get a prepaid {name} eSIM before you fly.',
+    'Need internet in {name}? A prepaid travel eSIM keeps maps, rides and messages working.',
 ]
-REGION_OPENER = 'One eSIM for {name}, covering {areas} places with a single plan: {plans}.'
-CLOSER = (' Delivered by email, installed with a QR code, and your own number stays active.'
+REGION_OPENER = ('Regional eSIM for {name}: one prepaid travel data plan that works in {areas} places, '
+                 'so you do not need a new SIM card in each country.')
+CLOSER = (' Delivered by email in minutes, installed with a QR code, and your own number stays active.'
           ' Data only; needs an unlocked, eSIM-compatible phone.')
+COMMON_TAGS = ['#esim', '#travelesim', '#traveltips', '#travelhacks', '#internationaltravel']
 
 
 def pin_payload(dest, index, image_url):
@@ -341,17 +345,20 @@ def pin_payload(dest, index, image_url):
     name = dest['name']
     if dest['regional']:
         where = 'your whole trip' if name == 'Global' else name
-        opener = REGION_OPENER.format(name=where, areas=dest['areas'], plans=plans)
-        tags = '#esim #traveltips #travelhacks #roaming #backpacking'
+        opener = REGION_OPENER.format(name=where, areas=dest['areas'])
+        label = 'Global eSIM' if name == 'Global' else 'Regional eSIM for %s' % name
+        title = '%s (%d places): Prepaid Travel Data from €%s' % (label, dest['areas'], dest['min_price'])
+        tags = COMMON_TAGS + ['#backpacking', '#roaming']
     else:
-        opener = OPENERS[index % len(OPENERS)].format(name=name, plans=plans)
+        opener = OPENERS[index % len(OPENERS)].format(name=name)
+        title = '%s eSIM: Prepaid Travel Data Plans from €%s' % (name, dest['min_price'])
         slug = re.sub(r'[^a-z]', '', name.lower())
-        tags = '#%stravel #%s #esim #traveltips #travelhacks' % (slug, slug)
+        tags = ['#%stravel' % slug, '#%s' % slug] + COMMON_TAGS
+    description = '%s Plans: %s.%s %s' % (opener, plans, CLOSER, ' '.join(tags))
     return {
         'board_id': BOARD_ID,
-        'title': ('%s eSIM%s: travel data from €%s' % (
-            name, ' (%d places)' % dest['areas'] if dest['regional'] else '', dest['min_price']))[:100],
-        'description': (opener + CLOSER + ' ' + tags)[:800],
+        'title': title[:100],
+        'description': description[:800],
         'link': '%s/products/%s' % (SHOP_URL, dest['handle']),
         'alt_text': ('%s eSIM data plans: %s.' % (name, alt_plans))[:500],
         'media_source': {'source_type': 'image_url', 'url': image_url},
