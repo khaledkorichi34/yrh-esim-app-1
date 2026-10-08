@@ -365,6 +365,57 @@ def pin_payload(dest, index, image_url):
     }
 
 
+# ---------- Facebook / Instagram ----------
+
+# One post a day: the first destination of the day's pins, as a 4:5 JPEG
+# (Instagram does not take the 2:3 pin) with captions for each network.
+
+def flag(dest):
+    if dest['regional'] or not re.fullmatch(r'[A-Z]{2}', dest['code']):
+        return '🌍'
+    return ''.join(chr(0x1F1E6 + ord(c) - 65) for c in dest['code'])
+
+
+def social_captions(dest, index):
+    name = dest['name']
+    plan_lines = '\n'.join('• %s · %s · €%s' % (p['size'], p['days'], p['price']) for p in dest['plans'])
+    if dest['regional']:
+        where = 'your whole trip' if name == 'Global' else name
+        opener = REGION_OPENER.format(name=where, areas=dest['areas'])
+        head = '%s eSIM %s %d places, from €%s' % (name, flag(dest), dest['areas'], dest['min_price'])
+        ig_tags = ['#esim', '#travelesim', '#esimtravel', '#backpacking', '#traveltips', '#travelhacks',
+                   '#internationaltravel', '#digitalnomad', '#roaming', '#worldtravel']
+        fb_tags = ['#esim', '#travelesim', '#backpacking', '#roaming']
+    else:
+        opener = OPENERS[index % len(OPENERS)].format(name=name)
+        head = '%s eSIM %s from €%s – prepaid travel data' % (name, flag(dest), dest['min_price'])
+        slug = re.sub(r'[^a-z]', '', name.lower())
+        ig_tags = ['#%stravel' % slug, '#%s' % slug, '#esim', '#travelesim', '#esimtravel', '#traveltips',
+                   '#travelhacks', '#internationaltravel', '#digitalnomad', '#roaming']
+        fb_tags = ['#%stravel' % slug, '#esim', '#travelesim', '#traveltips']
+    body = '%s\n\n%s\n\n%s\n\neSIM by email in minutes · Keep your number · Data only' % (head, opener, plan_lines)
+    link = '%s/products/%s' % (SHOP_URL, dest['handle'])
+    ig = '%s\n\n🔗 Link in bio · 💬 WhatsApp +34 642 377 474\n\n%s' % (body, ' '.join(ig_tags))
+    fb = '%s\n\n🛒 %s\n💬 WhatsApp +34 642 377 474\n\n%s' % (body, link, ' '.join(fb_tags))
+    return ig, fb
+
+
+def write_social(out, date, dest):
+    from PIL import Image
+    pin = Image.open(os.path.join(out, 'pins', date, dest['key'] + '.png')).convert('RGB')
+    img = Image.new('RGB', (1080, 1350), NAVY)
+    img.paste(pin.resize((900, 1350), Image.LANCZOS), (90, 0))
+    os.makedirs(os.path.join(out, 'social'), exist_ok=True)
+    img.save(os.path.join(out, 'social', date + '.jpg'), 'JPEG', quality=90)
+    index = int(datetime.date.fromisoformat(date).toordinal())
+    ig, fb = social_captions(dest, index)
+    with open(os.path.join(out, 'social', date + '.json'), 'w', encoding='utf-8') as f:
+        json.dump({'date': date, 'name': dest['name'],
+                   'image': '%s/social/%s.jpg' % (ASSETS_URL, date), 'ig': ig, 'fb': fb},
+                  f, ensure_ascii=False, indent=1)
+    print('Social post for', date, ':', dest['name'])
+
+
 # ---------- main ----------
 
 def main():
@@ -386,7 +437,9 @@ def main():
     batch = 'redo-' + args.redo if args.redo else date
     day_file = os.path.join(args.out, 'days', batch + '.json')
     state_file = os.path.join(args.out, 'state.json')
-    if os.path.exists(day_file):
+    pins_ready = os.path.exists(day_file)
+    social_ready = os.path.exists(os.path.join(args.out, 'social', date + '.json'))
+    if pins_ready and (args.redo or social_ready):
         print('Pins for', batch, 'are already prepared. Nothing to do.')
         return
 
@@ -400,6 +453,12 @@ def main():
         products = fetch_catalog()
     dests = [d for d in (to_destination(p) for p in products) if d]
     by_handle = {d['handle']: d for d in dests}
+    if pins_ready:
+        # Pins were made earlier today; only the Facebook/Instagram post is missing.
+        first = [h for h in state['days'].get(date, []) if h in by_handle][:1]
+        if first:
+            write_social(args.out, date, by_handle[first[0]])
+        return
     if args.redo:
         today = [h for h in state['queued'] if h in by_handle]
         print('Drawing again the %d destinations that already have a pin' % len(today))
@@ -433,6 +492,7 @@ def main():
     state['days'][date] = today
     with open(state_file, 'w', encoding='utf-8') as f:
         json.dump(state, f, ensure_ascii=False, indent=1)
+    write_social(args.out, date, by_handle[today[0]])
 
 
 if __name__ == '__main__':
