@@ -22,7 +22,12 @@
   "sg_package",
   "my_package",
   "vn_package",
-  "au_package"
+  "au_package",
+  "ca_package",
+  "mx_package",
+  "nl_package",
+  "ch_package",
+  "at_package"
  ],
  "days": {
   "2026-10-05": [
@@ -45,6 +50,13 @@
    "my_package",
    "vn_package",
    "au_package"
+  ],
+  "2026-10-09": [
+   "ca_package",
+   "mx_package",
+   "nl_package",
+   "ch_package",
+   "at_package"
   ]
  }
 }
