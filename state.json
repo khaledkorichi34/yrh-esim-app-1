@@ -17,7 +17,12 @@
   "eg_package",
   "ma_package",
   "id_package",
-  "kr_package"
+  "kr_package",
+  "cn_package",
+  "sg_package",
+  "my_package",
+  "vn_package",
+  "au_package"
  ],
  "days": {
   "2026-10-05": [
@@ -33,6 +38,13 @@
    "ma_package",
    "id_package",
    "kr_package"
+  ],
+  "2026-10-08": [
+   "cn_package",
+   "sg_package",
+   "my_package",
+   "vn_package",
+   "au_package"
   ]
  }
 }
