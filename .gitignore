@@ -3,3 +3,4 @@ node_modules/
 dist/
 *.apk
 *.aab
+__pycache__/
