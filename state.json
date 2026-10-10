@@ -27,7 +27,12 @@
   "mx_package",
   "nl_package",
   "ch_package",
-  "at_package"
+  "at_package",
+  "hr_package",
+  "ie_package",
+  "in_package",
+  "ph_package",
+  "br_package"
  ],
  "days": {
   "2026-10-05": [
@@ -57,6 +62,13 @@
    "nl_package",
    "ch_package",
    "at_package"
+  ],
+  "2026-10-10": [
+   "hr_package",
+   "ie_package",
+   "in_package",
+   "ph_package",
+   "br_package"
   ]
  }
 }
