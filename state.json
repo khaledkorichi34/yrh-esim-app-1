@@ -37,7 +37,12 @@
   "hk_package",
   "be_package",
   "cz_package",
-  "pl_package"
+  "pl_package",
+  "se_package",
+  "no_package",
+  "dk_package",
+  "hu_package",
+  "is_package"
  ],
  "days": {
   "2026-10-05": [
@@ -81,6 +86,13 @@
    "be_package",
    "cz_package",
    "pl_package"
+  ],
+  "2026-10-12": [
+   "se_package",
+   "no_package",
+   "dk_package",
+   "hu_package",
+   "is_package"
   ]
  }
 }
