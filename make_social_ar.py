@@ -173,6 +173,7 @@ TAGS_FB = '#eSIM #الجالية #سفر #انترنت'
 
 def caption(body, handle, tags_extra=''):
     link_fb = ('🛒 ' + SHOP + handle + '\n') if handle else '🛒 https://yrh.ai\n'
+    body = body + '\n\n🎁 خصم 30% على أول شريحة بالكود AHLAN30 (حتى 31 أكتوبر)'
     ig = body + '\n\n🔗 الرابط في البايو · 💬 واتساب ' + WA + '\n\n' + (tags_extra + ' ' if tags_extra else '') + TAGS_IG
     fb = body + '\n\n' + link_fb + '💬 واتساب ' + WA + '\n\n' + (tags_extra + ' ' if tags_extra else '') + TAGS_FB
     return ig, fb
