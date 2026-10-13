@@ -42,7 +42,12 @@
   "no_package",
   "dk_package",
   "hu_package",
-  "is_package"
+  "is_package",
+  "nz_package",
+  "za_package",
+  "ke_package",
+  "tz_package",
+  "lk_package"
  ],
  "days": {
   "2026-10-05": [
@@ -93,6 +98,13 @@
    "dk_package",
    "hu_package",
    "is_package"
+  ],
+  "2026-10-13": [
+   "nz_package",
+   "za_package",
+   "ke_package",
+   "tz_package",
+   "lk_package"
   ]
  }
 }
