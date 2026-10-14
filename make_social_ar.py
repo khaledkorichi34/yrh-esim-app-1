@@ -267,9 +267,9 @@ def main(only=None):
     for date, name, img, ig, fb in build():
         if only and date not in only:
             continue
-        img.resize((W, H), Image.LANCZOS).save(os.path.join(out, date + '.jpg'), quality=90)
-        with open(os.path.join(out, date + '.json'), 'w', encoding='utf-8') as fh:
-            json.dump({'date': date, 'name': name, 'image': RAW + date + '.jpg', 'ig': ig, 'fb': fb},
+        img.resize((W, H), Image.LANCZOS).save(os.path.join(out, date + '-11.jpg'), quality=90)
+        with open(os.path.join(out, date + '-11.json'), 'w', encoding='utf-8') as fh:
+            json.dump({'date': date, 'name': name, 'image': RAW + date + '-11.jpg', 'ig': ig, 'fb': fb},
                       fh, ensure_ascii=False, indent=1)
         print(date, name)
 
