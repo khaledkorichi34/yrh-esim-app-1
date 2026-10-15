@@ -52,7 +52,12 @@
   "jo_package",
   "cy_package",
   "mt_package",
-  "ar_package"
+  "ar_package",
+  "cl_package",
+  "pe_package",
+  "co_package",
+  "do_package",
+  "cr_package"
  ],
  "days": {
   "2026-10-05": [
@@ -117,6 +122,13 @@
    "cy_package",
    "mt_package",
    "ar_package"
+  ],
+  "2026-10-15": [
+   "cl_package",
+   "pe_package",
+   "co_package",
+   "do_package",
+   "cr_package"
   ]
  }
 }
