@@ -57,7 +57,12 @@
   "pe_package",
   "co_package",
   "do_package",
-  "cr_package"
+  "cr_package",
+  "gl-120_package",
+  "usca-2_package",
+  "sea-8_package",
+  "me-13_package",
+  "kw_package"
  ],
  "days": {
   "2026-10-05": [
@@ -129,6 +134,13 @@
    "co_package",
    "do_package",
    "cr_package"
+  ],
+  "2026-10-16": [
+   "gl-120_package",
+   "usca-2_package",
+   "sea-8_package",
+   "me-13_package",
+   "kw_package"
   ]
  }
 }
