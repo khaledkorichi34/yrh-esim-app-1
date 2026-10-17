@@ -62,7 +62,12 @@
   "usca-2_package",
   "sea-8_package",
   "me-13_package",
-  "kw_package"
+  "kw_package",
+  "bh_package",
+  "om_package",
+  "tn_package",
+  "dz_package",
+  "af_package"
  ],
  "days": {
   "2026-10-05": [
@@ -141,6 +146,13 @@
    "sea-8_package",
    "me-13_package",
    "kw_package"
+  ],
+  "2026-10-17": [
+   "bh_package",
+   "om_package",
+   "tn_package",
+   "dz_package",
+   "af_package"
   ]
  }
 }
