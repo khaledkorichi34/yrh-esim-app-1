@@ -67,7 +67,12 @@
   "om_package",
   "tn_package",
   "dz_package",
-  "af_package"
+  "af_package",
+  "af-21_package",
+  "af-29_package",
+  "ax_package",
+  "al_package",
+  "ad_package"
  ],
  "days": {
   "2026-10-05": [
@@ -153,6 +158,13 @@
    "tn_package",
    "dz_package",
    "af_package"
+  ],
+  "2026-10-18": [
+   "af-21_package",
+   "af-29_package",
+   "ax_package",
+   "al_package",
+   "ad_package"
   ]
  }
 }
