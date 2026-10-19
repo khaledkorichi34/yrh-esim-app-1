@@ -72,7 +72,12 @@
   "af-29_package",
   "ax_package",
   "al_package",
-  "ad_package"
+  "ad_package",
+  "ao_package",
+  "ai_package",
+  "ag_package",
+  "am_package",
+  "aw_package"
  ],
  "days": {
   "2026-10-05": [
@@ -165,6 +170,13 @@
    "ax_package",
    "al_package",
    "ad_package"
+  ],
+  "2026-10-19": [
+   "ao_package",
+   "ai_package",
+   "ag_package",
+   "am_package",
+   "aw_package"
   ]
  }
 }
