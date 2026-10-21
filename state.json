@@ -82,7 +82,12 @@
   "as-12_package",
   "as-20_package",
   "as-14_package",
-  "as-21_package"
+  "as-21_package",
+  "aukus-3_package",
+  "aunz-2_package",
+  "az_package",
+  "bs_package",
+  "eu-7_package"
  ],
  "days": {
   "2026-10-05": [
@@ -189,6 +194,13 @@
    "as-20_package",
    "as-14_package",
    "as-21_package"
+  ],
+  "2026-10-21": [
+   "aukus-3_package",
+   "aunz-2_package",
+   "az_package",
+   "bs_package",
+   "eu-7_package"
   ]
  }
 }
