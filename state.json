@@ -87,7 +87,12 @@
   "aunz-2_package",
   "az_package",
   "bs_package",
-  "eu-7_package"
+  "eu-7_package",
+  "bd_package",
+  "bb_package",
+  "by_package",
+  "bz_package",
+  "bj_package"
  ],
  "days": {
   "2026-10-05": [
@@ -201,6 +206,13 @@
    "az_package",
    "bs_package",
    "eu-7_package"
+  ],
+  "2026-10-22": [
+   "bd_package",
+   "bb_package",
+   "by_package",
+   "bz_package",
+   "bj_package"
   ]
  }
 }
