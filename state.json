@@ -92,7 +92,12 @@
   "bb_package",
   "by_package",
   "bz_package",
-  "bj_package"
+  "bj_package",
+  "bm_package",
+  "bt_package",
+  "bo_package",
+  "bq_package",
+  "ba_package"
  ],
  "days": {
   "2026-10-05": [
@@ -213,6 +218,13 @@
    "by_package",
    "bz_package",
    "bj_package"
+  ],
+  "2026-10-23": [
+   "bm_package",
+   "bt_package",
+   "bo_package",
+   "bq_package",
+   "ba_package"
   ]
  }
 }
