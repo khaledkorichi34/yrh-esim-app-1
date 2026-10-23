@@ -222,6 +222,27 @@ add_action(
 					'availability'    => 'https://schema.org/InStock',
 					'url'             => $url,
 					'seller'          => array( '@type' => 'Organization', 'name' => 'YRH eSIM' ),
+					/* digital product: delivered free by email, no physical return; refund policy page explains it */
+					'shippingDetails' => array(
+						'@type'               => 'OfferShippingDetails',
+						'shippingRate'        => array( '@type' => 'MonetaryAmount', 'value' => 0, 'currency' => 'USD' ),
+						'shippingDestination' => array( '@type' => 'DefinedRegion', 'addressCountry' => yrh_seo_countries() ),
+						'deliveryTime'        => array(
+							'@type'        => 'ShippingDeliveryTime',
+							'handlingTime' => array( '@type' => 'QuantitativeValue', 'minValue' => 0, 'maxValue' => 0, 'unitCode' => 'DAY' ),
+							'transitTime'  => array( '@type' => 'QuantitativeValue', 'minValue' => 0, 'maxValue' => 0, 'unitCode' => 'DAY' ),
+						),
+					),
+					'hasMerchantReturnPolicy' => array(
+						'@type'                => 'MerchantReturnPolicy',
+						'applicableCountry'    => yrh_seo_countries(),
+						'returnPolicyCategory' => 'https://schema.org/MerchantReturnFiniteReturnWindow',
+						'merchantReturnDays'   => 30,
+						'returnMethod'         => 'https://schema.org/ReturnByMail',
+						'returnFees'           => 'https://schema.org/FreeReturn',
+						'refundType'           => 'https://schema.org/FullRefund',
+						'merchantReturnLink'   => home_url( '/refund-policy/' ),
+					),
 				);
 			}
 			$graph[] = $prod;
@@ -243,6 +264,22 @@ add_action(
 
 /* WooCommerce's own product markup would duplicate ours. */
 add_filter( 'woocommerce_structured_data_product', '__return_empty_array' );
+
+/* Turn WooCommerce's own JSON-LD off completely: on shop/list pages it printed half-empty product nodes. */
+add_action(
+	'init',
+	function () {
+		if ( function_exists( 'WC' ) && isset( WC()->structured_data ) && WC()->structured_data ) {
+			remove_action( 'wp_footer', array( WC()->structured_data, 'output_structured_data' ), 10 );
+		}
+	},
+	20
+);
+
+/* countries we sell to most (Google needs a list for shipping and returns) */
+function yrh_seo_countries() {
+	return array( 'US', 'GB', 'ES', 'FR', 'BE', 'DE', 'IT', 'NL', 'CH', 'CA', 'MA', 'DZ', 'TN', 'SA', 'AE', 'TR', 'EG' );
+}
 
 /* ---------- robots ---------- */
 add_filter(
