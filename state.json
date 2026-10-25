@@ -102,7 +102,12 @@
   "bn_package",
   "bg_package",
   "bf_package",
-  "kh_package"
+  "kh_package",
+  "cm_package",
+  "cv_package",
+  "cb-25_package",
+  "ky_package",
+  "cf_package"
  ],
  "days": {
   "2026-10-05": [
@@ -237,6 +242,13 @@
    "bg_package",
    "bf_package",
    "kh_package"
+  ],
+  "2026-10-25": [
+   "cm_package",
+   "cv_package",
+   "cb-25_package",
+   "ky_package",
+   "cf_package"
   ]
  }
 }
