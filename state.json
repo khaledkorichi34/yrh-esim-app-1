@@ -107,7 +107,12 @@
   "cv_package",
   "cb-25_package",
   "ky_package",
-  "cf_package"
+  "cf_package",
+  "ca-4_package",
+  "as-5_package",
+  "td_package",
+  "cn-3_package",
+  "cnjpkr-3_package"
  ],
  "days": {
   "2026-10-05": [
@@ -249,6 +254,13 @@
    "cb-25_package",
    "ky_package",
    "cf_package"
+  ],
+  "2026-10-26": [
+   "ca-4_package",
+   "as-5_package",
+   "td_package",
+   "cn-3_package",
+   "cnjpkr-3_package"
   ]
  }
 }
