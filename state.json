@@ -112,7 +112,12 @@
   "as-5_package",
   "td_package",
   "cn-3_package",
-  "cnjpkr-3_package"
+  "cnjpkr-3_package",
+  "ci_package",
+  "cw_package",
+  "cd_package",
+  "dm_package",
+  "ec_package"
  ],
  "days": {
   "2026-10-05": [
@@ -261,6 +266,13 @@
    "td_package",
    "cn-3_package",
    "cnjpkr-3_package"
+  ],
+  "2026-10-27": [
+   "ci_package",
+   "cw_package",
+   "cd_package",
+   "dm_package",
+   "ec_package"
   ]
  }
 }
