@@ -117,7 +117,12 @@
   "cw_package",
   "cd_package",
   "dm_package",
-  "ec_package"
+  "ec_package",
+  "sv_package",
+  "ee_package",
+  "sz_package",
+  "et_package",
+  "eu-35_package"
  ],
  "days": {
   "2026-10-05": [
@@ -273,6 +278,13 @@
    "cd_package",
    "dm_package",
    "ec_package"
+  ],
+  "2026-10-28": [
+   "sv_package",
+   "ee_package",
+   "sz_package",
+   "et_package",
+   "eu-35_package"
   ]
  }
 }
