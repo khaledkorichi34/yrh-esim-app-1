@@ -122,7 +122,12 @@
   "ee_package",
   "sz_package",
   "et_package",
-  "eu-35_package"
+  "eu-35_package",
+  "eu-30_package",
+  "eu-33_package",
+  "eu-31_package",
+  "eu-43_package",
+  "fo_package"
  ],
  "days": {
   "2026-10-05": [
@@ -285,6 +290,13 @@
    "sz_package",
    "et_package",
    "eu-35_package"
+  ],
+  "2026-10-29": [
+   "eu-30_package",
+   "eu-33_package",
+   "eu-31_package",
+   "eu-43_package",
+   "fo_package"
   ]
  }
 }
