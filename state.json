@@ -127,7 +127,12 @@
   "eu-33_package",
   "eu-31_package",
   "eu-43_package",
-  "fo_package"
+  "fo_package",
+  "fj_package",
+  "fi_package",
+  "gf_package",
+  "pf_package",
+  "ga_package"
  ],
  "days": {
   "2026-10-05": [
@@ -297,6 +302,13 @@
    "eu-31_package",
    "eu-43_package",
    "fo_package"
+  ],
+  "2026-10-30": [
+   "fj_package",
+   "fi_package",
+   "gf_package",
+   "pf_package",
+   "ga_package"
   ]
  }
 }
