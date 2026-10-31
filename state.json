@@ -132,7 +132,12 @@
   "fi_package",
   "gf_package",
   "pf_package",
-  "ga_package"
+  "ga_package",
+  "gm_package",
+  "saaeqakwombh-6_package",
+  "ge_package",
+  "gh_package",
+  "gi_package"
  ],
  "days": {
   "2026-10-05": [
@@ -309,6 +314,13 @@
    "gf_package",
    "pf_package",
    "ga_package"
+  ],
+  "2026-10-31": [
+   "gm_package",
+   "saaeqakwombh-6_package",
+   "ge_package",
+   "gh_package",
+   "gi_package"
   ]
  }
 }
