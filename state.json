@@ -137,7 +137,12 @@
   "saaeqakwombh-6_package",
   "ge_package",
   "gh_package",
-  "gi_package"
+  "gi_package",
+  "gl-139_package",
+  "gl_package",
+  "gd_package",
+  "gp_package",
+  "gu_package"
  ],
  "days": {
   "2026-10-05": [
@@ -321,6 +326,13 @@
    "ge_package",
    "gh_package",
    "gi_package"
+  ],
+  "2026-11-01": [
+   "gl-139_package",
+   "gl_package",
+   "gd_package",
+   "gp_package",
+   "gu_package"
   ]
  }
 }
