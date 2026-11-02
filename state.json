@@ -142,7 +142,12 @@
   "gl_package",
   "gd_package",
   "gp_package",
-  "gu_package"
+  "gu_package",
+  "gt_package",
+  "gg_package",
+  "gn_package",
+  "gw_package",
+  "me-6_package"
  ],
  "days": {
   "2026-10-05": [
@@ -333,6 +338,13 @@
    "gd_package",
    "gp_package",
    "gu_package"
+  ],
+  "2026-11-02": [
+   "gt_package",
+   "gg_package",
+   "gn_package",
+   "gw_package",
+   "me-6_package"
   ]
  }
 }
