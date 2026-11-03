@@ -147,7 +147,12 @@
   "gg_package",
   "gn_package",
   "gw_package",
-  "me-6_package"
+  "me-6_package",
+  "gy_package",
+  "ht_package",
+  "hn_package",
+  "iq_package",
+  "iesi-2_package"
  ],
  "days": {
   "2026-10-05": [
@@ -345,6 +350,13 @@
    "gn_package",
    "gw_package",
    "me-6_package"
+  ],
+  "2026-11-03": [
+   "gy_package",
+   "ht_package",
+   "hn_package",
+   "iq_package",
+   "iesi-2_package"
   ]
  }
 }
