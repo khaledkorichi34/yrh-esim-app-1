@@ -152,7 +152,12 @@
   "ht_package",
   "hn_package",
   "iq_package",
-  "iesi-2_package"
+  "iesi-2_package",
+  "bi-2_package",
+  "im_package",
+  "jm_package",
+  "jpkr-2_package",
+  "je_package"
  ],
  "days": {
   "2026-10-05": [
@@ -357,6 +362,13 @@
    "hn_package",
    "iq_package",
    "iesi-2_package"
+  ],
+  "2026-11-04": [
+   "bi-2_package",
+   "im_package",
+   "jm_package",
+   "jpkr-2_package",
+   "je_package"
   ]
  }
 }
