@@ -190,8 +190,14 @@ class Ctx:
         img.alpha_composite(self.grain[frame % len(self.grain)])
         # brand bug top
         d = ImageDraw.Draw(img)
-        d.text((W // 2, 120), "YRH eSIM", font=self.brand_f, fill=INK + (200,), anchor="mm")
-        d.rounded_rectangle([W // 2 - 26, 150, W // 2 + 26, 156], radius=3, fill=self.accent + (230,))
+        d.text((W // 2, 112), "YRH eSIM", font=self.brand_f, fill=INK + (200,), anchor="mm")
+        d.rounded_rectangle([W // 2 - 26, 142, W // 2 + 26, 148], radius=3, fill=self.accent + (230,))
+        # the shop link stays on screen the whole video
+        lf = self.brand_f.font_variant(size=46)
+        tw = d.textlength("yrh.ai", font=lf)
+        d.rounded_rectangle([W // 2 - tw / 2 - 34, 168, W // 2 + tw / 2 + 34, 236], radius=34,
+                            fill=(255, 255, 255, 235))
+        d.text((W // 2, 202), "yrh.ai", font=lf, fill=BG + (255,), anchor="mm")
         return img
 
 

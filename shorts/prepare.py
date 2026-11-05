@@ -136,9 +136,9 @@ Return ONLY JSON:
 "offer_labels":{{{', '.join(f'"{k}":"destination name in the target language"' for k in keys)}}},
 "benefit_bullets":["4 bullets, max 3 words each"],
 "cta_button":"'Get it on Google Play' in the target language, short",
-"title":"YouTube title in the target language, max 70 chars, includes eSIM and a destination, max 1 emoji",
-"description":"4-6 lines in the target language: hook line, the prices list with plan sizes, https://yrh.ai, the Google Play app name, the line 'Prices checked on yrh.ai, {human_date(plan)}' translated, then 3-5 hashtags",
-"tags":"8-12 comma-separated tags mixing the target language and English",
+"title":"SEO title in the target language, max 70 chars: start with the exact phrase people search (e.g. 'eSIM <first destination>' in the target language), then the cheapest price with its data amount, then '| YRH eSIM'; max 1 emoji",
+"description":"4-6 lines in the target language: hook line, the prices list with plan sizes, https://yrh.ai, the Google Play app name, the line 'Prices checked on yrh.ai, {human_date(plan)}' translated, then 3-5 hashtags in the target language and English (no #Shorts, it is added). The first line must contain the main search phrase. Do not put URLs in it, they are added automatically",
+"tags":"10-15 comma-separated search phrases people type, in the target language and English: 'esim <destination>', '<destination> sim card', 'internet in <destination>', 'roaming', 'travel esim', 'YRH eSIM'",
 "tts_style":"one English sentence for the voice actor: tone, pace, accent"}}
 Headlines and subs must not contain prices with plan sizes split apart; if a sub shows a price it must also show its data amount.""")
 
@@ -198,7 +198,17 @@ def cmd_spec(job, script_path):
             "price_note": f"yrh.ai · {human_date(plan)}", "scenes": s["scenes"]}
     json.dump(spec, open(os.path.join(jdir(job), "spec.json"), "w"), ensure_ascii=False, indent=1)
     title = s["title"][:95]
-    meta = {"title": title, "description": s["description"] + "\n\n#Shorts", "tags": s["tags"],
+    utm = f"utm_source=youtube&utm_medium=shorts&utm_campaign={plan['job']}"
+    links = []
+    for k in plan["pool"]:
+        cd = plan["prices"][k]["card"]
+        links.append(f"{plan['dest'][k]['emoji']} {s['offer_labels'][k]} {fmt_plan(cd['gb'], cd['days'])} ${cd['price']:.2f}: "
+                     f"https://yrh.ai/product/{plan['dest'][k]['slug']}/?{utm}")
+    first_line = s["description"].split("\n")[0]
+    rest = "\n".join(s["description"].split("\n")[1:])
+    desc = (f"{first_line}\n👉 https://yrh.ai/product/{plan['dest'][first]['slug']}/?{utm}\n\n" + "\n".join(links)
+            + f"\n\n{rest}\n\n📲 YRH eSIM (Google Play)\n🌐 https://yrh.ai/?{utm}\n#Shorts")
+    meta = {"title": title, "description": desc, "tags": s["tags"],
             "voice": c["voice"], "music": plan["music"], "publish_at": plan["publish_at"]}
     json.dump(meta, open(os.path.join(jdir(job), "meta.json"), "w"), ensure_ascii=False, indent=1)
     lines = "\n\n".join(sc["voice"] for sc in s["scenes"])
