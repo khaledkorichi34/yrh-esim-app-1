@@ -97,15 +97,38 @@ def cmd_prices(job, key, path):
     print(key, "cheapest", p["cheapest"]["option"], p["cheapest"]["price"], "| card", p["card"]["option"], p["card"]["price"])
 
 
+def cur(plan):
+    return plan["country"].get("currency")
+
+
+def amount(plan, usd):
+    """Price as shown to this audience: local currency if the country has one set, else USD."""
+    c = cur(plan)
+    return f"{usd * c['rate']:.2f}" if c else f"{usd:.2f}"
+
+
+def money(plan, usd):
+    c = cur(plan)
+    return f"{amount(plan, usd)} {c['word']}" if c else f"${usd:.2f}"
+
+
 def price_lines(plan):
     out = []
     for k in plan["pool"]:
         p = plan["prices"][k]
         en = plan["dest"][k]["en"]
         ch, cd = p["cheapest"], p["card"]
-        out.append(f"- {k} = {en}: {fmt_plan(ch['gb'], ch['days'])} = ${ch['price']:.2f} ; "
-                   f"{fmt_plan(cd['gb'], cd['days'])} = ${cd['price']:.2f}")
+        out.append(f"- {k} = {en}: {fmt_plan(ch['gb'], ch['days'])} = {money(plan, ch['price'])} ; "
+                   f"{fmt_plan(cd['gb'], cd['days'])} = {money(plan, cd['price'])}")
     return "\n".join(out)
+
+
+def currency_rule(plan):
+    c = cur(plan)
+    if not c:
+        return "Prices are in US dollars."
+    return (f"Show and say prices ONLY in {c['name']} ({c['word']}), never in dollars. In voice lines you may round "
+            f"up as 'less than N {c['word']}' (N = next whole number above the price).")
 
 
 def human_date(plan):
@@ -119,25 +142,27 @@ def cmd_prompt(job):
     keys = plan["pool"]
     print(f"""Write a 26-30 second YouTube Short script for YRH eSIM (travel data eSIMs, website yrh.ai, Android app "YRH eSIM" on Google Play).
 Audience: residents of {c['name']} who travel abroad. Language: {c['language']}. Natural, warm, energetic, like a friend giving a travel tip; never stiff or formal.
-Featured destinations and REAL prices in USD (use exactly; never invent other numbers, plans or currencies):
+Featured destinations and REAL prices (use exactly; never invent other numbers, plans or currencies):
 {price_lines(plan)}
+{currency_rule(plan)}
 True facts you may use: QR code arrives by email right after purchase; install in minutes (Wi-Fi needed to install); works on local 4G/5G networks; hotspot included; top up anytime; data only (no phone number); phone must be unlocked and eSIM-compatible; "works or your money back" with WhatsApp support.
 Never claim: unlimited data, cheapest in the world, named carriers' roaming prices, user counts, discounts.
 Every spoken price must be said together with its data amount. Write numbers in voice lines as words, the way a native speaker says them.
-Make this video feel different from a generic ad: open with a hook built on the FIRST destination ({plan['dest'][keys[0]]['en']}) and its cheapest price, and add one genuinely useful travel tip for that destination in the problem or benefits line.
+Make this video feel different from a generic ad: open with a hook built on the FIRST destination ({plan['dest'][keys[0]]['en']}) and its cheapest price, and add one genuinely useful travel tip for that destination in the problem line.
 Scenes (each voice line 4-10 words):
 1 hook (0-3s): destination question + price shock with its data amount
 2 problem: roaming bills / SIM-shop queues / a practical tip
 3 offers: name the destinations; say at most one price aloud
-4 benefits: how it works
-5 cta: yrh.ai + the app on Google Play
+4 steps: how to order on the website: go to yrh.ai, choose your destination and plan, pay, scan the QR code from the email
+5 cta: download our app from our website yrh.ai (the "Get the app" button at the top of the site)
 Return ONLY JSON:
-{{"scenes":[{{"id":"hook|problem|offers|benefits|cta","voice":"...","headline":"max 5 words on screen","sub":"max 6 words or empty"}}],
+{{"scenes":[{{"id":"hook|problem|offers|steps|cta","voice":"...","headline":"max 5 words on screen","sub":"max 6 words or empty"}}],
 "offer_labels":{{{', '.join(f'"{k}":"destination name in the target language"' for k in keys)}}},
-"benefit_bullets":["4 bullets, max 3 words each"],
-"cta_button":"'Get it on Google Play' in the target language, short",
+"steps":["4 short on-screen steps, max 5 words each; step 1 must contain yrh.ai"],
+"cta_button":"'Download the app at yrh.ai' in the target language, short",
+"price_note":"one short footnote line in the target language: prices from yrh.ai on {human_date(plan)}{'' if not cur(plan) else ', shown in ' + cur(plan)['name'] + ' at ' + str(cur(plan)['rate']) + ' per dollar, paid in USD on the site'}",
 "title":"SEO title in the target language, max 70 chars: start with the exact phrase people search (e.g. 'eSIM <first destination>' in the target language), then the cheapest price with its data amount, then '| YRH eSIM'; max 1 emoji",
-"description":"4-6 lines in the target language: hook line, the prices list with plan sizes, https://yrh.ai, the Google Play app name, the line 'Prices checked on yrh.ai, {human_date(plan)}' translated, then 3-5 hashtags in the target language and English (no #Shorts, it is added). The first line must contain the main search phrase. Do not put URLs in it, they are added automatically",
+"description":"4-6 lines in the target language: hook line, the prices list with plan sizes, the 4 ordering steps, 'download the YRH eSIM app from yrh.ai', the line 'Prices checked on yrh.ai, {human_date(plan)}' translated, then 3-5 hashtags in the target language and English (no #Shorts, it is added). The first line must contain the main search phrase. Do not put URLs in it, they are added automatically",
 "tags":"10-15 comma-separated search phrases people type, in the target language and English: 'esim <destination>', '<destination> sim card', 'internet in <destination>', 'roaming', 'travel esim', 'YRH eSIM'",
 "tts_style":"one English sentence for the voice actor: tone, pace, accent"}}
 Headlines and subs must not contain prices with plan sizes split apart; if a sub shows a price it must also show its data amount.""")
@@ -148,8 +173,9 @@ def cmd_review(job, script_path):
     c = plan["country"]
     script = open(script_path, encoding="utf-8").read().strip()
     print(f"""Review and correct this YouTube Short script JSON for YRH eSIM, aimed at residents of {c['name']} travelling abroad, language: {c['language']}.
-Allowed facts and prices (USD), nothing else:
+Allowed facts and prices, nothing else:
 {price_lines(plan)}
+{currency_rule(plan)}
 Check and fix:
 1. Every price matches the list and is tied to its data amount and validity. Remove any number not in the list.
 2. Language is natural and native for {c['name']} (spelling, grammar, idiom). No machine-translation feel.
@@ -175,11 +201,11 @@ def cmd_spec(job, script_path):
     c = plan["country"]
     font = dict(CFG["fonts"][c["font"]])
     ids = [x["id"] for x in s["scenes"]]
-    assert ids == ["hook", "problem", "offers", "benefits", "cta"], ids
+    assert ids == ["hook", "problem", "offers", "steps", "cta"], ids
     allowed = set()
     for k in plan["pool"]:
         for which in ("cheapest", "card"):
-            allowed.add(f"{plan['prices'][k][which]['price']:.2f}")
+            allowed.add(amount(plan, plan['prices'][k][which]['price']))
     # on-screen prices must be real
     for sc in s["scenes"]:
         for fld in ("headline", "sub"):
@@ -191,23 +217,26 @@ def cmd_spec(job, script_path):
     for k in plan["pool"]:
         cd = plan["prices"][k]["card"]
         offers.append({"emoji": plan["dest"][k]["emoji"], "label": s["offer_labels"][k],
-                       "plan": fmt_plan(cd["gb"], cd["days"]), "price": f"${cd['price']:.2f}"})
+                       "plan": fmt_plan(cd["gb"], cd["days"]),
+                       **({"price": amount(plan, cd["price"]), "unit": cur(plan)["word"]} if cur(plan)
+                          else {"price": f"${cd['price']:.2f}"})})
     spec = {"lang": c["lang"], "rtl": font.pop("rtl", False), **font,
             "accent": c["accent"], "accent2": c["accent2"], "hook_emoji": plan["dest"][first]["emoji"],
-            "cta_button": s["cta_button"], "offers": offers, "bullets": s["benefit_bullets"][:4],
-            "price_note": f"yrh.ai · {human_date(plan)}", "scenes": s["scenes"]}
+            "cta_button": s["cta_button"], "offers": offers, "steps": s["steps"][:4],
+            "price_note": s.get("price_note") or f"yrh.ai · {human_date(plan)}", "scenes": s["scenes"],
+            **({"bill_text": "! ! !"} if cur(plan) else {})}
     json.dump(spec, open(os.path.join(jdir(job), "spec.json"), "w"), ensure_ascii=False, indent=1)
     title = s["title"][:95]
     utm = f"utm_source=youtube&utm_medium=shorts&utm_campaign={plan['job']}"
     links = []
     for k in plan["pool"]:
         cd = plan["prices"][k]["card"]
-        links.append(f"{plan['dest'][k]['emoji']} {s['offer_labels'][k]} {fmt_plan(cd['gb'], cd['days'])} ${cd['price']:.2f}: "
+        links.append(f"{plan['dest'][k]['emoji']} {s['offer_labels'][k]} {fmt_plan(cd['gb'], cd['days'])} {money(plan, cd['price'])}: "
                      f"https://yrh.ai/product/{plan['dest'][k]['slug']}/?{utm}")
     first_line = s["description"].split("\n")[0]
     rest = "\n".join(s["description"].split("\n")[1:])
     desc = (f"{first_line}\n👉 https://yrh.ai/product/{plan['dest'][first]['slug']}/?{utm}\n\n" + "\n".join(links)
-            + f"\n\n{rest}\n\n📲 YRH eSIM (Google Play)\n🌐 https://yrh.ai/?{utm}\n#Shorts")
+            + f"\n\n{rest}\n\n📲 YRH eSIM app: https://yrh.ai/?{utm} (Get the app)\n#Shorts")
     meta = {"title": title, "description": desc, "tags": s["tags"],
             "voice": c["voice"], "music": plan["music"], "publish_at": plan["publish_at"]}
     json.dump(meta, open(os.path.join(jdir(job), "meta.json"), "w"), ensure_ascii=False, indent=1)
