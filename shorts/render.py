@@ -246,7 +246,7 @@ def p_problem(c, img, t, dur, sc):
     # big red "!!!"
     r = ease((t - 0.3) / 0.3)
     d.rounded_rectangle([x0 + 60, yy + 330, x0 + bw - 60, yy + 420], radius=24, fill=(230, 57, 70, int(255 * r)))
-    d.text((cx + shake, yy + 375), "$ $ $ !", font=c.brand_f.font_variant(size=60), fill=(255, 255, 255, int(255 * r)),
+    d.text((cx + shake, yy + 375), c.spec.get("bill_text", "$ $ $ !"), font=c.brand_f.font_variant(size=60), fill=(255, 255, 255, int(255 * r)),
            anchor="mm")
     img.alpha_composite(lay)
     f, lines = T.fit(sc["headline"], W - 140, 112, 64, maxlines=2)
@@ -295,8 +295,14 @@ def p_offers(c, img, t, dur, sc):
         # price (always LTR digits)
         pfnt = ImageFont.truetype(os.path.join(FONTS, "Inter-ExtraBold.otf"), 88)
         px = (x0 + 60) if T.rtl else (x1 - 60)
-        d.text((px, y0 + ch / 2 + 10), o["price"], font=pfnt, fill=c.accent2 + (int(255 * ai),),
+        unit = o.get("unit")
+        d.text((px, y0 + ch / 2 + (-10 if unit else 10)), o["price"], font=pfnt, fill=c.accent2 + (int(255 * ai),),
                anchor=("lm" if T.rtl else "rm"))
+        if unit:  # currency word in the viewer's language under the number
+            pw = d.textlength(o["price"], font=pfnt)
+            ux = px + pw / 2 if T.rtl else px - pw / 2
+            d.text((ux, y0 + ch / 2 + 70), unit, font=T.font(44), fill=c.accent2 + (int(255 * ai),),
+                   anchor="mm", **T.kw())
         if o.get("from"):
             ff = T.font(34, bold=False)
             d.text((px, y0 + 70), o["from"], font=ff, fill=MUTED + (int(255 * ai),),
@@ -373,6 +379,41 @@ def p_benefits(c, img, t, dur, sc):
         img.alpha_composite(lay)
 
 
+def p_steps(c, img, t, dur, sc):
+    """Numbered 'how to order' steps, one appearing after another."""
+    T = c.typo
+    a = ease(t / 0.3)
+    f, lines = T.fit(sc["headline"], W - 140, 96, 60, maxlines=2)
+    y = draw_text_block(img, T, lines, f, W // 2, 330, INK, a, int(40 * (1 - a)))
+    steps = c.spec.get("steps", [])
+    n = max(1, len(steps))
+    top = max(y + 60, 560)
+    rh, gap = 190, 34
+    step_t = min(1.2, max(0.5, (dur - 1.0) / n))
+    numf = ImageFont.truetype(os.path.join(FONTS, "Inter-ExtraBold.otf"), 64)
+    for i, s_ in enumerate(steps):
+        ai = ease((t - 0.3 - i * step_t) / 0.35)
+        if ai <= 0:
+            continue
+        y0 = top + i * (rh + gap) + int(50 * (1 - ai))
+        lay = Image.new("RGBA", img.size, (0, 0, 0, 0))
+        d = ImageDraw.Draw(lay)
+        d.rounded_rectangle([70, y0, W - 70, y0 + rh], radius=40, fill=CARD + (int(245 * ai),),
+                            outline=c.accent + (int(140 * ai),), width=3)
+        cx = (W - 70 - 95) if T.rtl else (70 + 95)
+        d.ellipse([cx - 55, y0 + rh / 2 - 55, cx + 55, y0 + rh / 2 + 55], fill=c.accent + (int(255 * ai),))
+        d.text((cx, y0 + rh / 2 + 2), str(i + 1), font=numf, fill=(255, 255, 255, int(255 * ai)), anchor="mm")
+        img.alpha_composite(lay)
+        sf, sl = T.fit(s_, W - 140 - 230, 58, 36, maxlines=2)
+        tx = (W - 70 - 190) if T.rtl else (70 + 190)
+        lh = int(sf.size * 1.18)
+        yy = y0 + rh / 2 - lh * len(sl) / 2 + lh / 2
+        d2 = ImageDraw.Draw(img)
+        for ln in sl:
+            d2.text((tx, yy), ln, font=sf, fill=INK + (int(255 * ai),), anchor=("rm" if T.rtl else "lm"), **T.kw())
+            yy += lh
+
+
 def p_cta(c, img, t, dur, sc):
     T = c.typo
     a = ease(t / 0.35)
@@ -410,7 +451,7 @@ def p_cta(c, img, t, dur, sc):
         draw_text_block(img, T, l2, f2, W // 2, by + bh + 60, MUTED, a2)
 
 
-PAINTERS = {"hook": p_hook, "problem": p_problem, "offers": p_offers, "benefits": p_benefits, "cta": p_cta}
+PAINTERS = {"hook": p_hook, "problem": p_problem, "offers": p_offers, "benefits": p_benefits, "steps": p_steps, "cta": p_cta}
 
 
 # ---------- timing from voice ----------
@@ -437,8 +478,13 @@ def scene_bounds(voice, scenes):
         guess.append(total * acc / sum(lens))
     cuts = []
     if len(gaps) >= n - 1:
-        # the n-1 longest pauses are the scene breaks (the voice is read with a long pause between lines)
-        cuts = sorted(m for _, m in sorted(gaps, key=lambda g: -g[0])[: n - 1])
+        # each break = the pause that best combines length and closeness to where the text says it should be
+        used, cuts = set(), []
+        for g in guess:
+            best = max((x for x in gaps if x[1] not in used),
+                       key=lambda x: x[0] - 0.22 * abs(x[1] - g))
+            used.add(best[1]); cuts.append(best[1])
+        cuts.sort()
     else:
         cuts = guess
     return total, cuts
