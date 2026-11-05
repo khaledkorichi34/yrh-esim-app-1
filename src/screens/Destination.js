@@ -1,51 +1,32 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { View, Text, ScrollView, Pressable, StyleSheet } from 'react-native';
 import * as WebBrowser from 'expo-web-browser';
-import { useShopifyCheckoutSheet } from '@shopify/checkout-sheet-kit';
 import { C, T, dir } from '../theme';
 import { t, countryName } from '../i18n';
-import { checkoutUrl } from '../shopify';
+import { checkoutUrl } from '../store';
 import PlanTicket from '../components/PlanTicket';
 
 export default function Destination({ dest, lang, rtl, onBack, topInset }) {
   const d = dir(rtl);
-  const checkout = useShopifyCheckoutSheet();
   const [busyId, setBusyId] = useState(null);
-  const [notice, setNotice] = useState(null); // 'paid' | 'sent' | 'error'
-  const [paidEmail, setPaidEmail] = useState(null);
-
-  // Checkout runs in a sheet inside the app. These events tell us how it ended.
-  useEffect(() => {
-    const subs = [
-      checkout.addEventListener('completed', (event) => {
-        setPaidEmail((event && event.orderDetails && event.orderDetails.email) || null);
-        setNotice('paid');
-      }),
-      checkout.addEventListener('error', () => setNotice('error')),
-      checkout.addEventListener('close', () => setBusyId(null)),
-    ];
-    return () => subs.forEach((s) => s && s.remove && s.remove());
-  }, [checkout]);
+  const [notice, setNotice] = useState(null); // 'sent' | 'error'
 
   async function buy(plan) {
     setBusyId(plan.id);
     setNotice(null);
-    const url = checkoutUrl(plan.id);
     try {
-      // Payment happens here, inside the app. After payment the store's
-      // automation orders the eSIM and emails the install link.
-      checkout.present(url);
-      setTimeout(() => setBusyId(null), 1500);
+      // Payment happens on the yrh.ai checkout, opened in a browser tab over the app.
+      // After payment the store's automation orders the eSIM and emails the install link.
+      await WebBrowser.openBrowserAsync(checkoutUrl(plan), {
+        toolbarColor: C.navy,
+        controlsColor: C.yellow,
+        showTitle: true,
+      });
+      setNotice('sent');
     } catch (e) {
-      // If the in-app sheet is unavailable on this phone, fall back to a browser tab.
-      try {
-        await WebBrowser.openBrowserAsync(url, { toolbarColor: C.navy, controlsColor: C.yellow, showTitle: true });
-        setNotice('sent');
-      } catch (e2) {
-        setNotice('error');
-      } finally {
-        setBusyId(null);
-      }
+      setNotice('error');
+    } finally {
+      setBusyId(null);
     }
   }
 
@@ -55,14 +36,9 @@ export default function Destination({ dest, lang, rtl, onBack, topInset }) {
     dest.network && { k: t(lang, 'network'), v: dest.network.replace(/^[A-Z]{2}\s*-\s*/, '') },
   ].filter(Boolean);
 
-  const showCard = notice === 'paid' || notice === 'sent';
-  const cardTitle = notice === 'paid' ? t(lang, 'paidTitle') : t(lang, 'sentTitle');
-  const cardText =
-    notice === 'paid'
-      ? paidEmail
-        ? t(lang, 'paidTextEmail', { email: paidEmail })
-        : t(lang, 'paidText')
-      : t(lang, 'sentText');
+  const showCard = notice === 'sent';
+  const cardTitle = t(lang, 'sentTitle');
+  const cardText = t(lang, 'sentText');
 
   return (
     <ScrollView style={styles.screen} contentContainerStyle={styles.content}>

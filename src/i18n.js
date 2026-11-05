@@ -23,6 +23,8 @@ const S = {
     choosePlan: 'Choose a plan',
     buy: 'Buy',
     perDay: '{data} per day',
+    unlimited: 'Unlimited',
+    unlimitedSpeed: 'Unlimited · {speed}',
     hotspot: 'Hotspot',
     topUp: 'Top-up',
     yes: 'Yes',
@@ -66,6 +68,8 @@ const S = {
     choosePlan: 'اختر باقة',
     buy: 'اشترِ',
     perDay: '{data} يومياً',
+    unlimited: 'غير محدود',
+    unlimitedSpeed: 'غير محدود · {speed}',
     hotspot: 'مشاركة الإنترنت',
     topUp: 'الشحن الإضافي',
     yes: 'نعم',
@@ -109,6 +113,8 @@ const S = {
     choosePlan: 'Choisissez un forfait',
     buy: 'Acheter',
     perDay: '{data} par jour',
+    unlimited: 'Illimité',
+    unlimitedSpeed: 'Illimité · {speed}',
     hotspot: 'Partage de connexion',
     topUp: 'Recharge',
     yes: 'Oui',
@@ -152,6 +158,8 @@ const S = {
     choosePlan: 'Elige un plan',
     buy: 'Comprar',
     perDay: '{data} al día',
+    unlimited: 'Ilimitado',
+    unlimitedSpeed: 'Ilimitado · {speed}',
     hotspot: 'Compartir conexión',
     topUp: 'Recarga',
     yes: 'Sí',
@@ -221,7 +229,7 @@ export function formatPrice(lang, n) {
     if (!priceFmt[loc]) priceFmt[loc] = new Intl.NumberFormat(loc, { style: 'currency', currency: CURRENCY });
     return priceFmt[loc].format(n);
   } catch (e) {
-    return '€' + n.toFixed(2);
+    return '$' + n.toFixed(2);
   }
 }
 

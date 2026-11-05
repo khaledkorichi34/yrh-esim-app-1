@@ -7,7 +7,15 @@ import { t, daysLabel, formatPrice } from '../i18n';
 // a perforated tear line, then the price and the buy action.
 export default function PlanTicket({ plan, lang, rtl, busy, onBuy }) {
   const d = dir(rtl);
-  const data = plan.data ? (plan.perDay ? t(lang, 'perDay', { data: plan.data }) : plan.data) : plan.title;
+  const data = plan.data
+    ? plan.perDay
+      ? t(lang, 'perDay', { data: plan.data })
+      : plan.data
+    : plan.unlimited
+      ? plan.unlimited === 'full'
+        ? t(lang, 'unlimited')
+        : t(lang, 'unlimitedSpeed', { speed: plan.unlimited })
+      : plan.title;
   const days = daysLabel(lang, plan.days);
   const price = formatPrice(lang, plan.price);
 
