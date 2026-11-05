@@ -157,7 +157,12 @@
   "im_package",
   "jm_package",
   "jpkr-2_package",
-  "je_package"
+  "je_package",
+  "kz_package",
+  "xk_package",
+  "kg_package",
+  "la_package",
+  "lv_package"
  ],
  "days": {
   "2026-10-05": [
@@ -369,6 +374,13 @@
    "jm_package",
    "jpkr-2_package",
    "je_package"
+  ],
+  "2026-11-05": [
+   "kz_package",
+   "xk_package",
+   "kg_package",
+   "la_package",
+   "lv_package"
   ]
  }
 }
