@@ -15,6 +15,7 @@ Everything lives on branch `youtube-assets` of `khaledkorichi34/yrh-esim-app-1`.
 | Fable (OpenRouter) | 10078512 | `s10078512_open_router_ask_fable` (prompt, system, max_tokens) |
 | Gemini TTS -> repo | 10111683 | `scenarios_run` with data {text, voice, path} (responsive) |
 | Gemini Lyria music -> repo | 10111688 | `scenarios_run` with data {prompt, path} |
+| Instagram Reel (YRH eSIM) | 10112718 | `scenarios_run` with data {video_url, caption} |
 | YouTube upload (@yrhesim) | 10111677 | `scenarios_run` with data {video_url, title, description, tags, publish_at} |
 
 Long Gemini/Fable runs may return only an executionId: read the result with `executions_get-detail`
@@ -44,7 +45,11 @@ Work in a clone of the branch: `git clone --depth 1 -b youtube-assets https://gi
 9. Publish: commit `videos/<JOB>.mp4`, `jobs/<JOB>/`, push to `youtube-assets`, then run scenario 10111677 with
    video_url `https://raw.githubusercontent.com/khaledkorichi34/yrh-esim-app-1/youtube-assets/videos/<JOB>.mp4`,
    title, description, tags from `meta.json`, and publish_at from `meta.json`.
+9b. Instagram: post the same video with scenario 10112718 {video_url (same raw URL), caption}. Caption in the target language:
+   hook line, the 3 destinations with plan size and price, benefits line, "yrh.ai (link in bio)" + the app on Google Play,
+   the price-check date line, then 5-8 hashtags. No URLs (not clickable on Instagram). Instagram gets ONLY these YouTube videos.
+   It can take a few minutes; if the call times out, check `executions_list` for scenario 10112718 instead of posting twice.
 10. `python3 prepare.py done <JOB> <videoId>`, commit state.json and push.
-11. Report in Arabic to Khaled (SendUserMessage): country, destinations, title, the scheduled time, link `https://youtu.be/<videoId>`.
+11. Report in Arabic to Khaled (SendUserMessage): country, destinations, title, the scheduled time, link `https://youtu.be/<videoId>`, and whether the Instagram Reel was posted.
 
 Never publish a price that is not in that day's yrh.ai data. If any step fails twice, stop and report what failed.
