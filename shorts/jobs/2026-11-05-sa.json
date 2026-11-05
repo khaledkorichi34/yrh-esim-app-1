@@ -1,0 +1,11 @@
+{"lang":"ar","rtl":true,"font_bold":"fonts/Tajawal-ExtraBold.ttf","font_regular":"fonts/Tajawal-Medium.ttf",
+"accent":"#00A651","accent2":"#7CF7B0","hook_emoji":"✈️","cta_button":"حمّله من جوجل بلاي",
+"price_note":"الأسعار من yrh.ai بتاريخ 5 نوفمبر 2026",
+"offers":[{"emoji":"🇹🇷","label":"تركيا","plan":"10GB · 30 days","price":"$7.27"},{"emoji":"🇪🇺","label":"أوروبا","plan":"5GB · 30 days","price":"$6.19"},{"emoji":"🌍","label":"عالمية","plan":"1GB · 7 days","price":"$10.43"}],
+"bullets":["تفعيل سريع بكود QR","شبكات 4G/5G","هوت سبوت مدعوم","دعم عبر الواتساب"],
+"scenes":[
+{"id":"hook","voice":"مسافر لتركيا؟ ثلاثة جيجا بثلاثة دولار وسبعة وثلاثين سنت!","headline":"مسافر لتركيا؟","sub":"3GB بـ $3.37 فقط"},
+{"id":"problem","voice":"انسَ فواتير التجوال الغالية وحوسة شرايح المطار.","headline":"وداعاً لفواتير التجوال!","sub":"لا تضيّع وقتك بالمطار"},
+{"id":"offers","voice":"عشرة جيجا بتركيا بسبعة دولار وسبعة وعشرين سنت بس!","headline":"باقات تركيا وأوروبا والعالم","sub":""},
+{"id":"benefits","voice":"الكود يوصلك على الإيميل، ثبّته بدقايق ويشتغل معك.","headline":"تفعيل سهل بدقائق","sub":""},
+{"id":"cta","voice":"حمّل تطبيق YRH eSIM للأندرويد، أو زُر yrh.ai الآن!","headline":"حمّل تطبيق YRH eSIM","sub":"متوفر في جوجل بلاي"}]}

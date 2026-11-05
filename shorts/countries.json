@@ -1,0 +1,51 @@
+{
+  "fonts": {
+    "ar":    {"font_bold": "fonts/Tajawal-ExtraBold.ttf", "font_regular": "fonts/Tajawal-Medium.ttf", "rtl": true},
+    "latin": {"font_bold": "fonts/Inter-ExtraBold.otf", "font_regular": "fonts/Inter-Regular.otf"},
+    "ja":    {"font_bold": "/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc", "font_regular": "/usr/share/fonts/opentype/noto/NotoSansCJK-Medium.ttc", "font_index": 0},
+    "ko":    {"font_bold": "/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc", "font_regular": "/usr/share/fonts/opentype/noto/NotoSansCJK-Medium.ttc", "font_index": 1},
+    "hi":    {"font_bold": "fonts/NotoSansDevanagari[wdth,wght].ttf", "font_regular": "fonts/NotoSansDevanagari[wdth,wght].ttf", "font_bold_var": "Bold"}
+  },
+  "dest": {
+    "turkey":   {"slug": "turkey-esim", "emoji": "🇹🇷", "en": "Turkey"},
+    "europe":   {"slug": "europe-35-areas-esim", "emoji": "🇪🇺", "en": "Europe (35 countries)"},
+    "global":   {"slug": "global-120-areas-esim", "emoji": "🌍", "en": "Global (116 countries)"},
+    "usa":      {"slug": "united-states-esim", "emoji": "🇺🇸", "en": "United States"},
+    "uk":       {"slug": "united-kingdom-esim", "emoji": "🇬🇧", "en": "United Kingdom"},
+    "japan":    {"slug": "japan-esim", "emoji": "🇯🇵", "en": "Japan"},
+    "korea":    {"slug": "south-korea-esim", "emoji": "🇰🇷", "en": "South Korea"},
+    "thailand": {"slug": "thailand-esim", "emoji": "🇹🇭", "en": "Thailand"},
+    "egypt":    {"slug": "egypt-esim", "emoji": "🇪🇬", "en": "Egypt"},
+    "uae":      {"slug": "united-arab-emirates-esim", "emoji": "🇦🇪", "en": "United Arab Emirates"},
+    "spain":    {"slug": "spain-esim", "emoji": "🇪🇸", "en": "Spain"},
+    "france":   {"slug": "france-esim", "emoji": "🇫🇷", "en": "France"},
+    "italy":    {"slug": "italy-esim", "emoji": "🇮🇹", "en": "Italy"},
+    "mexico":   {"slug": "mexico-esim", "emoji": "🇲🇽", "en": "Mexico"},
+    "canada":   {"slug": "canada-esim", "emoji": "🇨🇦", "en": "Canada"},
+    "asia":     {"slug": "asia-12-areas-esim", "emoji": "🌏", "en": "Asia (12 countries)"},
+    "malaysia": {"slug": "malaysia-esim", "emoji": "🇲🇾", "en": "Malaysia"},
+    "georgia":  {"slug": "georgia-esim", "emoji": "🇬🇪", "en": "Georgia"},
+    "usa_canada": {"slug": "usa-canada-esim", "emoji": "🇺🇸", "en": "USA & Canada"},
+    "china":    {"slug": "china-esim", "emoji": "🇨🇳", "en": "China"},
+    "australia":{"slug": "australia-esim", "emoji": "🇦🇺", "en": "Australia"},
+    "portugal": {"slug": "portugal-esim", "emoji": "🇵🇹", "en": "Portugal"},
+    "greece":   {"slug": "greece-esim", "emoji": "🇬🇷", "en": "Greece"},
+    "india":    {"slug": "india-esim", "emoji": "🇮🇳", "en": "India"}
+  },
+  "countries": [
+    {"code": "sa", "tz": "Asia/Riyadh", "name": "Saudi Arabia", "language": "Arabic (Saudi/Gulf-friendly, warm, simple)", "lang": "ar", "font": "ar", "voice": "Puck", "accent": "#00A651", "accent2": "#7CF7B0", "accent_note": "Saudi Arabian travelers", "pools": [["turkey","europe","global"],["egypt","georgia","malaysia"],["uk","usa","asia"]]},
+    {"code": "ae", "tz": "Asia/Dubai", "name": "United Arab Emirates", "language": "Arabic (Gulf-friendly, warm, simple)", "lang": "ar", "font": "ar", "voice": "Kore", "accent": "#C8102E", "accent2": "#FF8A8A", "pools": [["uk","europe","usa"],["japan","thailand","global"],["georgia","turkey","asia"]]},
+    {"code": "us", "tz": "America/New_York", "name": "United States", "language": "American English", "lang": "en", "font": "latin", "voice": "Puck", "accent": "#3C3B9E", "accent2": "#7DB3FF", "pools": [["mexico","europe","japan"],["uk","italy","global"],["canada","thailand","korea"]]},
+    {"code": "gb", "tz": "Europe/London", "name": "United Kingdom", "language": "British English", "lang": "en", "font": "latin", "voice": "Charon", "accent": "#C8102E", "accent2": "#7DB3FF", "pools": [["usa","turkey","thailand"],["spain","greece","global"],["japan","uae","canada"]]},
+    {"code": "de", "tz": "Europe/Berlin", "name": "Germany", "language": "German", "lang": "de", "font": "latin", "voice": "Kore", "accent": "#DD0000", "accent2": "#FFCE00", "pools": [["usa","turkey","thailand"],["japan","uae","global"],["mexico","canada","asia"]]},
+    {"code": "jp", "tz": "Asia/Tokyo", "name": "Japan", "language": "Japanese", "lang": "ja", "font": "ja", "voice": "Puck", "accent": "#BC002D", "accent2": "#FF9AA9", "pools": [["korea","usa","europe"],["thailand","australia","global"],["italy","france","asia"]]},
+    {"code": "mx", "tz": "America/Mexico_City", "name": "Mexico", "language": "Mexican Spanish", "lang": "es", "font": "latin", "voice": "Puck", "accent": "#006847", "accent2": "#7CF7B0", "pools": [["usa","spain","europe"],["japan","canada","global"],["italy","france","korea"]]},
+    {"code": "br", "tz": "America/Sao_Paulo", "name": "Brazil", "language": "Brazilian Portuguese", "lang": "pt", "font": "latin", "voice": "Kore", "accent": "#009C3B", "accent2": "#FFDF00", "pools": [["portugal","europe","usa"],["japan","italy","global"],["spain","france","canada"]]},
+    {"code": "in", "tz": "Asia/Kolkata", "name": "India", "language": "Hindi (simple, conversational)", "lang": "hi", "font": "hi", "voice": "Puck", "accent": "#FF9933", "accent2": "#FFD08A", "pools": [["uae","thailand","europe"],["usa","uk","global"],["malaysia","asia","australia"]]},
+    {"code": "kr", "tz": "Asia/Seoul", "name": "South Korea", "language": "Korean", "lang": "ko", "font": "ko", "voice": "Kore", "accent": "#CD2E3A", "accent2": "#7DB3FF", "pools": [["japan","usa","europe"],["thailand","china","global"],["australia","france","asia"]]},
+    {"code": "fr", "tz": "Europe/Paris", "name": "France", "language": "French", "lang": "fr", "font": "latin", "voice": "Charon", "accent": "#0055A4", "accent2": "#FF6B6B", "pools": [["usa","japan","thailand"],["canada","uae","global"],["mexico","turkey","asia"]]},
+    {"code": "it", "tz": "Europe/Rome", "name": "Italy", "language": "Italian", "lang": "it", "font": "latin", "voice": "Puck", "accent": "#009246", "accent2": "#FF6B6B", "pools": [["usa","japan","egypt"],["thailand","uk","global"],["mexico","canada","asia"]]},
+    {"code": "au", "tz": "Australia/Sydney", "name": "Australia", "language": "Australian English", "lang": "en", "font": "latin", "voice": "Kore", "accent": "#00843D", "accent2": "#FFCD00", "pools": [["japan","thailand","usa"],["europe","korea","global"],["uk","malaysia","asia"]]},
+    {"code": "ca", "tz": "America/Toronto", "name": "Canada", "language": "Canadian English", "lang": "en", "font": "latin", "voice": "Puck", "accent": "#D80621", "accent2": "#FF9AA9", "pools": [["usa","mexico","europe"],["japan","uk","global"],["france","italy","asia"]]}
+  ]
+}
