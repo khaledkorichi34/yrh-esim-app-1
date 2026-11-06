@@ -162,7 +162,12 @@
   "xk_package",
   "kg_package",
   "la_package",
-  "lv_package"
+  "lv_package",
+  "ls_package",
+  "lr_package",
+  "ly_package",
+  "li_package",
+  "lt_package"
  ],
  "days": {
   "2026-10-05": [
@@ -381,6 +386,13 @@
    "kg_package",
    "la_package",
    "lv_package"
+  ],
+  "2026-11-06": [
+   "ls_package",
+   "lr_package",
+   "ly_package",
+   "li_package",
+   "lt_package"
   ]
  }
 }
