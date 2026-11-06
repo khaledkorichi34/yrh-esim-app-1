@@ -67,6 +67,12 @@ def cmd_next():
     c = CFG["countries"][d % n]
     pool = c["pools"][(d // n) % len(c["pools"])]
     today = datetime.date.today().isoformat()
+    focus = CFG.get("focus")
+    in_focus = bool(focus and focus["from"] <= today <= focus["until"])
+    if in_focus:  # a focus week targets one country with a different set of destinations each day
+        c = next(x for x in CFG["countries"] if x["code"] == focus["code"])
+        k = (datetime.date.fromisoformat(today) - datetime.date.fromisoformat(focus["from"])).days
+        pool = focus["pools"][k % len(focus["pools"])]
     job = f"{today}-{c['code']}"
     os.makedirs(jdir(job), exist_ok=True)
     from zoneinfo import ZoneInfo
@@ -77,7 +83,7 @@ def cmd_next():
     if target - local < datetime.timedelta(minutes=50):
         target += datetime.timedelta(days=1)
     publish_at = target.astimezone(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    plan = {"job": job, "date": today, "publish_at": publish_at, "day": d, "country": c, "pool": pool,
+    plan = {"job": job, "date": today, "publish_at": publish_at, "focus": in_focus, "day": d, "country": c, "pool": pool,
             "music": MUSIC[d % len(MUSIC)], "dest": {k: CFG["dest"][k] for k in pool}}
     json.dump(plan, open(os.path.join(jdir(job), "plan.json"), "w"), ensure_ascii=False, indent=1)
     print("JOB", job, "| publish_at", publish_at, "(18:30 in", c["tz"] + ")")
@@ -250,7 +256,9 @@ def cmd_spec(job, script_path):
 def cmd_done(job, vid):
     st = load_state()
     st["history"].append({"job": job, "videoId": vid, "at": datetime.datetime.utcnow().isoformat() + "Z"})
-    st["day"] += 1
+    plan = json.load(open(os.path.join(jdir(job), "plan.json")))
+    if not plan.get("focus"):  # the normal rotation pauses during a focus week
+        st["day"] += 1
     json.dump(st, open(STATE, "w"), indent=1)
     print("next day index", st["day"])
 

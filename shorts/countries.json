@@ -547,5 +547,47 @@
     ]
    ]
   }
- ]
+ ],
+ "focus": {
+  "code": "sa",
+  "from": "2026-11-06",
+  "until": "2026-11-12",
+  "pools": [
+   [
+    "egypt",
+    "georgia",
+    "global"
+   ],
+   [
+    "malaysia",
+    "thailand",
+    "asia"
+   ],
+   [
+    "uk",
+    "europe",
+    "global"
+   ],
+   [
+    "uae",
+    "georgia",
+    "europe"
+   ],
+   [
+    "italy",
+    "france",
+    "spain"
+   ],
+   [
+    "usa",
+    "uk",
+    "global"
+   ],
+   [
+    "japan",
+    "korea",
+    "asia"
+   ]
+  ]
+ }
 }
