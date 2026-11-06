@@ -1,0 +1,109 @@
+{
+ "job": "2026-11-06-sa",
+ "date": "2026-11-06",
+ "publish_at": "2026-11-06T15:30:00Z",
+ "focus": true,
+ "day": 1,
+ "country": {
+  "code": "sa",
+  "tz": "Asia/Riyadh",
+  "name": "Saudi Arabia",
+  "language": "Arabic (Saudi/Gulf-friendly, warm, simple)",
+  "lang": "ar",
+  "font": "ar",
+  "voice": "Puck",
+  "accent": "#00A651",
+  "accent2": "#7CF7B0",
+  "accent_note": "Saudi Arabian travelers",
+  "pools": [
+   [
+    "turkey",
+    "europe",
+    "global"
+   ],
+   [
+    "egypt",
+    "georgia",
+    "malaysia"
+   ],
+   [
+    "uk",
+    "usa",
+    "asia"
+   ]
+  ],
+  "currency": {
+   "code": "SAR",
+   "name": "Saudi riyals",
+   "word": "ريال",
+   "rate": 3.75
+  }
+ },
+ "pool": [
+  "egypt",
+  "georgia",
+  "global"
+ ],
+ "music": "music/house2.mp3",
+ "dest": {
+  "egypt": {
+   "slug": "egypt-esim",
+   "emoji": "🇪🇬",
+   "en": "Egypt"
+  },
+  "georgia": {
+   "slug": "georgia-esim",
+   "emoji": "🇬🇪",
+   "en": "Georgia"
+  },
+  "global": {
+   "slug": "global-120-areas-esim",
+   "emoji": "🌍",
+   "en": "Global (116 countries)"
+  }
+ },
+ "prices": {
+  "egypt": {
+   "cheapest": {
+    "gb": 1.0,
+    "days": 7,
+    "price": 3.37,
+    "option": "Egypt 1GB 7Days"
+   },
+   "card": {
+    "gb": 5.0,
+    "days": 30,
+    "price": 12.46,
+    "option": "Egypt 5GB 30Days"
+   }
+  },
+  "georgia": {
+   "cheapest": {
+    "gb": 1.0,
+    "days": 7,
+    "price": 3.37,
+    "option": "Georgia 1GB 7Days"
+   },
+   "card": {
+    "gb": 5.0,
+    "days": 30,
+    "price": 8.65,
+    "option": "Georgia 5GB 30Days"
+   }
+  },
+  "global": {
+   "cheapest": {
+    "gb": 1.0,
+    "days": 7,
+    "price": 10.43,
+    "option": "Global (120+ areas) 1GB 7Days"
+   },
+   "card": {
+    "gb": 5.0,
+    "days": 30,
+    "price": 40.8,
+    "option": "Global (120+ areas) 5GB 30Days"
+   }
+  }
+ }
+}
