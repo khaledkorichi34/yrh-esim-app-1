@@ -167,7 +167,12 @@
   "lr_package",
   "ly_package",
   "li_package",
-  "lt_package"
+  "lt_package",
+  "lu_package",
+  "mo_package",
+  "mg_package",
+  "mw_package",
+  "ml_package"
  ],
  "days": {
   "2026-10-05": [
@@ -393,6 +398,13 @@
    "ly_package",
    "li_package",
    "lt_package"
+  ],
+  "2026-11-07": [
+   "lu_package",
+   "mo_package",
+   "mg_package",
+   "mw_package",
+   "ml_package"
   ]
  }
 }
