@@ -1,0 +1,109 @@
+{
+ "job": "2026-11-07-sa",
+ "date": "2026-11-07",
+ "publish_at": "2026-11-07T15:30:00Z",
+ "focus": true,
+ "day": 1,
+ "country": {
+  "code": "sa",
+  "tz": "Asia/Riyadh",
+  "name": "Saudi Arabia",
+  "language": "Arabic (Saudi/Gulf-friendly, warm, simple)",
+  "lang": "ar",
+  "font": "ar",
+  "voice": "Puck",
+  "accent": "#00A651",
+  "accent2": "#7CF7B0",
+  "accent_note": "Saudi Arabian travelers",
+  "pools": [
+   [
+    "turkey",
+    "europe",
+    "global"
+   ],
+   [
+    "egypt",
+    "georgia",
+    "malaysia"
+   ],
+   [
+    "uk",
+    "usa",
+    "asia"
+   ]
+  ],
+  "currency": {
+   "code": "SAR",
+   "name": "Saudi riyals",
+   "word": "ريال",
+   "rate": 3.75
+  }
+ },
+ "pool": [
+  "malaysia",
+  "thailand",
+  "asia"
+ ],
+ "music": "music/house2.mp3",
+ "dest": {
+  "malaysia": {
+   "slug": "malaysia-esim",
+   "emoji": "🇲🇾",
+   "en": "Malaysia"
+  },
+  "thailand": {
+   "slug": "thailand-esim",
+   "emoji": "🇹🇭",
+   "en": "Thailand"
+  },
+  "asia": {
+   "slug": "asia-12-areas-esim",
+   "emoji": "🌏",
+   "en": "Asia (12 countries)"
+  }
+ },
+ "prices": {
+  "malaysia": {
+   "cheapest": {
+    "gb": 1.0,
+    "days": 7,
+    "price": 3.37,
+    "option": "Malaysia 1GB 7Days"
+   },
+   "card": {
+    "gb": 5.0,
+    "days": 30,
+    "price": 6.13,
+    "option": "Malaysia 5GB 30Days"
+   }
+  },
+  "thailand": {
+   "cheapest": {
+    "gb": 1.0,
+    "days": 7,
+    "price": 3.37,
+    "option": "Thailand 1GB 7Days"
+   },
+   "card": {
+    "gb": 5.0,
+    "days": 30,
+    "price": 6.13,
+    "option": "Thailand 5GB 30Days"
+   }
+  },
+  "asia": {
+   "cheapest": {
+    "gb": 1.0,
+    "days": 7,
+    "price": 7.93,
+    "option": "Asia (12 areas) 1GB 7Days"
+   },
+   "card": {
+    "gb": 5.0,
+    "days": 30,
+    "price": 30.6,
+    "option": "Asia (12 areas) 5GB 30Days"
+   }
+  }
+ }
+}
