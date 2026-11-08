@@ -172,7 +172,12 @@
   "mo_package",
   "mg_package",
   "mw_package",
-  "ml_package"
+  "ml_package",
+  "mq_package",
+  "mr_package",
+  "mu_package",
+  "yt_package",
+  "me-5_package"
  ],
  "days": {
   "2026-10-05": [
@@ -405,6 +410,13 @@
    "mg_package",
    "mw_package",
    "ml_package"
+  ],
+  "2026-11-08": [
+   "mq_package",
+   "mr_package",
+   "mu_package",
+   "yt_package",
+   "me-5_package"
   ]
  }
 }
