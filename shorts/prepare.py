@@ -35,7 +35,10 @@ def plan_size(opt):
 
 
 def fmt_plan(gb, days):
-    g = f"{int(gb)}GB" if gb == int(gb) else f"{gb:g}GB"
+    if gb < 1:
+        g = f"{round(gb * 1024)}MB"
+    else:
+        g = f"{int(gb)}GB" if gb == int(gb) else f"{gb:g}GB"
     return f"{g} · {days} days"
 
 
