@@ -177,7 +177,12 @@
   "mr_package",
   "mu_package",
   "yt_package",
-  "me-5_package"
+  "me-5_package",
+  "me-12_package",
+  "md_package",
+  "mc_package",
+  "mn_package",
+  "me_package"
  ],
  "days": {
   "2026-10-05": [
@@ -417,6 +422,13 @@
    "mu_package",
    "yt_package",
    "me-5_package"
+  ],
+  "2026-11-09": [
+   "me-12_package",
+   "md_package",
+   "mc_package",
+   "mn_package",
+   "me_package"
   ]
  }
 }
