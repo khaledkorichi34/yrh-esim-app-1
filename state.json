@@ -187,7 +187,12 @@
   "mz_package",
   "nr_package",
   "np_package",
-  "nc_package"
+  "nc_package",
+  "ni_package",
+  "ne_package",
+  "ng_package",
+  "na-3_package",
+  "mk_package"
  ],
  "days": {
   "2026-10-05": [
@@ -441,6 +446,13 @@
    "nr_package",
    "np_package",
    "nc_package"
+  ],
+  "2026-11-11": [
+   "ni_package",
+   "ne_package",
+   "ng_package",
+   "na-3_package",
+   "mk_package"
   ]
  }
 }
