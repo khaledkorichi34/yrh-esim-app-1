@@ -192,7 +192,12 @@
   "ne_package",
   "ng_package",
   "na-3_package",
-  "mk_package"
+  "mk_package",
+  "oce-8_package",
+  "pk_package",
+  "pa_package",
+  "pg_package",
+  "py_package"
  ],
  "days": {
   "2026-10-05": [
@@ -453,6 +458,13 @@
    "ng_package",
    "na-3_package",
    "mk_package"
+  ],
+  "2026-11-12": [
+   "oce-8_package",
+   "pk_package",
+   "pa_package",
+   "pg_package",
+   "py_package"
   ]
  }
 }
