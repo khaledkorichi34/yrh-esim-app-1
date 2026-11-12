@@ -1,0 +1,109 @@
+{
+ "job": "2026-11-12-sa",
+ "date": "2026-11-12",
+ "publish_at": "2026-11-12T15:30:00Z",
+ "focus": true,
+ "day": 1,
+ "country": {
+  "code": "sa",
+  "tz": "Asia/Riyadh",
+  "name": "Saudi Arabia",
+  "language": "Arabic (Saudi/Gulf-friendly, warm, simple)",
+  "lang": "ar",
+  "font": "ar",
+  "voice": "Puck",
+  "accent": "#00A651",
+  "accent2": "#7CF7B0",
+  "accent_note": "Saudi Arabian travelers",
+  "pools": [
+   [
+    "turkey",
+    "europe",
+    "global"
+   ],
+   [
+    "egypt",
+    "georgia",
+    "malaysia"
+   ],
+   [
+    "uk",
+    "usa",
+    "asia"
+   ]
+  ],
+  "currency": {
+   "code": "SAR",
+   "name": "Saudi riyals",
+   "word": "ريال",
+   "rate": 3.75
+  }
+ },
+ "pool": [
+  "japan",
+  "korea",
+  "asia"
+ ],
+ "music": "music/house2.mp3",
+ "dest": {
+  "japan": {
+   "slug": "japan-esim",
+   "emoji": "🇯🇵",
+   "en": "Japan"
+  },
+  "korea": {
+   "slug": "south-korea-esim",
+   "emoji": "🇰🇷",
+   "en": "South Korea"
+  },
+  "asia": {
+   "slug": "asia-12-areas-esim",
+   "emoji": "🌏",
+   "en": "Asia (12 countries)"
+  }
+ },
+ "prices": {
+  "japan": {
+   "cheapest": {
+    "gb": 1.0,
+    "days": 7,
+    "price": 3.37,
+    "option": "Japan 1GB 7Days"
+   },
+   "card": {
+    "gb": 5.0,
+    "days": 30,
+    "price": 6.13,
+    "option": "Japan 5GB 30Days"
+   }
+  },
+  "korea": {
+   "cheapest": {
+    "gb": 1.0,
+    "days": 7,
+    "price": 3.37,
+    "option": "South Korea 1GB 7Days"
+   },
+   "card": {
+    "gb": 5.0,
+    "days": 30,
+    "price": 6.13,
+    "option": "South Korea 5GB 30Days"
+   }
+  },
+  "asia": {
+   "cheapest": {
+    "gb": 1.0,
+    "days": 7,
+    "price": 7.93,
+    "option": "Asia (12 areas) 1GB 7Days"
+   },
+   "card": {
+    "gb": 5.0,
+    "days": 30,
+    "price": 30.6,
+    "option": "Asia (12 areas) 5GB 30Days"
+   }
+  }
+ }
+}
