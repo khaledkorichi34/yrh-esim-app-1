@@ -1,0 +1,102 @@
+{
+ "job": "2026-11-13-ae",
+ "date": "2026-11-13",
+ "publish_at": "2026-11-13T14:30:00Z",
+ "focus": false,
+ "day": 1,
+ "country": {
+  "code": "ae",
+  "tz": "Asia/Dubai",
+  "name": "United Arab Emirates",
+  "language": "Arabic (Gulf-friendly, warm, simple)",
+  "lang": "ar",
+  "font": "ar",
+  "voice": "Kore",
+  "accent": "#C8102E",
+  "accent2": "#FF8A8A",
+  "pools": [
+   [
+    "uk",
+    "europe",
+    "usa"
+   ],
+   [
+    "japan",
+    "thailand",
+    "global"
+   ],
+   [
+    "georgia",
+    "turkey",
+    "asia"
+   ]
+  ]
+ },
+ "pool": [
+  "uk",
+  "europe",
+  "usa"
+ ],
+ "music": "music/house2.mp3",
+ "dest": {
+  "uk": {
+   "slug": "united-kingdom-esim",
+   "emoji": "🇬🇧",
+   "en": "United Kingdom"
+  },
+  "europe": {
+   "slug": "europe-35-areas-esim",
+   "emoji": "🇪🇺",
+   "en": "Europe (35 countries)"
+  },
+  "usa": {
+   "slug": "united-states-esim",
+   "emoji": "🇺🇸",
+   "en": "United States"
+  }
+ },
+ "prices": {
+  "uk": {
+   "cheapest": {
+    "gb": 1.0,
+    "days": 7,
+    "price": 3.37,
+    "option": "United Kingdom 1GB 7Days"
+   },
+   "card": {
+    "gb": 5.0,
+    "days": 30,
+    "price": 5.39,
+    "option": "United Kingdom 5GB 30Days"
+   }
+  },
+  "europe": {
+   "cheapest": {
+    "gb": 1.0,
+    "days": 7,
+    "price": 3.37,
+    "option": "Europe (35 areas) 1GB 7Days"
+   },
+   "card": {
+    "gb": 5.0,
+    "days": 30,
+    "price": 6.19,
+    "option": "Europe (35 areas) 5GB 30Days"
+   }
+  },
+  "usa": {
+   "cheapest": {
+    "gb": 1.0,
+    "days": 7,
+    "price": 3.37,
+    "option": "United States 1GB 7Days"
+   },
+   "card": {
+    "gb": 5.0,
+    "days": 30,
+    "price": 7.71,
+    "option": "United States 5GB 30Days"
+   }
+  }
+ }
+}

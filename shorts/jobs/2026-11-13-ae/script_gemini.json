@@ -1,0 +1,17 @@
+{
+  "scenes": [
+    {"id": "hook", "voice": "مسافر بريطانيا؟ واحد جيجا بثلاثة دولار وسبعة وثلاثين سنت بس!", "headline": "مسافر بريطانيا؟", "sub": "1GB بـ 3.37$ فقط!"},
+    {"id": "problem", "voice": "وفر رسوم التجوال، وادفع بمترو لندن ببطاقتك البنكية مباشرة.", "headline": "وفر رسوم التجوال", "sub": "وادفع بالمترو ببطاقتك مباشرة"},
+    {"id": "offers", "voice": "إنترنت لبريطانيا، أوروبا وأمريكا من واي آر إتش إي سيم.", "headline": "باقات لأوروبا وأمريكا", "sub": "تغطية ممتازة بكل مكان"},
+    {"id": "steps", "voice": "زور موقع yrh.ai، اختار باقتك، ادفع، وامسح كود الإيميل.", "headline": "خطوات التفعيل سريعة", "sub": "اشترك في ثواني"},
+    {"id": "cta", "voice": "حمل تطبيقنا من زر التحميل بموقع yrh.ai ورحلة سعيدة!", "headline": "حمل تطبيق YRH eSIM", "sub": "من موقعنا الآن"}
+  ],
+  "offer_labels": {"uk": "بريطانيا", "europe": "أوروبا (35 دولة)", "usa": "أمريكا"},
+  "steps": ["ادخل موقع yrh.ai", "اختار وجهتك وباقتك", "ادفع بكل أمان", "امسح الكود من الإيميل"],
+  "cta_button": "حمل التطبيق من yrh.ai",
+  "price_note": "الأسعار من موقع yrh.ai بتاريخ 13 نوفمبر 2026",
+  "title": "eSIM بريطانيا 1GB بـ 3.37$ | YRH eSIM 🇬🇧",
+  "description": "eSIM بريطانيا؟ وفر رسوم التجوال وسافر بذكاء!\nالأسعار:\nبريطانيا: 1GB/7 أيام بـ 3.37$ | 5GB/30 يوم بـ 5.39$\nأوروبا (35 دولة): 1GB/7 أيام بـ 3.37$ | 5GB/30 يوم بـ 6.19$\nأمريكا: 1GB/7 أيام بـ 3.37$ | 5GB/30 يوم بـ 7.71$\nخطوات الطلب: 1. ادخل الموقع 2. اختار الوجهة 3. ادفع 4. امسح كود الإيميل\ndownload the YRH eSIM app from yrh.ai\nتم التحقق من الأسعار على yrh.ai، 13 نوفمبر 2026\n#eSIM #بريطانيا #uktravel #سفر #yrhesim",
+  "tags": "eSIM بريطانيا, شريحة بريطانيا, انترنت في بريطانيا, تجوال, شريحة سفر, YRH eSIM, uk esim, uk sim card, internet in uk, roaming, travel esim",
+  "tts_style": "Friendly, energetic Gulf Arabic accent, conversational and warm, like a helpful local friend giving a quick and practical travel tip, upbeat pace."
+}
