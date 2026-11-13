@@ -197,7 +197,12 @@
   "pk_package",
   "pa_package",
   "pg_package",
-  "py_package"
+  "py_package",
+  "pr_package",
+  "cg_package",
+  "re_package",
+  "ro_package",
+  "ru_package"
  ],
  "days": {
   "2026-10-05": [
@@ -465,6 +470,13 @@
    "pa_package",
    "pg_package",
    "py_package"
+  ],
+  "2026-11-13": [
+   "pr_package",
+   "cg_package",
+   "re_package",
+   "ro_package",
+   "ru_package"
   ]
  }
 }
