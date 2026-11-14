@@ -1,0 +1,69 @@
+{
+ "lang": "en",
+ "rtl": false,
+ "font_bold": "fonts/Inter-ExtraBold.otf",
+ "font_regular": "fonts/Inter-Regular.otf",
+ "accent": "#3C3B9E",
+ "accent2": "#7DB3FF",
+ "hook_emoji": "🇲🇽",
+ "cta_button": "Download the app at yrh.ai",
+ "offers": [
+  {
+   "emoji": "🇲🇽",
+   "label": "Mexico",
+   "plan": "5GB · 30 days",
+   "price": "$16.97"
+  },
+  {
+   "emoji": "🇪🇺",
+   "label": "Europe",
+   "plan": "5GB · 30 days",
+   "price": "$6.19"
+  },
+  {
+   "emoji": "🇯🇵",
+   "label": "Japan",
+   "plan": "5GB · 30 days",
+   "price": "$6.13"
+  }
+ ],
+ "steps": [
+  "Go to yrh.ai",
+  "Choose destination and plan",
+  "Pay securely online",
+  "Scan QR from email"
+ ],
+ "price_note": "Prices from yrh.ai on Nov 14, 2026",
+ "scenes": [
+  {
+   "id": "hook",
+   "voice": "Mexico? Five hundred megabytes for three dollars thirty-seven!",
+   "headline": "Mexico data from $3.37!",
+   "sub": "500MB · 7 days = $3.37"
+  },
+  {
+   "id": "problem",
+   "voice": "Skip the roaming bill shock and stay connected on landing.",
+   "headline": "No surprise roaming bills!",
+   "sub": "Set up before you fly"
+  },
+  {
+   "id": "offers",
+   "voice": "Europe and Japan too, one gig from three thirty-seven.",
+   "headline": "Europe and Japan too!",
+   "sub": "1GB · 7 days = $3.37 each"
+  },
+  {
+   "id": "steps",
+   "voice": "Pick a plan at yrh.ai, pay, scan the QR code.",
+   "headline": "Set up in minutes!",
+   "sub": "QR code arrives by email"
+  },
+  {
+   "id": "cta",
+   "voice": "Download the YRH eSIM app at yrh.ai today!",
+   "headline": "Download the app!",
+   "sub": "Get it at yrh.ai"
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+Write a 26-30 second YouTube Short script for YRH eSIM (travel data eSIMs, website yrh.ai, Android app "YRH eSIM" on Google Play).
+Audience: residents of United States who travel abroad. Language: American English. Natural, warm, energetic, like a friend giving a travel tip; never stiff or formal.
+Featured destinations and REAL prices (use exactly; never invent other numbers, plans or currencies):
+- mexico = Mexico: 500MB · 7 days = $3.37 ; 5GB · 30 days = $16.97
+- europe = Europe (35 countries): 1GB · 7 days = $3.37 ; 5GB · 30 days = $6.19
+- japan = Japan: 1GB · 7 days = $3.37 ; 5GB · 30 days = $6.13
+Prices are in US dollars.
+True facts you may use: QR code arrives by email right after purchase; install in minutes (Wi-Fi needed to install); works on local 4G/5G networks; hotspot included; top up anytime; data only (no phone number); phone must be unlocked and eSIM-compatible; "works or your money back" with WhatsApp support.
+Never claim: unlimited data, cheapest in the world, named carriers' roaming prices, user counts, discounts.
+Every spoken price must be said together with its data amount. Write numbers in voice lines as words, the way a native speaker says them.
+Make this video feel different from a generic ad: open with a hook built on the FIRST destination (Mexico) and its cheapest price, and add one genuinely useful travel tip for that destination in the problem line.
+Scenes (each voice line 4-10 words):
+1 hook (0-3s): destination question + price shock with its data amount
+2 problem: roaming bills / SIM-shop queues / a practical tip
+3 offers: name the destinations; say at most one price aloud
+4 steps: how to order on the website: go to yrh.ai, choose your destination and plan, pay, scan the QR code from the email
+5 cta: download our app from our website yrh.ai (the "Get the app" button at the top of the site)
+Return ONLY JSON:
+{"scenes":[{"id":"hook|problem|offers|steps|cta","voice":"...","headline":"max 5 words on screen","sub":"max 6 words or empty"}],
+"offer_labels":{"mexico":"destination name in the target language", "europe":"destination name in the target language", "japan":"destination name in the target language"},
+"steps":["4 short on-screen steps, max 5 words each; step 1 must contain yrh.ai"],
+"cta_button":"'Download the app at yrh.ai' in the target language, short",
+"price_note":"one short footnote line in the target language: prices from yrh.ai on 14 Nov 2026",
+"title":"SEO title in the target language, max 70 chars: start with the exact phrase people search (e.g. 'eSIM <first destination>' in the target language), then the cheapest price with its data amount, then '| YRH eSIM'; max 1 emoji",
+"description":"4-6 lines in the target language: hook line, the prices list with plan sizes, the 4 ordering steps, 'download the YRH eSIM app from yrh.ai', the line 'Prices checked on yrh.ai, 14 Nov 2026' translated, then 3-5 hashtags in the target language and English (no #Shorts, it is added). The first line must contain the main search phrase. Do not put URLs in it, they are added automatically",
+"tags":"10-15 comma-separated search phrases people type, in the target language and English: 'esim <destination>', '<destination> sim card', 'internet in <destination>', 'roaming', 'travel esim', 'YRH eSIM'",
+"tts_style":"one English sentence for the voice actor: tone, pace, accent"}
+Headlines and subs must not contain prices with plan sizes split apart; if a sub shows a price it must also show its data amount.
