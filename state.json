@@ -202,7 +202,12 @@
   "cg_package",
   "re_package",
   "ro_package",
-  "ru_package"
+  "ru_package",
+  "rw_package",
+  "bl_package",
+  "kn_package",
+  "lc_package",
+  "mf_package"
  ],
  "days": {
   "2026-10-05": [
@@ -477,6 +482,13 @@
    "re_package",
    "ro_package",
    "ru_package"
+  ],
+  "2026-11-14": [
+   "rw_package",
+   "bl_package",
+   "kn_package",
+   "lc_package",
+   "mf_package"
   ]
  }
 }
