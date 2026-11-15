@@ -207,7 +207,12 @@
   "bl_package",
   "kn_package",
   "lc_package",
-  "mf_package"
+  "mf_package",
+  "vc_package",
+  "ws_package",
+  "sm_package",
+  "sn_package",
+  "rs_package"
  ],
  "days": {
   "2026-10-05": [
@@ -489,6 +494,13 @@
    "kn_package",
    "lc_package",
    "mf_package"
+  ],
+  "2026-11-15": [
+   "vc_package",
+   "ws_package",
+   "sm_package",
+   "sn_package",
+   "rs_package"
   ]
  }
 }
