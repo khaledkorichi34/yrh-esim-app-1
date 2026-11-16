@@ -212,7 +212,12 @@
   "ws_package",
   "sm_package",
   "sn_package",
-  "rs_package"
+  "rs_package",
+  "sc_package",
+  "sl_package",
+  "sgmyth-3_package",
+  "sk_package",
+  "si_package"
  ],
  "days": {
   "2026-10-05": [
@@ -501,6 +506,13 @@
    "sm_package",
    "sn_package",
    "rs_package"
+  ],
+  "2026-11-16": [
+   "sc_package",
+   "sl_package",
+   "sgmyth-3_package",
+   "sk_package",
+   "si_package"
   ]
  }
 }
