@@ -236,16 +236,16 @@ def cmd_spec(job, script_path):
             **({"bill_text": "! ! !"} if cur(plan) else {})}
     json.dump(spec, open(os.path.join(jdir(job), "spec.json"), "w"), ensure_ascii=False, indent=1)
     title = s["title"][:95]
-    utm = f"utm_source=youtube&utm_medium=shorts&utm_campaign={plan['job']}"
+    utm = ""  # short links: no tracking query string
     links = []
     for k in plan["pool"]:
         cd = plan["prices"][k]["card"]
         links.append(f"{plan['dest'][k]['emoji']} {s['offer_labels'][k]} {fmt_plan(cd['gb'], cd['days'])} {money(plan, cd['price'])}: "
-                     f"https://yrh.ai/product/{plan['dest'][k]['slug']}/?{utm}")
+                     f"https://yrh.ai/product/{plan['dest'][k]['slug']}/{utm}")
     first_line = s["description"].split("\n")[0]
     rest = "\n".join(s["description"].split("\n")[1:])
-    desc = (f"{first_line}\n👉 https://yrh.ai/product/{plan['dest'][first]['slug']}/?{utm}\n\n" + "\n".join(links)
-            + f"\n\n{rest}\n\n📲 YRH eSIM app: https://yrh.ai/?{utm} (Get the app)\n#Shorts")
+    desc = (f"{first_line}\n👉 https://yrh.ai/product/{plan['dest'][first]['slug']}/{utm}\n\n" + "\n".join(links)
+            + f"\n\n{rest}\n\n📲 YRH eSIM app: https://yrh.ai (Get the app)\n#Shorts")
     meta = {"title": title, "description": desc, "tags": s["tags"],
             "voice": c["voice"], "music": plan["music"], "publish_at": plan["publish_at"]}
     json.dump(meta, open(os.path.join(jdir(job), "meta.json"), "w"), ensure_ascii=False, indent=1)
