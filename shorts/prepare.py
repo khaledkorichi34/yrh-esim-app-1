@@ -170,9 +170,9 @@ Return ONLY JSON:
 "steps":["4 short on-screen steps, max 5 words each; step 1 must contain yrh.ai"],
 "cta_button":"'Download the app at yrh.ai' in the target language, short",
 "price_note":"one short footnote line in the target language: prices from yrh.ai on {human_date(plan)}{'' if not cur(plan) else ', shown in ' + cur(plan)['name'] + ' at ' + str(cur(plan)['rate']) + ' per dollar, paid in USD on the site'}",
-"title":"SEO title in the target language, max 70 chars: start with the exact phrase people search (e.g. 'eSIM <first destination>' in the target language), then the cheapest price with its data amount, then '| YRH eSIM'; max 1 emoji",
-"description":"4-6 lines in the target language: hook line, the prices list with plan sizes, the 4 ordering steps, 'download the YRH eSIM app from yrh.ai', the line 'Prices checked on yrh.ai, {human_date(plan)}' translated, then 3-5 hashtags in the target language and English (no #Shorts, it is added). The first line must contain the main search phrase. Do not put URLs in it, they are added automatically",
-"tags":"10-15 comma-separated search phrases people type, in the target language and English: 'esim <destination>', '<destination> sim card', 'internet in <destination>', 'roaming', 'travel esim', 'YRH eSIM'",
+"title":"SEO title in the target language, max 75 chars, this exact pattern: '<best eSIM for / eSIM + first destination, in the target language> 2026 <1 emoji flag> <cheapest data amount> for <price> <no roaming or equivalent>' (example: 'Best eSIM for Mexico 2026 🇲🇽 500MB for $3.37'). Search phrase first, the year 2026 always present, price tied to its data amount, max 1 emoji, no '| YRH eSIM' unless it fits in 75 chars",
+"description":"4-6 lines in the target language. LINE 1 (shows in search results): 'Best eSIM for <destination> 2026: no roaming fees, activate by QR in minutes.' translated naturally, then the hook sentence. Then the prices list with plan sizes, the 4 ordering steps, 'download the YRH eSIM app from yrh.ai', the line 'Prices checked on yrh.ai, {human_date(plan)}' translated, then 4-5 hashtags in the target language and English (no #Shorts, it is added). Do not put URLs in it, they are added automatically",
+"tags":"9-10 comma-separated search phrases people type, in the target language and English, total under 450 characters: 'esim <destination>', 'best esim for <destination>', '<destination> sim card', 'internet in <destination>', 'travel esim', 'no roaming', 'YRH eSIM', 'esim 2026'",
 "tts_style":"one English sentence for the voice actor: tone, pace, accent"}}
 Headlines and subs must not contain prices with plan sizes split apart; if a sub shows a price it must also show its data amount.""")
 
@@ -191,7 +191,7 @@ Check and fix:
 3. Hook is specific and strong in the first 3 seconds. Each voice line 4-10 words; total voice 22-28 seconds.
 4. Numbers in voice lines are written as words a TTS reads naturally.
 5. No false or risky claims (unlimited, cheapest, guaranteed coverage everywhere, competitor prices).
-6. offer_labels are destination names only. Title <= 70 chars. Description contains https://yrh.ai and the price-check date line.
+6. offer_labels are destination names only. Title <= 75 chars and follows the pattern with 2026. Description contains https://yrh.ai and the price-check date line.
 Return ONLY the corrected JSON, same structure, no commentary.
 
 {script}""")
