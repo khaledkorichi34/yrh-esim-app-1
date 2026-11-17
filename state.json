@@ -217,7 +217,12 @@
   "sl_package",
   "sgmyth-3_package",
   "sk_package",
-  "si_package"
+  "si_package",
+  "sa-18_package",
+  "sa-6_package",
+  "sas-6_package",
+  "ss_package",
+  "sd_package"
  ],
  "days": {
   "2026-10-05": [
@@ -513,6 +518,13 @@
    "sgmyth-3_package",
    "sk_package",
    "si_package"
+  ],
+  "2026-11-17": [
+   "sa-18_package",
+   "sa-6_package",
+   "sas-6_package",
+   "ss_package",
+   "sd_package"
   ]
  }
 }
