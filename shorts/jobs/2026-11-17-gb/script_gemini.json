@@ -1,0 +1,19 @@
+{
+  "scenes": [
+    {"id": "hook", "voice": "Heading over to America? One gigabyte is three dollars thirty-seven!", "headline": "Heading over to America?", "sub": "1GB for $3.37"},
+    {"id": "problem", "voice": "Remember your ESTA, and dodge those SIM shop queues!", "headline": "Remember your ESTA!", "sub": "Dodge SIM shop queues"},
+    {"id": "offers", "voice": "Stay connected in the States, Turkey, or Thailand instantly.", "headline": "USA, Turkey, or Thailand", "sub": "Instant local data"},
+    {"id": "offers", "voice": "Five gigabytes in Turkey is just five dollars twenty-one.", "headline": "5GB in Turkey", "sub": "5GB for just $5.21"},
+    {"id": "steps", "voice": "Just head to y-r-h dot a-i for your plan.", "headline": "Head to yrh.ai", "sub": "Pick your travel plan"},
+    {"id": "steps", "voice": "Pay securely, then scan the QR code from your email.", "headline": "Pay securely", "sub": "Scan emailed QR code"},
+    {"id": "cta", "voice": "Download our app straight from y-r-h dot a-i today!", "headline": "Download our app", "sub": "Get it at yrh.ai"}
+  ],
+  "offer_labels": {"usa": "United States", "turkey": "Turkey", "thailand": "Thailand"},
+  "steps": ["1. Go to yrh.ai", "2. Choose destination and plan", "3. Pay securely", "4. Scan email QR code"],
+  "cta_button": "Download the app at yrh.ai",
+  "price_note": "Prices from yrh.ai on 17 Nov 2026",
+  "title": "eSIM United States 1GB for $3.37 | YRH eSIM 🇺🇸",
+  "description": "Looking for an eSIM United States for your next trip?\nUSA: 1GB/7 days = $3.37, 5GB/30 days = $7.71 | Turkey: 3GB/30 days = $3.37, 5GB/30 days = $5.21 | Thailand: 1GB/7 days = $3.37, 5GB/30 days = $6.13.\nSteps: 1. Go to yrh.ai 2. Choose plan 3. Pay 4. Scan email QR code.\nDownload the YRH eSIM app from yrh.ai\nPrices checked on yrh.ai, 17 Nov 2026\n#esimunitedstates #travelesim #yrhesim #roaming",
+  "tags": "esim united states, united states sim card, internet in united states, roaming, travel esim, YRH eSIM, esim usa, esim turkey, esim thailand, travel tips, holiday data, usa sim card",
+  "tts_style": "Warm, energetic British accent, speaking at a friendly and natural pace like a mate sharing a brilliant travel hack."
+}

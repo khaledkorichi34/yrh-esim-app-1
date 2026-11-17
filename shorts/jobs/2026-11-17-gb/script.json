@@ -1,0 +1,17 @@
+{
+  "scenes": [
+    {"id": "hook", "voice": "Heading Stateside? A week's gigabyte for three dollars thirty-seven.", "headline": "Heading Stateside?", "sub": "USA: 1GB · 7 days · $3.37"},
+    {"id": "problem", "voice": "Roaming charges and airport SIM queues? Honestly, no thanks.", "headline": "Roaming charges? No thanks", "sub": "Skip the SIM shop queues"},
+    {"id": "offers", "voice": "Turkey too: five gigabytes, thirty days, just five dollars twenty-one.", "headline": "USA, Turkey or Thailand", "sub": "Turkey: 5GB · 30 days · $5.21"},
+    {"id": "steps", "voice": "Visit y-r-h dot a-i, pick a plan, pay, scan the QR code.", "headline": "Go to yrh.ai", "sub": "Pick a plan · Pay · Scan the QR code"},
+    {"id": "cta", "voice": "Download our app straight from y-r-h dot a-i today!", "headline": "Download our app", "sub": "Get it at yrh.ai"}
+  ],
+  "offer_labels": {"usa": "United States", "turkey": "Turkey", "thailand": "Thailand"},
+  "steps": ["1. Go to yrh.ai", "2. Choose destination and plan", "3. Pay securely", "4. Scan the QR code from your email"],
+  "cta_button": "Download the app at yrh.ai",
+  "price_note": "Prices from yrh.ai on 17 Nov 2026",
+  "title": "eSIM for the United States: 1GB / 7 days for $3.37 | YRH eSIM 🇺🇸",
+  "description": "Looking for a United States eSIM for your next trip?\nUSA: 1GB/7 days = $3.37, 5GB/30 days = $7.71 | Turkey: 3GB/30 days = $3.37, 5GB/30 days = $5.21 | Thailand: 1GB/7 days = $3.37, 5GB/30 days = $6.13. Prices in US dollars.\nSteps: 1. Go to https://yrh.ai 2. Choose your destination and plan 3. Pay securely 4. Scan the QR code from your email.\nDownload the YRH eSIM app from https://yrh.ai\nPrices checked on yrh.ai, 17 Nov 2026\n#esimunitedstates #travelesim #yrhesim #roaming",
+  "tags": "esim united states, united states sim card, internet in united states, roaming, travel esim, YRH eSIM, esim usa, esim turkey, esim thailand, travel tips, holiday data, usa sim card",
+  "tts_style": "Warm, energetic British accent, speaking at a friendly and natural pace like a mate sharing a brilliant travel hack."
+}

@@ -1,0 +1,69 @@
+{
+ "lang": "en",
+ "rtl": false,
+ "font_bold": "fonts/Inter-ExtraBold.otf",
+ "font_regular": "fonts/Inter-Regular.otf",
+ "accent": "#C8102E",
+ "accent2": "#7DB3FF",
+ "hook_emoji": "🇺🇸",
+ "cta_button": "Download the app at yrh.ai",
+ "offers": [
+  {
+   "emoji": "🇺🇸",
+   "label": "United States",
+   "plan": "5GB · 30 days",
+   "price": "$7.71"
+  },
+  {
+   "emoji": "🇹🇷",
+   "label": "Turkey",
+   "plan": "5GB · 30 days",
+   "price": "$5.21"
+  },
+  {
+   "emoji": "🇹🇭",
+   "label": "Thailand",
+   "plan": "5GB · 30 days",
+   "price": "$6.13"
+  }
+ ],
+ "steps": [
+  "1. Go to yrh.ai",
+  "2. Choose destination and plan",
+  "3. Pay securely",
+  "4. Scan the QR code from your email"
+ ],
+ "price_note": "Prices from yrh.ai on 17 Nov 2026",
+ "scenes": [
+  {
+   "id": "hook",
+   "voice": "Heading Stateside? A week's gigabyte for three dollars thirty-seven.",
+   "headline": "Heading Stateside?",
+   "sub": "USA: 1GB · 7 days · $3.37"
+  },
+  {
+   "id": "problem",
+   "voice": "Roaming charges and airport SIM queues? Honestly, no thanks.",
+   "headline": "Roaming charges? No thanks",
+   "sub": "Skip the SIM shop queues"
+  },
+  {
+   "id": "offers",
+   "voice": "Turkey too: five gigabytes, thirty days, just five dollars twenty-one.",
+   "headline": "USA, Turkey or Thailand",
+   "sub": "Turkey: 5GB · 30 days · $5.21"
+  },
+  {
+   "id": "steps",
+   "voice": "Visit y-r-h dot a-i, pick a plan, pay, scan the QR code.",
+   "headline": "Go to yrh.ai",
+   "sub": "Pick a plan · Pay · Scan the QR code"
+  },
+  {
+   "id": "cta",
+   "voice": "Download our app straight from y-r-h dot a-i today!",
+   "headline": "Download our app",
+   "sub": "Get it at yrh.ai"
+  }
+ ]
+}
