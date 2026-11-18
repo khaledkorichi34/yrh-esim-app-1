@@ -222,7 +222,12 @@
   "sa-6_package",
   "sas-6_package",
   "ss_package",
-  "sd_package"
+  "sd_package",
+  "sr_package",
+  "tj_package",
+  "tg_package",
+  "to_package",
+  "tt_package"
  ],
  "days": {
   "2026-10-05": [
@@ -525,6 +530,13 @@
    "sas-6_package",
    "ss_package",
    "sd_package"
+  ],
+  "2026-11-18": [
+   "sr_package",
+   "tj_package",
+   "tg_package",
+   "to_package",
+   "tt_package"
   ]
  }
 }
