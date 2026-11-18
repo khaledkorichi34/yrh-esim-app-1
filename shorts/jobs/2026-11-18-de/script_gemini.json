@@ -1,0 +1,21 @@
+{
+  "scenes": [
+    {"id": "hook","voice": "USA Urlaub? Ein Gigabyte für drei Dollar siebenunddreißig!","headline": "USA Trip geplant?","sub": "1GB für nur $3.37!"},
+    {"id": "problem","voice": "Denk an den Steckdosenadapter für drüben,","headline": "Reise-Adapter nicht vergessen!","sub": "Wichtig für die USA"},
+    {"id": "problem","voice": "und spar dir den Stress im SIM-Shop!","headline": "Spar dir den SIM-Shop","sub": "Kein Stress im Urlaub"},
+    {"id": "offers","voice": "Ob für die USA, Türkei oder Thailand,","headline": "Internet auf der ganzen Welt","sub": "USA, Türkei oder Thailand"},
+    {"id": "offers","voice": "fünf Gigabyte Türkei kosten nur fünf Dollar einundzwanzig!","headline": "Türkei 5GB für $5.21","sub": "Top-Netz ohne versteckte Kosten"},
+    {"id": "steps","voice": "Geh einfach auf ypsilon er ha punkt a i,","headline": "So einfach geht's","sub": "Geh auf yrh.ai"},
+    {"id": "steps","voice": "wähle dein Land und den passenden Tarif.","headline": "Land und Tarif wählen","sub": "Perfekt für deine Reise"},
+    {"id": "steps","voice": "Dann scannst du den QR-Code aus der E-Mail!","headline": "QR-Code scannen","sub": "Direkt aus der E-Mail"},
+    {"id": "cta","voice": "Hol die App auf ypsilon er ha punkt a i!","headline": "Hol dir die App","sub": "Jetzt auf yrh.ai"}
+  ],
+  "offer_labels": {"usa": "USA","turkey": "Türkei","thailand": "Thailand"},
+  "steps": ["Geh auf yrh.ai","Land und Tarif auswählen","Schnell und sicher bezahlen","QR-Code aus E-Mail scannen"],
+  "cta_button": "App auf yrh.ai herunterladen",
+  "price_note": "Preise von yrh.ai am 18. Nov 2026",
+  "title": "Beste eSIM für USA 2026 🇺🇸 1GB für $3.37 ohne Roaming",
+  "description": "Beste eSIM für die USA 2026: Keine Roaming-Gebühren, in Minuten per QR aktiviert.\nUSA Urlaub? Ein Gigabyte für nur $3.37!\n🇺🇸 USA: 1GB · 7 Tage = $3.37 | 5GB · 30 Tage = $7.71\n🇹🇷 Türkei: 3GB · 30 Tage = $3.37 | 5GB · 30 Tage = $5.21\n🇹🇭 Thailand: 1GB · 7 Tage = $3.37 | 5GB · 30 Tage = $6.13\n1. Geh auf yrh.ai 2. Ziel wählen 3. Bezahlen 4. QR-Code scannen\nLade die YRH eSIM App von yrh.ai herunter.\nPreise überprüft auf yrh.ai, 18. Nov 2026.\n#eSIM #USA #Reisetipps #TravelHack #yrhesim",
+  "tags": "esim usa, beste esim für usa, usa sim karte, internet in usa, travel esim, no roaming, YRH eSIM, esim 2026, usa reise, esim türkei",
+  "tts_style": "Friendly, upbeat, and fast-paced like a knowledgeable travel buddy, speaking with a modern German accent."
+}

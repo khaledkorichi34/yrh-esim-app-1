@@ -1,0 +1,69 @@
+{
+ "lang": "de",
+ "rtl": false,
+ "font_bold": "fonts/Inter-ExtraBold.otf",
+ "font_regular": "fonts/Inter-Regular.otf",
+ "accent": "#DD0000",
+ "accent2": "#FFCE00",
+ "hook_emoji": "🇺🇸",
+ "cta_button": "App auf yrh.ai herunterladen",
+ "offers": [
+  {
+   "emoji": "🇺🇸",
+   "label": "USA",
+   "plan": "5GB · 30 days",
+   "price": "$7.71"
+  },
+  {
+   "emoji": "🇹🇷",
+   "label": "Türkei",
+   "plan": "5GB · 30 days",
+   "price": "$5.21"
+  },
+  {
+   "emoji": "🇹🇭",
+   "label": "Thailand",
+   "plan": "5GB · 30 days",
+   "price": "$6.13"
+  }
+ ],
+ "steps": [
+  "Geh auf yrh.ai",
+  "Land und Tarif auswählen",
+  "Schnell und sicher bezahlen",
+  "QR-Code aus der E-Mail scannen"
+ ],
+ "price_note": "Preise von yrh.ai am 18. Nov 2026",
+ "scenes": [
+  {
+   "id": "hook",
+   "voice": "USA-Trip? Ein Gigabyte für drei Dollar siebenunddreißig!",
+   "headline": "USA-Trip geplant?",
+   "sub": "1GB · 7 Tage für $3.37"
+  },
+  {
+   "id": "problem",
+   "voice": "Offline-Karten laden, aber Uber und Tickets brauchen Daten.",
+   "headline": "Uber braucht mobile Daten",
+   "sub": "Offline-Karten allein reichen nicht"
+  },
+  {
+   "id": "offers",
+   "voice": "Türkei: fünf Gigabyte für fünf Dollar einundzwanzig, dreißig Tage.",
+   "headline": "Türkei 5GB für $5.21",
+   "sub": "Auch für USA und Thailand"
+  },
+  {
+   "id": "steps",
+   "voice": "Auf ypsilon er ha punkt a i Land und Tarif wählen, bezahlen, QR-Code scannen.",
+   "headline": "So einfach geht's",
+   "sub": "Land wählen, bezahlen, scannen"
+  },
+  {
+   "id": "cta",
+   "voice": "Jetzt die App holen: ypsilon er ha punkt a i!",
+   "headline": "Hol dir die App",
+   "sub": "Jetzt auf yrh.ai"
+  }
+ ]
+}

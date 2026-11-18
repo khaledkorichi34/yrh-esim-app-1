@@ -1,0 +1,17 @@
+{
+  "scenes": [
+    {"id": "hook","voice": "USA-Trip? Ein Gigabyte für drei Dollar siebenunddreißig!","headline": "USA-Trip geplant?","sub": "1GB · 7 Tage für $3.37"},
+    {"id": "problem","voice": "Offline-Karten laden, aber Uber und Tickets brauchen Daten.","headline": "Uber braucht mobile Daten","sub": "Offline-Karten allein reichen nicht"},
+    {"id": "offers","voice": "Türkei: fünf Gigabyte für fünf Dollar einundzwanzig, dreißig Tage.","headline": "Türkei 5GB für $5.21","sub": "Auch für USA und Thailand"},
+    {"id": "steps","voice": "Auf ypsilon er ha punkt a i Land und Tarif wählen, bezahlen, QR-Code scannen.","headline": "So einfach geht's","sub": "Land wählen, bezahlen, scannen"},
+    {"id": "cta","voice": "Jetzt die App holen: ypsilon er ha punkt a i!","headline": "Hol dir die App","sub": "Jetzt auf yrh.ai"}
+  ],
+  "offer_labels": {"usa": "USA","turkey": "Türkei","thailand": "Thailand"},
+  "steps": ["Geh auf yrh.ai","Land und Tarif auswählen","Schnell und sicher bezahlen","QR-Code aus der E-Mail scannen"],
+  "cta_button": "App auf yrh.ai herunterladen",
+  "price_note": "Preise von yrh.ai am 18. Nov 2026",
+  "title": "Beste eSIM für die USA 2026 🇺🇸 1GB für $3.37 – ohne Roaming",
+  "description": "Beste eSIM für die USA 2026: Keine Roaming-Gebühren, in Minuten per QR-Code aktiviert.\nUSA-Urlaub? Ein Gigabyte für nur $3.37!\n🇺🇸 USA: 1GB · 7 Tage = $3.37 | 5GB · 30 Tage = $7.71\n🇹🇷 Türkei: 3GB · 30 Tage = $3.37 | 5GB · 30 Tage = $5.21\n🇹🇭 Thailand: 1GB · 7 Tage = $3.37 | 5GB · 30 Tage = $6.13\n1. Geh auf https://yrh.ai 2. Ziel wählen 3. Bezahlen 4. QR-Code scannen\nLade die YRH eSIM App auf https://yrh.ai herunter.\nPreise überprüft auf yrh.ai, 18. Nov 2026.\n#eSIM #USA #Reisetipps #TravelHack #yrhesim",
+  "tags": "esim usa, beste esim für usa, usa sim karte, internet in usa, travel esim, no roaming, YRH eSIM, esim 2026, usa reise, esim türkei",
+  "tts_style": "Friendly, upbeat, and fast-paced like a knowledgeable travel buddy, speaking natural native German (Germany)."
+}
