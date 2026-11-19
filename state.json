@@ -227,7 +227,12 @@
   "tj_package",
   "tg_package",
   "to_package",
-  "tt_package"
+  "tt_package",
+  "tc_package",
+  "ug_package",
+  "ua_package",
+  "uy_package",
+  "uz_package"
  ],
  "days": {
   "2026-10-05": [
@@ -537,6 +542,13 @@
    "tg_package",
    "to_package",
    "tt_package"
+  ],
+  "2026-11-19": [
+   "tc_package",
+   "ug_package",
+   "ua_package",
+   "uy_package",
+   "uz_package"
   ]
  }
 }
