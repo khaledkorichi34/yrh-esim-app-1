@@ -1,0 +1,17 @@
+{
+  "scenes": [
+    {"id": "hook", "voice": "韓国旅行？1ギガがたった3ドル37セント！", "headline": "韓国旅行に行くなら", "sub": "1GBが3.37ドル！"},
+    {"id": "problem", "voice": "SIM行列はパス！ネイバーマップに必須だよ。", "headline": "SIMの行列はパス！", "sub": "ネイバーマップにも必須"},
+    {"id": "offers", "voice": "韓国、アメリカ、ヨーロッパも！ヨーロッパ5ギガで6ドル19セント。", "headline": "ヨーロッパやアメリカも！", "sub": "ヨーロッパ5GBが6.19ドル"},
+    {"id": "steps", "voice": "ワイアールエイチドットエーアイで決済、メールのQRを読むだけ！", "headline": "使い方は超簡単", "sub": "メールのQRを読むだけ"},
+    {"id": "cta", "voice": "今すぐワイアールエイチドットエーアイからアプリをダウンロードしてね！", "headline": "yrh.aiへアクセス！", "sub": "アプリをダウンロードしてね"}
+  ],
+  "offer_labels": {"korea": "韓国", "usa": "アメリカ", "europe": "ヨーロッパ"},
+  "steps": ["yrh.aiにアクセス", "目的地とプランを選択", "オンラインでお支払い", "メールのQRをスキャン"],
+  "cta_button": "yrh.aiでアプリをダウンロード",
+  "price_note": "2026年11月19日時点のyrh.aiの価格",
+  "title": "韓国旅行eSIM 2026 🇰🇷 1GBが3.37ドル ローミング不要",
+  "description": "韓国旅行eSIM 2026: ローミング不要、QRで数分で開通。\n韓国旅行？1GBがたった3.37ドル！\n【料金プラン】\n韓国: 1GB(7日間) $3.37 / 5GB(30日間) $6.13\nアメリカ: 1GB(7日間) $3.37 / 5GB(30日間) $7.71\nヨーロッパ(35カ国): 1GB(7日間) $3.37 / 5GB(30日間) $6.19\n【使い方】yrh.aiにアクセス、目的地とプランを選択、オンラインでお支払い、メールのQRをスキャン。\nyrh.aiからYRH eSIMアプリをダウンロード！\n2026年11月19日時点のyrh.aiの価格\n#韓国旅行 #eSIM #海外旅行 #koreatravel #yrhesim",
+  "tags": "eSIM 韓国, 韓国旅行 eSIM, 韓国 SIMカード, 韓国 インターネット, 旅行用eSIM, ローミング不要, YRH eSIM, esim 2026, best esim for korea, esim korea",
+  "tts_style": "Upbeat, friendly, and natural Japanese female voice, like a seasoned traveler sharing a great tip with a friend, spoken at a conversational pace."
+}

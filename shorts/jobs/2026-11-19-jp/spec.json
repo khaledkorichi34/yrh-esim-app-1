@@ -1,0 +1,70 @@
+{
+ "lang": "ja",
+ "rtl": false,
+ "font_bold": "/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc",
+ "font_regular": "/usr/share/fonts/opentype/noto/NotoSansCJK-Medium.ttc",
+ "font_index": 0,
+ "accent": "#BC002D",
+ "accent2": "#FF9AA9",
+ "hook_emoji": "🇰🇷",
+ "cta_button": "yrh.aiでアプリをダウンロード",
+ "offers": [
+  {
+   "emoji": "🇰🇷",
+   "label": "韓国",
+   "plan": "5GB · 30 days",
+   "price": "$6.13"
+  },
+  {
+   "emoji": "🇺🇸",
+   "label": "アメリカ",
+   "plan": "5GB · 30 days",
+   "price": "$7.71"
+  },
+  {
+   "emoji": "🇪🇺",
+   "label": "ヨーロッパ",
+   "plan": "5GB · 30 days",
+   "price": "$6.19"
+  }
+ ],
+ "steps": [
+  "yrh.aiにアクセス",
+  "目的地とプランを選択",
+  "オンラインでお支払い",
+  "メールのQRをスキャン"
+ ],
+ "price_note": "2026年11月19日時点のyrh.aiの価格",
+ "scenes": [
+  {
+   "id": "hook",
+   "voice": "韓国旅行、一ギガ七日間が三ドル三十七セント！",
+   "headline": "韓国旅行なら",
+   "sub": "1GB・7日間が3.37ドル"
+  },
+  {
+   "id": "problem",
+   "voice": "空港のシム行列はパス。ネイバーマップもすぐ使える！",
+   "headline": "SIM行列はパス！",
+   "sub": "ネイバーマップもすぐ使える"
+  },
+  {
+   "id": "offers",
+   "voice": "アメリカもヨーロッパも。ヨーロッパは五ギガ三十日間で六ドル十九セント！",
+   "headline": "アメリカも欧州も！",
+   "sub": "ヨーロッパ5GB・30日間が6.19ドル"
+  },
+  {
+   "id": "steps",
+   "voice": "ワイアールエイチドットエーアイで決済して、メールのキューアールを読むだけ！",
+   "headline": "使い方は簡単",
+   "sub": "メールのQRを読むだけ"
+  },
+  {
+   "id": "cta",
+   "voice": "今すぐワイアールエイチドットエーアイでアプリをダウンロード！",
+   "headline": "yrh.aiへ！",
+   "sub": "アプリをダウンロードしてね"
+  }
+ ]
+}
