@@ -232,7 +232,12 @@
   "ug_package",
   "ua_package",
   "uy_package",
-  "uz_package"
+  "uz_package",
+  "vu_package",
+  "va_package",
+  "ve_package",
+  "vg_package",
+  "ye_package"
  ],
  "days": {
   "2026-10-05": [
@@ -549,6 +554,13 @@
    "ua_package",
    "uy_package",
    "uz_package"
+  ],
+  "2026-11-20": [
+   "vu_package",
+   "va_package",
+   "ve_package",
+   "vg_package",
+   "ye_package"
   ]
  }
 }
