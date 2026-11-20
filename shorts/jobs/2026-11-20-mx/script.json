@@ -1,0 +1,17 @@
+{
+  "scenes": [
+    {"id": "hook","voice": "¿Viajas a Estados Unidos? Un giga por siete días, tres dólares treinta y siete.","headline": "Estados Unidos: 1GB por $3.37","sub": "7 días · sin sorpresas"},
+    {"id": "problem","voice": "Sin roaming carísimo ni buscar wifi en cada esquina.","headline": "Adiós al roaming caro","sub": "Ni buscar wifi por todos lados"},
+    {"id": "offers","voice": "También tenemos planes para España y toda Europa.","headline": "También España y Europa","sub": "5GB · 30 días: España $5.39 · Europa $6.19"},
+    {"id": "steps","voice": "Entra a yrh punto ai, elige destino y plan, paga y escanea el QR.","headline": "Entra a yrh.ai","sub": "Elige, paga y escanea el QR que te llega al correo"},
+    {"id": "cta","voice": "Descarga la app en yrh punto ai y conéctate.","headline": "Descarga la app","sub": "Disponible en yrh.ai"}
+  ],
+  "offer_labels": {"usa": "EE. UU.","spain": "España","europe": "Europa"},
+  "steps": ["Entra a yrh.ai","Elige tu destino y plan","Realiza el pago","Escanea el QR de tu correo"],
+  "cta_button": "Descarga la app en yrh.ai",
+  "price_note": "Precios de yrh.ai al 20 nov 2026",
+  "title": "eSIM Estados Unidos 2026 🇺🇸 1GB por $3.37 sin roaming",
+  "description": "eSIM para Estados Unidos 2026: sin cargos de roaming, actívala por QR en minutos. ¿Viajas a Estados Unidos? Un giga por siete días cuesta $3.37.\nPlanes: 🇺🇸 Estados Unidos 1GB/7 días $3.37, 5GB/30 días $7.71 | 🇪🇸 España 1GB/7 días $3.37, 5GB/30 días $5.39 | 🇪🇺 Europa (35 países) 1GB/7 días $3.37, 5GB/30 días $6.19.\nEntra a https://yrh.ai, elige tu destino y plan, paga y escanea el código QR que te llega al correo. ¡Descarga la app YRH eSIM desde https://yrh.ai!\nPrecios verificados en https://yrh.ai, 20 nov 2026.\n#esimestadosunidos #viajesusa #travelesim #noroaming #yrhesim",
+  "tags": "esim estados unidos, esim para estados unidos, sim card estados unidos, internet en estados unidos, travel esim, sin roaming, YRH eSIM, esim 2026, esim usa",
+  "tts_style": "Warm, energetic Mexican Spanish, like a friendly travel tip, natural and upbeat pace."
+}

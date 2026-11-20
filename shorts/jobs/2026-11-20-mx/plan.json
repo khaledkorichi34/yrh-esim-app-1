@@ -1,0 +1,102 @@
+{
+ "job": "2026-11-20-mx",
+ "date": "2026-11-20",
+ "publish_at": "2026-11-21T00:30:00Z",
+ "focus": false,
+ "day": 6,
+ "country": {
+  "code": "mx",
+  "tz": "America/Mexico_City",
+  "name": "Mexico",
+  "language": "Mexican Spanish",
+  "lang": "es",
+  "font": "latin",
+  "voice": "Puck",
+  "accent": "#006847",
+  "accent2": "#7CF7B0",
+  "pools": [
+   [
+    "usa",
+    "spain",
+    "europe"
+   ],
+   [
+    "japan",
+    "canada",
+    "global"
+   ],
+   [
+    "italy",
+    "france",
+    "korea"
+   ]
+  ]
+ },
+ "pool": [
+  "usa",
+  "spain",
+  "europe"
+ ],
+ "music": "music/house1.mp3",
+ "dest": {
+  "usa": {
+   "slug": "united-states-esim",
+   "emoji": "🇺🇸",
+   "en": "United States"
+  },
+  "spain": {
+   "slug": "spain-esim",
+   "emoji": "🇪🇸",
+   "en": "Spain"
+  },
+  "europe": {
+   "slug": "europe-35-areas-esim",
+   "emoji": "🇪🇺",
+   "en": "Europe (35 countries)"
+  }
+ },
+ "prices": {
+  "usa": {
+   "cheapest": {
+    "gb": 1.0,
+    "days": 7,
+    "price": 3.37,
+    "option": "United States 1GB 7Days"
+   },
+   "card": {
+    "gb": 5.0,
+    "days": 30,
+    "price": 7.71,
+    "option": "United States 5GB 30Days"
+   }
+  },
+  "spain": {
+   "cheapest": {
+    "gb": 1.0,
+    "days": 7,
+    "price": 3.37,
+    "option": "Spain 1GB 7Days"
+   },
+   "card": {
+    "gb": 5.0,
+    "days": 30,
+    "price": 5.39,
+    "option": "Spain 5GB 30Days"
+   }
+  },
+  "europe": {
+   "cheapest": {
+    "gb": 1.0,
+    "days": 7,
+    "price": 3.37,
+    "option": "Europe (35 areas) 1GB 7Days"
+   },
+   "card": {
+    "gb": 5.0,
+    "days": 30,
+    "price": 6.19,
+    "option": "Europe (35 areas) 5GB 30Days"
+   }
+  }
+ }
+}

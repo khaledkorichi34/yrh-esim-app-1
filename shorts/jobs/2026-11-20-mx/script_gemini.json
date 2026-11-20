@@ -1,0 +1,19 @@
+{
+  "scenes": [
+    {"id": "hook","voice": "¿Viajas a Estados Unidos pronto?","headline": "¿Viajas a Estados Unidos?","sub": ""},
+    {"id": "hook","voice": "Un giga cuesta tres dólares con treinta y siete.","headline": "1GB por solo $3.37","sub": "Precio sin sorpresas"},
+    {"id": "problem","voice": "Tip: allá los precios no incluyen impuestos. Cero roaming.","headline": "Tip: precios sin impuestos","sub": "Olvídate del caro roaming"},
+    {"id": "offers","voice": "También hay eSIM para España y Europa.","headline": "España y Europa","sub": "Conéctate al instante"},
+    {"id": "steps","voice": "Entra a yrh punto ai, elige plan y paga.","headline": "Entra a yrh.ai","sub": "Elige tu plan y paga"},
+    {"id": "steps","voice": "Luego escanea el código QR de tu correo.","headline": "Escanea el código QR","sub": "Llega directo a tu correo"},
+    {"id": "cta","voice": "Descarga nuestra app desde yrh punto ai.","headline": "Descarga la app","sub": "Disponible en yrh.ai"}
+  ],
+  "offer_labels": {"usa": "Estados Unidos","spain": "España","europe": "Europa"},
+  "steps": ["Entra a yrh.ai","Elige tu plan","Realiza el pago","Escanea el QR"],
+  "cta_button": "Descarga la app en yrh.ai",
+  "price_note": "Precios de yrh.ai al 20 nov 2026",
+  "title": "eSIM Estados Unidos 2026 🇺🇸 1GB por $3.37 sin roaming",
+  "description": "La mejor eSIM para Estados Unidos 2026: sin cargos de roaming, actívala por QR en minutos. ¿Viajas a Estados Unidos pronto? Un giga cuesta tres dólares con treinta y siete.\nPlanes: 🇺🇸 Estados Unidos 1GB/7 días $3.37, 5GB/30 días $7.71 | 🇪🇸 España 1GB/7 días $3.37, 5GB/30 días $5.39 | 🇪🇺 Europa (35 países) 1GB/7 días $3.37, 5GB/30 días $6.19.\nVe a yrh.ai, elige tu destino y plan, paga y escanea el código QR del correo. ¡Descarga la app YRH eSIM desde yrh.ai!\nPrecios verificados en yrh.ai, 20 nov 2026.\n#esimestadosunidos #viajesusa #travelesim #noroaming #yrhesim",
+  "tags": "esim estados unidos, mejor esim para estados unidos, estados unidos sim card, internet en estados unidos, travel esim, no roaming, YRH eSIM, esim 2026, esim usa",
+  "tts_style": "Warm, energetic Mexican Spanish, like a friendly travel tip, natural and upbeat pace."
+}

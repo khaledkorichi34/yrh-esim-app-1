@@ -1,0 +1,69 @@
+{
+ "lang": "es",
+ "rtl": false,
+ "font_bold": "fonts/Inter-ExtraBold.otf",
+ "font_regular": "fonts/Inter-Regular.otf",
+ "accent": "#006847",
+ "accent2": "#7CF7B0",
+ "hook_emoji": "🇺🇸",
+ "cta_button": "Descarga la app en yrh.ai",
+ "offers": [
+  {
+   "emoji": "🇺🇸",
+   "label": "EE. UU.",
+   "plan": "5GB · 30 days",
+   "price": "$7.71"
+  },
+  {
+   "emoji": "🇪🇸",
+   "label": "España",
+   "plan": "5GB · 30 days",
+   "price": "$5.39"
+  },
+  {
+   "emoji": "🇪🇺",
+   "label": "Europa",
+   "plan": "5GB · 30 days",
+   "price": "$6.19"
+  }
+ ],
+ "steps": [
+  "Entra a yrh.ai",
+  "Elige tu destino y plan",
+  "Realiza el pago",
+  "Escanea el QR de tu correo"
+ ],
+ "price_note": "Precios de yrh.ai al 20 nov 2026",
+ "scenes": [
+  {
+   "id": "hook",
+   "voice": "¿Viajas a Estados Unidos? Un giga por siete días, tres dólares treinta y siete.",
+   "headline": "Estados Unidos: 1GB por $3.37",
+   "sub": "7 días · sin sorpresas"
+  },
+  {
+   "id": "problem",
+   "voice": "Sin roaming carísimo ni buscar wifi en cada esquina.",
+   "headline": "Adiós al roaming caro",
+   "sub": "Ni buscar wifi por todos lados"
+  },
+  {
+   "id": "offers",
+   "voice": "También tenemos planes para España y toda Europa.",
+   "headline": "También España y Europa",
+   "sub": "5GB · 30 días: España $5.39 · Europa $6.19"
+  },
+  {
+   "id": "steps",
+   "voice": "Entra a yrh punto ai, elige destino y plan, paga y escanea el QR.",
+   "headline": "Entra a yrh.ai",
+   "sub": "Elige, paga y escanea el QR que te llega al correo"
+  },
+  {
+   "id": "cta",
+   "voice": "Descarga la app en yrh punto ai y conéctate.",
+   "headline": "Descarga la app",
+   "sub": "Disponible en yrh.ai"
+  }
+ ]
+}
