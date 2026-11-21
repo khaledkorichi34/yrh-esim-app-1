@@ -1,0 +1,69 @@
+{
+ "lang": "pt",
+ "rtl": false,
+ "font_bold": "fonts/Inter-ExtraBold.otf",
+ "font_regular": "fonts/Inter-Regular.otf",
+ "accent": "#009C3B",
+ "accent2": "#FFDF00",
+ "hook_emoji": "🇵🇹",
+ "cta_button": "Baixe o app em yrh.ai",
+ "offers": [
+  {
+   "emoji": "🇵🇹",
+   "label": "Portugal",
+   "plan": "5GB · 30 days",
+   "price": "$5.39"
+  },
+  {
+   "emoji": "🇪🇺",
+   "label": "Europa",
+   "plan": "5GB · 30 days",
+   "price": "$6.19"
+  },
+  {
+   "emoji": "🇺🇸",
+   "label": "EUA",
+   "plan": "5GB · 30 days",
+   "price": "$7.71"
+  }
+ ],
+ "steps": [
+  "Acesse o site yrh.ai",
+  "Escolha destino e plano",
+  "Pague com segurança",
+  "Escaneie o QR Code"
+ ],
+ "price_note": "Preços consultados na yrh.ai em 21 de nov de 2026",
+ "scenes": [
+  {
+   "id": "hook",
+   "voice": "Vai pra Portugal? Um giga, sete dias, por três dólares e trinta e sete!",
+   "headline": "Portugal: 1GB por $3.37",
+   "sub": "Chega de roaming caro"
+  },
+  {
+   "id": "problem",
+   "voice": "Use tênis confortáveis nas ladeiras de Lisboa e fuja do roaming caro!",
+   "headline": "Dica para Lisboa",
+   "sub": "Tênis confortáveis e adeus, roaming"
+  },
+  {
+   "id": "offers",
+   "voice": "Tem Europa e Estados Unidos. Cinco gigas na Europa por seis dólares e dezenove.",
+   "headline": "Europa: 5GB por $6.19",
+   "sub": "Conexão em 35 países"
+  },
+  {
+   "id": "steps",
+   "voice": "Acesse ípsilon erre agá ponto ai, escolha o plano, pague e escaneie o QR code.",
+   "headline": "Acesse yrh.ai",
+   "sub": "Escolha, pague e escaneie o QR Code"
+  },
+  {
+   "id": "cta",
+   "voice": "E baixe o nosso aplicativo pelo botão no topo do site!",
+   "headline": "Baixe nosso app",
+   "sub": "Botão no topo do site"
+  }
+ ]
+}

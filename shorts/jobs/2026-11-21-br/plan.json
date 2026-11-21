@@ -1,0 +1,102 @@
+{
+ "job": "2026-11-21-br",
+ "date": "2026-11-21",
+ "publish_at": "2026-11-21T21:30:00Z",
+ "focus": false,
+ "day": 7,
+ "country": {
+  "code": "br",
+  "tz": "America/Sao_Paulo",
+  "name": "Brazil",
+  "language": "Brazilian Portuguese",
+  "lang": "pt",
+  "font": "latin",
+  "voice": "Kore",
+  "accent": "#009C3B",
+  "accent2": "#FFDF00",
+  "pools": [
+   [
+    "portugal",
+    "europe",
+    "usa"
+   ],
+   [
+    "japan",
+    "italy",
+    "global"
+   ],
+   [
+    "spain",
+    "france",
+    "canada"
+   ]
+  ]
+ },
+ "pool": [
+  "portugal",
+  "europe",
+  "usa"
+ ],
+ "music": "music/house2.mp3",
+ "dest": {
+  "portugal": {
+   "slug": "portugal-esim",
+   "emoji": "🇵🇹",
+   "en": "Portugal"
+  },
+  "europe": {
+   "slug": "europe-35-areas-esim",
+   "emoji": "🇪🇺",
+   "en": "Europe (35 countries)"
+  },
+  "usa": {
+   "slug": "united-states-esim",
+   "emoji": "🇺🇸",
+   "en": "United States"
+  }
+ },
+ "prices": {
+  "portugal": {
+   "cheapest": {
+    "gb": 1.0,
+    "days": 7,
+    "price": 3.37,
+    "option": "Portugal 1GB 7Days"
+   },
+   "card": {
+    "gb": 5.0,
+    "days": 30,
+    "price": 5.39,
+    "option": "Portugal 5GB 30Days"
+   }
+  },
+  "europe": {
+   "cheapest": {
+    "gb": 1.0,
+    "days": 7,
+    "price": 3.37,
+    "option": "Europe (35 areas) 1GB 7Days"
+   },
+   "card": {
+    "gb": 5.0,
+    "days": 30,
+    "price": 6.19,
+    "option": "Europe (35 areas) 5GB 30Days"
+   }
+  },
+  "usa": {
+   "cheapest": {
+    "gb": 1.0,
+    "days": 7,
+    "price": 3.37,
+    "option": "United States 1GB 7Days"
+   },
+   "card": {
+    "gb": 5.0,
+    "days": 30,
+    "price": 7.71,
+    "option": "United States 5GB 30Days"
+   }
+  }
+ }
+}
