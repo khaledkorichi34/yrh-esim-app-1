@@ -237,7 +237,9 @@
   "va_package",
   "ve_package",
   "vg_package",
-  "ye_package"
+  "ye_package",
+  "zm_package",
+  "zw_package"
  ],
  "days": {
   "2026-10-05": [
@@ -561,6 +563,10 @@
    "ve_package",
    "vg_package",
    "ye_package"
+  ],
+  "2026-11-21": [
+   "zm_package",
+   "zw_package"
   ]
  }
 }
