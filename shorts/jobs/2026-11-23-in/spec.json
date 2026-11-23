@@ -1,0 +1,70 @@
+{
+ "lang": "hi",
+ "rtl": false,
+ "font_bold": "fonts/NotoSansDevanagari[wdth,wght].ttf",
+ "font_regular": "fonts/NotoSansDevanagari[wdth,wght].ttf",
+ "font_bold_var": "Bold",
+ "accent": "#FF9933",
+ "accent2": "#FFD08A",
+ "hook_emoji": "🇦🇪",
+ "cta_button": "yrh.ai से ऐप डाउनलोड करें",
+ "offers": [
+  {
+   "emoji": "🇦🇪",
+   "label": "यूएई",
+   "plan": "5GB · 30 days",
+   "price": "$18.13"
+  },
+  {
+   "emoji": "🇹🇭",
+   "label": "थाईलैंड",
+   "plan": "5GB · 30 days",
+   "price": "$6.13"
+  },
+  {
+   "emoji": "🇪🇺",
+   "label": "यूरोप",
+   "plan": "5GB · 30 days",
+   "price": "$6.19"
+  }
+ ],
+ "steps": [
+  "yrh.ai पर जाएं",
+  "डेस्टिनेशन और प्लान चुनें",
+  "सुरक्षित पेमेंट पूरा करें",
+  "ईमेल से QR कोड स्कैन करें"
+ ],
+ "price_note": "कीमतें yrh.ai पर 23 नवंबर 2026 को जांची गईं।",
+ "scenes": [
+  {
+   "id": "hook",
+   "voice": "यूएई ट्रिप? पाँच सौ एमबी, सिर्फ तीन डॉलर सैंतीस सेंट!",
+   "headline": "यूएई जा रहे हैं?",
+   "sub": "500MB · 7 दिन, सिर्फ $3.37"
+  },
+  {
+   "id": "problem",
+   "voice": "एयरपोर्ट पर सिम की लंबी लाइन में क्यों खड़े हों?",
+   "headline": "सिम की लाइन? नहीं!",
+   "sub": "लैंड करते ही डेटा चालू"
+  },
+  {
+   "id": "offers",
+   "voice": "यूएई, थाईलैंड या यूरोप — हर ट्रिप के लिए YRH ईसिम के आसान डेटा प्लान्स!",
+   "headline": "यूएई, थाईलैंड या यूरोप!",
+   "sub": "किफ़ायती ट्रैवल डेटा प्लान्स"
+  },
+  {
+   "id": "steps",
+   "voice": "yrh.ai पर प्लान चुनें, पे करें, क्यूआर स्कैन करें।",
+   "headline": "कैसे खरीदें?",
+   "sub": "yrh.ai पर प्लान चुनें, QR स्कैन करें"
+  },
+  {
+   "id": "cta",
+   "voice": "yrh.ai से YRH ईसिम ऐप आज ही डाउनलोड करें!",
+   "headline": "ट्रैवल के लिए तैयार?",
+   "sub": "yrh.ai से ऐप डाउनलोड करें!"
+  }
+ ]
+}

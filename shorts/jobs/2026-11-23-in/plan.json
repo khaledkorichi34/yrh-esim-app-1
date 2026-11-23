@@ -1,0 +1,102 @@
+{
+ "job": "2026-11-23-in",
+ "date": "2026-11-23",
+ "publish_at": "2026-11-23T13:00:00Z",
+ "focus": false,
+ "day": 8,
+ "country": {
+  "code": "in",
+  "tz": "Asia/Kolkata",
+  "name": "India",
+  "language": "Hindi (simple, conversational)",
+  "lang": "hi",
+  "font": "hi",
+  "voice": "Puck",
+  "accent": "#FF9933",
+  "accent2": "#FFD08A",
+  "pools": [
+   [
+    "uae",
+    "thailand",
+    "europe"
+   ],
+   [
+    "usa",
+    "uk",
+    "global"
+   ],
+   [
+    "malaysia",
+    "asia",
+    "australia"
+   ]
+  ]
+ },
+ "pool": [
+  "uae",
+  "thailand",
+  "europe"
+ ],
+ "music": "music/house3.mp3",
+ "dest": {
+  "uae": {
+   "slug": "united-arab-emirates-esim",
+   "emoji": "🇦🇪",
+   "en": "United Arab Emirates"
+  },
+  "thailand": {
+   "slug": "thailand-esim",
+   "emoji": "🇹🇭",
+   "en": "Thailand"
+  },
+  "europe": {
+   "slug": "europe-35-areas-esim",
+   "emoji": "🇪🇺",
+   "en": "Europe (35 countries)"
+  }
+ },
+ "prices": {
+  "uae": {
+   "cheapest": {
+    "gb": 0.48828125,
+    "days": 7,
+    "price": 3.37,
+    "option": "United Arab Emirates 500MB 7Days"
+   },
+   "card": {
+    "gb": 5.0,
+    "days": 30,
+    "price": 18.13,
+    "option": "United Arab Emirates 5GB 30Days"
+   }
+  },
+  "thailand": {
+   "cheapest": {
+    "gb": 1.0,
+    "days": 7,
+    "price": 3.37,
+    "option": "Thailand 1GB 7Days"
+   },
+   "card": {
+    "gb": 5.0,
+    "days": 30,
+    "price": 6.13,
+    "option": "Thailand 5GB 30Days"
+   }
+  },
+  "europe": {
+   "cheapest": {
+    "gb": 1.0,
+    "days": 7,
+    "price": 3.37,
+    "option": "Europe (35 areas) 1GB 7Days"
+   },
+   "card": {
+    "gb": 5.0,
+    "days": 30,
+    "price": 6.19,
+    "option": "Europe (35 areas) 5GB 30Days"
+   }
+  }
+ }
+}

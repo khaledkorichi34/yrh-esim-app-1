@@ -1,0 +1,51 @@
+{
+  "scenes": [
+    {
+      "id": "hook",
+      "voice": "यूएई ट्रिप? फाइव हंड्रेड एमबी, थ्री पॉइंट थ्री सेवन डॉलर्स!",
+      "headline": "यूएई जा रहे हैं?",
+      "sub": "500MB सिर्फ $3.37 में!"
+    },
+    {
+      "id": "problem",
+      "voice": "सिम लाइन छोड़ें, और दुबई मेट्रो मैप पहले डाउनलोड करें!",
+      "headline": "सिम लाइन छोड़ें!",
+      "sub": "दुबई मेट्रो मैप डाउनलोड करें"
+    },
+    {
+      "id": "offers",
+      "voice": "यूएई, थाईलैंड या यूरोप जाएं, YRH ईसिम से जुड़े रहें!",
+      "headline": "थाईलैंड, यूएई या यूरोप!",
+      "sub": "बेस्ट ट्रैवल डेटा प्लान्स"
+    },
+    {
+      "id": "steps",
+      "voice": "yrh.ai पर प्लान चुनें, और क्यूआर कोड को स्कैन करें।",
+      "headline": "कैसे खरीदें?",
+      "sub": "yrh.ai पर क्यूआर स्कैन करें"
+    },
+    {
+      "id": "cta",
+      "voice": "yrh.ai वेबसाइट से हमारा नया ऐप आज ही डाउनलोड करें!",
+      "headline": "ट्रैवल रेडी?",
+      "sub": "yrh.ai से ऐप डाउनलोड करें!"
+    }
+  ],
+  "offer_labels": {
+    "uae": "यूएई (UAE)",
+    "thailand": "थाईलैंड",
+    "europe": "यूरोप"
+  },
+  "steps": [
+    "yrh.ai पर जाएं",
+    "डेस्टिनेशन और प्लान चुनें",
+    "सुरक्षित पेमेंट पूरा करें",
+    "ईमेल से क्यूआर स्कैन करें"
+  ],
+  "cta_button": "yrh.ai से ऐप डाउनलोड करें",
+  "price_note": "कीमतें yrh.ai पर 23 नवंबर 2026 को जांची गईं।",
+  "title": "UAE के लिए बेस्ट eSIM 2026 🇦🇪 500MB for $3.37 नो रोमिंग",
+  "description": "UAE के लिए बेस्ट eSIM 2026: रोमिंग फीस नहीं, QR से मिनटों में एक्टिवेट करें। यूएई ट्रिप? 500MB डेटा सिर्फ $3.37 में!\n🇦🇪 यूएई: 500MB (7 दिन) = $3.37, 5GB (30 दिन) = $18.13 | 🇹🇭 थाईलैंड: 1GB (7 दिन) = $3.37, 5GB (30 दिन) = $6.13 | 🇪🇺 यूरोप: 1GB (7 दिन) = $3.37, 5GB (30 दिन) = $6.19\nyrh.ai पर जाएं, अपना प्लान चुनें, पे करें और ईमेल से QR स्कैन करें।\nyrh.ai वेबसाइट से YRH eSIM ऐप अभी डाउनलोड करें।\nकीमतें yrh.ai पर 23 नवंबर 2026 को जांची गईं। #eSIMUAE #TravelIndia #DubaiTrip #NoRoaming #YRHeSIM",
+  "tags": "esim uae, best esim for uae, uae sim card, internet in uae, travel esim, no roaming, YRH eSIM, esim 2026, दुबई ईसिम, रोमिंग फ्री",
+  "tts_style": "Friendly, warm, and highly energetic conversational Hindi, like a smart local friend giving quick travel hacks."
+}
