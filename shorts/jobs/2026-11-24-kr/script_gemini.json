@@ -1,0 +1,51 @@
+{
+  "scenes": [
+    {
+      "id": "hook",
+      "voice": "일본 가시나요? 일 기가바이트가 삼 점 삼칠 달러예요!",
+      "headline": "일본 여행 데이터 꿀팁",
+      "sub": "1GB에 단 $3.37"
+    },
+    {
+      "id": "problem",
+      "voice": "비짓 재팬 미리 캡처해두고 비싼 로밍 대신 써보세요.",
+      "headline": "비싼 로밍은 이제 그만",
+      "sub": "비짓 재팬 큐알 미리 캡처"
+    },
+    {
+      "id": "offers",
+      "voice": "일본 오 기가바이트에 육 점 일삼 달러고 미국과 유럽도 돼요.",
+      "headline": "미국, 유럽도 핫스팟 가능",
+      "sub": "5GB 일본 $6.13"
+    },
+    {
+      "id": "steps",
+      "voice": "와이알에이치 닷 에이아이에서 결제하면 이메일로 큐알 코드가 와요.",
+      "headline": "이메일로 큐알 바로 도착",
+      "sub": "1분 만에 설치 끝"
+    },
+    {
+      "id": "cta",
+      "voice": "지금 와이알에이치 닷 에이아이 상단에서 앱을 다운받으세요!",
+      "headline": "간편하게 앱으로 관리하세요",
+      "sub": "앱 다운로드하고 바로 개통"
+    }
+  ],
+  "offer_labels": {
+    "japan": "일본",
+    "usa": "미국",
+    "europe": "유럽 35개국"
+  },
+  "steps": [
+    "yrh.ai 접속하기",
+    "여행지 및 요금제 선택",
+    "안전하게 결제하기",
+    "이메일 QR로 개통하기"
+  ],
+  "cta_button": "yrh.ai에서 앱 다운로드",
+  "price_note": "2026년 11월 24일 yrh.ai 기준 가격입니다",
+  "title": "일본 이심 추천 2026 🇯🇵 1GB 단 $3.37 로밍 요금 안녕",
+  "description": "2026년 최고 일본 이심: 로밍 요금 없이 큐알로 몇 분 만에 개통하세요.\n일본 가시나요? 1GB가 단 $3.37이에요!\n[요금] 일본: 1GB 7일 $3.37, 5GB 30일 $6.13 (미국, 유럽 35개국 지원)\n[방법] yrh.ai 접속 -> 요금제 선택 -> 결제 -> 이메일 QR 스캔\n지금 yrh.ai 상단에서 YRH eSIM 앱을 다운로드하세요!\n2026년 11월 24일 yrh.ai 기준 가격입니다.\n#일본이심 #일본여행 #eSIMJapan #travelesim #YRHeSIM #noroaming",
+  "tags": "esim 일본, 일본 이심 추천, 일본 유심, 일본 인터넷, travel esim, no roaming, YRH eSIM, esim 2026, 일본 esim, japan esim",
+  "tts_style": "Friendly, warm, and energetic young Korean speaker, like a close friend sharing a genuinely smart travel hack, speaking at a lively natural pace."
+}

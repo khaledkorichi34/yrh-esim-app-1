@@ -1,0 +1,70 @@
+{
+ "lang": "ko",
+ "rtl": false,
+ "font_bold": "/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc",
+ "font_regular": "/usr/share/fonts/opentype/noto/NotoSansCJK-Medium.ttc",
+ "font_index": 1,
+ "accent": "#CD2E3A",
+ "accent2": "#7DB3FF",
+ "hook_emoji": "🇯🇵",
+ "cta_button": "yrh.ai에서 앱 다운로드",
+ "offers": [
+  {
+   "emoji": "🇯🇵",
+   "label": "일본",
+   "plan": "5GB · 30 days",
+   "price": "$6.13"
+  },
+  {
+   "emoji": "🇺🇸",
+   "label": "미국",
+   "plan": "5GB · 30 days",
+   "price": "$7.71"
+  },
+  {
+   "emoji": "🇪🇺",
+   "label": "유럽",
+   "plan": "5GB · 30 days",
+   "price": "$6.19"
+  }
+ ],
+ "steps": [
+  "yrh.ai 접속하기",
+  "여행지와 요금제 선택",
+  "안전하게 결제하기",
+  "이메일 QR로 개통하기"
+ ],
+ "price_note": "2026년 11월 24일 yrh.ai 기준 가격입니다",
+ "scenes": [
+  {
+   "id": "hook",
+   "voice": "일본 가세요? 일 기가 일주일에 삼 점 삼칠 달러!",
+   "headline": "일본 여행 데이터 꿀팁",
+   "sub": "1GB 7일 단 $3.37"
+  },
+  {
+   "id": "problem",
+   "voice": "비짓 재팬 큐알은 미리 캡처하고, 비싼 로밍은 이제 그만!",
+   "headline": "비싼 로밍은 이제 그만",
+   "sub": "비짓 재팬 QR은 미리 캡처"
+  },
+  {
+   "id": "offers",
+   "voice": "오 기가 한 달은 육 점 일삼 달러, 미국 유럽도요.",
+   "headline": "미국, 유럽 요금제도 준비 완료",
+   "sub": "일본 5GB 30일 $6.13"
+  },
+  {
+   "id": "steps",
+   "voice": "와이알에이치 닷 에이아이에서 결제하면 이메일로 큐알 코드가 와요.",
+   "headline": "이메일로 QR 바로 도착",
+   "sub": "몇 분 만에 설치 끝"
+  },
+  {
+   "id": "cta",
+   "voice": "지금 와이알에이치 닷 에이아이 상단에서 앱을 다운받으세요!",
+   "headline": "앱으로 간편하게 관리하세요",
+   "sub": "앱 다운로드하고 바로 개통"
+  }
+ ]
+}
