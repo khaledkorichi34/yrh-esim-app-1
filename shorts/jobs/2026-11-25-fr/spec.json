@@ -1,0 +1,69 @@
+{
+ "lang": "fr",
+ "rtl": false,
+ "font_bold": "fonts/Inter-ExtraBold.otf",
+ "font_regular": "fonts/Inter-Regular.otf",
+ "accent": "#0055A4",
+ "accent2": "#FF6B6B",
+ "hook_emoji": "🇺🇸",
+ "cta_button": "Télécharger l'appli sur yrh.ai",
+ "offers": [
+  {
+   "emoji": "🇺🇸",
+   "label": "États-Unis",
+   "plan": "5GB · 30 days",
+   "price": "$7.71"
+  },
+  {
+   "emoji": "🇯🇵",
+   "label": "Japon",
+   "plan": "5GB · 30 days",
+   "price": "$6.13"
+  },
+  {
+   "emoji": "🇹🇭",
+   "label": "Thaïlande",
+   "plan": "5GB · 30 days",
+   "price": "$6.13"
+  }
+ ],
+ "steps": [
+  "Va sur yrh.ai",
+  "Choisis ta destination et ton forfait",
+  "Paie en ligne",
+  "Scanne le QR code reçu par e-mail"
+ ],
+ "price_note": "Prix constatés sur yrh.ai le 25 novembre 2026",
+ "scenes": [
+  {
+   "id": "hook",
+   "voice": "Tu pars aux États-Unis ? Un giga pour trois dollars trente-sept.",
+   "headline": "Internet aux États-Unis ?",
+   "sub": "1 Go · 7 jours · 3,37 $"
+  },
+  {
+   "id": "problem",
+   "voice": "Fais ton ESTA à l'avance, et évite le hors forfait sur place.",
+   "headline": "Fini le hors forfait",
+   "sub": "Garde le contrôle de ta facture"
+  },
+  {
+   "id": "offers",
+   "voice": "Japon ou Thaïlande : cinq gigas, trente jours, six dollars treize.",
+   "headline": "États-Unis, Japon, Thaïlande",
+   "sub": "Japon : 5 Go · 30 jours · 6,13 $"
+  },
+  {
+   "id": "steps",
+   "voice": "Va sur yrh point ai, choisis ta destination, paie, puis scanne le QR code.",
+   "headline": "Commande en quelques clics",
+   "sub": "QR code reçu par e-mail"
+  },
+  {
+   "id": "cta",
+   "voice": "Télécharge l'appli YRH sur yrh point ai !",
+   "headline": "Télécharge l'appli !",
+   "sub": "Disponible sur yrh.ai"
+  }
+ ]
+}

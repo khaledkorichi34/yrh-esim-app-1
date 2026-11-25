@@ -1,0 +1,22 @@
+{
+  "scenes": [
+    {"id": "hook", "voice": "Tu pars bientôt aux États-Unis ?", "headline": "Départ aux États-Unis ?", "sub": ""},
+    {"id": "hook", "voice": "Prends un giga pour trois dollars trente-sept.", "headline": "Internet aux US ?", "sub": "1GB pour 3,37$"},
+    {"id": "problem", "voice": "Fais ton ESTA en avance,", "headline": "Conseil voyage et internet", "sub": ""},
+    {"id": "problem", "voice": "et évite le hors forfait sur place.", "headline": "Fini le roaming", "sub": "Garde le contrôle"},
+    {"id": "offers", "voice": "Parfait pour les US, Japon ou Thaïlande.", "headline": "US, Japon, Thaïlande", "sub": ""},
+    {"id": "offers", "voice": "Cinq gigas américains pour sept dollars soixante-onze.", "headline": "Super prix data", "sub": "5GB pour 7,71$ aux US"},
+    {"id": "steps", "voice": "Va sur yrh point ai, choisis ta destination,", "headline": "Commande très simple", "sub": "En quelques clics"},
+    {"id": "steps", "voice": "prends ton forfait et paie en ligne.", "headline": "Choisis et paie", "sub": ""},
+    {"id": "steps", "voice": "Scanne juste le QR code par mail.", "headline": "Installation rapide", "sub": "QR code par e-mail"},
+    {"id": "cta", "voice": "Télécharge notre appli depuis yrh point ai !", "headline": "Télécharge l'app !", "sub": "Disponible sur yrh.ai"}
+  ],
+  "offer_labels": {"usa": "États-Unis", "japan": "Japon", "thailand": "Thaïlande"},
+  "steps": ["Va sur yrh.ai", "Choisis destination et forfait", "Paie en ligne", "Scanne le QR code"],
+  "cta_button": "Télécharger l'app sur yrh.ai",
+  "price_note": "Prix constatés sur yrh.ai le 25 Nov 2026",
+  "title": "Meilleure eSIM États-Unis 2026 🇺🇸 1GB pour 3.37$ sans roaming",
+  "description": "Meilleure eSIM pour les États-Unis 2026 : pas de frais de roaming, activation par QR en quelques minutes.\nTu pars bientôt aux États-Unis ? Prends 1GB pour 3.37$.\n\nÉtats-Unis : 1GB (7 jours) = 3.37$ | 5GB (30 jours) = 7.71$\nJapon : 1GB (7 jours) = 3.37$ | 5GB (30 jours) = 6.13$\nThaïlande : 1GB (7 jours) = 3.37$ | 5GB (30 jours) = 6.13$\n\n1. Allez sur yrh.ai\n2. Choisissez votre destination et forfait\n3. Payez\n4. Scannez le QR code de l'e-mail\n\nTéléchargez l'application YRH eSIM depuis yrh.ai.\nPrix constatés sur yrh.ai le 25 Nov 2026.\n#eSIM #Voyage #EtatsUnis #USA #NoRoaming",
+  "tags": "esim etats-unis, meilleure esim pour les etats-unis, etats-unis sim card, internet aux etats-unis, travel esim, sans roaming, YRH eSIM, esim 2026, internet voyage, esim japon",
+  "tts_style": "Friendly, warm, and energetic Parisian French accent, spoken naturally like a helpful friend sharing a travel secret."
+}

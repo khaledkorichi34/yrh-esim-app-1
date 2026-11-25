@@ -1,0 +1,102 @@
+{
+ "job": "2026-11-25-fr",
+ "date": "2026-11-25",
+ "publish_at": "2026-11-25T17:30:00Z",
+ "focus": false,
+ "day": 10,
+ "country": {
+  "code": "fr",
+  "tz": "Europe/Paris",
+  "name": "France",
+  "language": "French",
+  "lang": "fr",
+  "font": "latin",
+  "voice": "Charon",
+  "accent": "#0055A4",
+  "accent2": "#FF6B6B",
+  "pools": [
+   [
+    "usa",
+    "japan",
+    "thailand"
+   ],
+   [
+    "canada",
+    "uae",
+    "global"
+   ],
+   [
+    "mexico",
+    "turkey",
+    "asia"
+   ]
+  ]
+ },
+ "pool": [
+  "usa",
+  "japan",
+  "thailand"
+ ],
+ "music": "music/house2.mp3",
+ "dest": {
+  "usa": {
+   "slug": "united-states-esim",
+   "emoji": "🇺🇸",
+   "en": "United States"
+  },
+  "japan": {
+   "slug": "japan-esim",
+   "emoji": "🇯🇵",
+   "en": "Japan"
+  },
+  "thailand": {
+   "slug": "thailand-esim",
+   "emoji": "🇹🇭",
+   "en": "Thailand"
+  }
+ },
+ "prices": {
+  "usa": {
+   "cheapest": {
+    "gb": 1.0,
+    "days": 7,
+    "price": 3.37,
+    "option": "United States 1GB 7Days"
+   },
+   "card": {
+    "gb": 5.0,
+    "days": 30,
+    "price": 7.71,
+    "option": "United States 5GB 30Days"
+   }
+  },
+  "japan": {
+   "cheapest": {
+    "gb": 1.0,
+    "days": 7,
+    "price": 3.37,
+    "option": "Japan 1GB 7Days"
+   },
+   "card": {
+    "gb": 5.0,
+    "days": 30,
+    "price": 6.13,
+    "option": "Japan 5GB 30Days"
+   }
+  },
+  "thailand": {
+   "cheapest": {
+    "gb": 1.0,
+    "days": 7,
+    "price": 3.37,
+    "option": "Thailand 1GB 7Days"
+   },
+   "card": {
+    "gb": 5.0,
+    "days": 30,
+    "price": 6.13,
+    "option": "Thailand 5GB 30Days"
+   }
+  }
+ }
+}

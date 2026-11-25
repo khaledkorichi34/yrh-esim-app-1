@@ -1,0 +1,17 @@
+{
+  "scenes": [
+    {"id": "hook", "voice": "Tu pars aux États-Unis ? Un giga pour trois dollars trente-sept.", "headline": "Internet aux États-Unis ?", "sub": "1 Go · 7 jours · 3,37 $"},
+    {"id": "problem", "voice": "Fais ton ESTA à l'avance, et évite le hors forfait sur place.", "headline": "Fini le hors forfait", "sub": "Garde le contrôle de ta facture"},
+    {"id": "offers", "voice": "Japon ou Thaïlande : cinq gigas, trente jours, six dollars treize.", "headline": "États-Unis, Japon, Thaïlande", "sub": "Japon : 5 Go · 30 jours · 6,13 $"},
+    {"id": "steps", "voice": "Va sur yrh point ai, choisis ta destination, paie, puis scanne le QR code.", "headline": "Commande en quelques clics", "sub": "QR code reçu par e-mail"},
+    {"id": "cta", "voice": "Télécharge l'appli YRH sur yrh point ai !", "headline": "Télécharge l'appli !", "sub": "Disponible sur yrh.ai"}
+  ],
+  "offer_labels": {"usa": "États-Unis", "japan": "Japon", "thailand": "Thaïlande"},
+  "steps": ["Va sur yrh.ai", "Choisis ta destination et ton forfait", "Paie en ligne", "Scanne le QR code reçu par e-mail"],
+  "cta_button": "Télécharger l'appli sur yrh.ai",
+  "price_note": "Prix constatés sur yrh.ai le 25 novembre 2026",
+  "title": "Meilleure eSIM États-Unis 2026 🇺🇸 1 Go pour 3,37 $ sans frais de roaming",
+  "description": "eSIM pour les États-Unis 2026 : pas de frais de roaming, activation par QR code en quelques minutes.\nTu pars bientôt aux États-Unis ? Prends 1 Go pour 3,37 $.\n\nÉtats-Unis : 1 Go (7 jours) = 3,37 $ | 5 Go (30 jours) = 7,71 $\nJapon : 1 Go (7 jours) = 3,37 $ | 5 Go (30 jours) = 6,13 $\nThaïlande : 1 Go (7 jours) = 3,37 $ | 5 Go (30 jours) = 6,13 $\nPrix en dollars américains (USD).\n\n1. Allez sur https://yrh.ai\n2. Choisissez votre destination et votre forfait\n3. Payez en ligne\n4. Scannez le QR code reçu par e-mail\n\nTéléchargez l'application YRH eSIM depuis https://yrh.ai.\nPrix constatés sur yrh.ai le 25 novembre 2026.\n#eSIM #Voyage #EtatsUnis #USA #SansRoaming",
+  "tags": "esim etats-unis, esim pour les etats-unis, carte sim etats-unis, internet aux etats-unis, esim voyage, sans frais de roaming, YRH eSIM, esim 2026, internet voyage, esim japon, esim thailande",
+  "tts_style": "Friendly, warm, and energetic Parisian French accent, spoken naturally like a helpful friend sharing a travel tip."
+}
