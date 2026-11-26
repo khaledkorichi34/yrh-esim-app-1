@@ -478,6 +478,9 @@ def scene_bounds(voice, scenes):
         guess.append(total * acc / sum(lens))
     cuts = []
     long_gaps = [x for x in gaps if x[0] >= 0.8]
+    if len(long_gaps) != n - 1:
+        # TTS pauses are often ~0.6 s: accept exactly n-1 clearly longer pauses too
+        long_gaps = [x for x in gaps if x[0] >= 0.5]
     if len(long_gaps) == n - 1:
         # the TTS left one clear pause per line break: use exactly those
         cuts = sorted(x[1] for x in long_gaps)

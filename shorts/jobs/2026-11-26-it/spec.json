@@ -1,0 +1,69 @@
+{
+ "lang": "it",
+ "rtl": false,
+ "font_bold": "fonts/Inter-ExtraBold.otf",
+ "font_regular": "fonts/Inter-Regular.otf",
+ "accent": "#009246",
+ "accent2": "#FF6B6B",
+ "hook_emoji": "🇺🇸",
+ "cta_button": "Scarica l'app su yrh.ai",
+ "offers": [
+  {
+   "emoji": "🇺🇸",
+   "label": "Stati Uniti",
+   "plan": "5GB · 30 days",
+   "price": "$7.71"
+  },
+  {
+   "emoji": "🇯🇵",
+   "label": "Giappone",
+   "plan": "5GB · 30 days",
+   "price": "$6.13"
+  },
+  {
+   "emoji": "🇪🇬",
+   "label": "Egitto",
+   "plan": "5GB · 30 days",
+   "price": "$12.46"
+  }
+ ],
+ "steps": [
+  "Vai su yrh.ai",
+  "Scegli il piano ideale",
+  "Paga online in sicurezza",
+  "Scansiona il QR code"
+ ],
+ "price_note": "Prezzi verificati su yrh.ai il 26 Nov 2026",
+ "scenes": [
+  {
+   "id": "hook",
+   "voice": "Negli Stati Uniti un giga per sette giorni costa tre dollari e trentasette.",
+   "headline": "1GB · 7 giorni a $3.37",
+   "sub": "Stati Uniti, senza roaming"
+  },
+  {
+   "id": "problem",
+   "voice": "Installa l'eSIM sul Wi-Fi di casa e atterri già connesso, senza roaming salato.",
+   "headline": "Tip: installala prima di partire",
+   "sub": "Atterri già connesso, niente roaming"
+  },
+  {
+   "id": "offers",
+   "voice": "Con YRH eSIM navighi anche in Giappone: cinque giga a sei dollari e tredici.",
+   "headline": "Giappone: 5GB · 30 giorni $6.13",
+   "sub": "Egitto: 5GB · 30 giorni $12.46"
+  },
+  {
+   "id": "steps",
+   "voice": "Vai su yrh punto ai, scegli il piano, paga online e scansiona il QR.",
+   "headline": "Come funziona",
+   "sub": "Piano, pagamento, QR via email"
+  },
+  {
+   "id": "cta",
+   "voice": "Scarica l'app YRH eSIM dal sito yrh punto ai.",
+   "headline": "Scarica l'app su yrh.ai",
+   "sub": "Dal sito ufficiale YRH"
+  }
+ ]
+}

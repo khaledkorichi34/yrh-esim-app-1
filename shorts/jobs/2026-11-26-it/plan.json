@@ -1,0 +1,102 @@
+{
+ "job": "2026-11-26-it",
+ "date": "2026-11-26",
+ "publish_at": "2026-11-26T17:30:00Z",
+ "focus": false,
+ "day": 11,
+ "country": {
+  "code": "it",
+  "tz": "Europe/Rome",
+  "name": "Italy",
+  "language": "Italian",
+  "lang": "it",
+  "font": "latin",
+  "voice": "Puck",
+  "accent": "#009246",
+  "accent2": "#FF6B6B",
+  "pools": [
+   [
+    "usa",
+    "japan",
+    "egypt"
+   ],
+   [
+    "thailand",
+    "uk",
+    "global"
+   ],
+   [
+    "mexico",
+    "canada",
+    "asia"
+   ]
+  ]
+ },
+ "pool": [
+  "usa",
+  "japan",
+  "egypt"
+ ],
+ "music": "music/house3.mp3",
+ "dest": {
+  "usa": {
+   "slug": "united-states-esim",
+   "emoji": "🇺🇸",
+   "en": "United States"
+  },
+  "japan": {
+   "slug": "japan-esim",
+   "emoji": "🇯🇵",
+   "en": "Japan"
+  },
+  "egypt": {
+   "slug": "egypt-esim",
+   "emoji": "🇪🇬",
+   "en": "Egypt"
+  }
+ },
+ "prices": {
+  "usa": {
+   "cheapest": {
+    "gb": 1.0,
+    "days": 7,
+    "price": 3.37,
+    "option": "United States 1GB 7Days"
+   },
+   "card": {
+    "gb": 5.0,
+    "days": 30,
+    "price": 7.71,
+    "option": "United States 5GB 30Days"
+   }
+  },
+  "japan": {
+   "cheapest": {
+    "gb": 1.0,
+    "days": 7,
+    "price": 3.37,
+    "option": "Japan 1GB 7Days"
+   },
+   "card": {
+    "gb": 5.0,
+    "days": 30,
+    "price": 6.13,
+    "option": "Japan 5GB 30Days"
+   }
+  },
+  "egypt": {
+   "cheapest": {
+    "gb": 1.0,
+    "days": 7,
+    "price": 3.37,
+    "option": "Egypt 1GB 7Days"
+   },
+   "card": {
+    "gb": 5.0,
+    "days": 30,
+    "price": 12.46,
+    "option": "Egypt 5GB 30Days"
+   }
+  }
+ }
+}
