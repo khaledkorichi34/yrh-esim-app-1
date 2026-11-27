@@ -1,0 +1,102 @@
+{
+ "job": "2026-11-27-au",
+ "date": "2026-11-27",
+ "publish_at": "2026-11-27T07:30:00Z",
+ "focus": false,
+ "day": 12,
+ "country": {
+  "code": "au",
+  "tz": "Australia/Sydney",
+  "name": "Australia",
+  "language": "Australian English",
+  "lang": "en",
+  "font": "latin",
+  "voice": "Kore",
+  "accent": "#00843D",
+  "accent2": "#FFCD00",
+  "pools": [
+   [
+    "japan",
+    "thailand",
+    "usa"
+   ],
+   [
+    "europe",
+    "korea",
+    "global"
+   ],
+   [
+    "uk",
+    "malaysia",
+    "asia"
+   ]
+  ]
+ },
+ "pool": [
+  "japan",
+  "thailand",
+  "usa"
+ ],
+ "music": "music/house1.mp3",
+ "dest": {
+  "japan": {
+   "slug": "japan-esim",
+   "emoji": "🇯🇵",
+   "en": "Japan"
+  },
+  "thailand": {
+   "slug": "thailand-esim",
+   "emoji": "🇹🇭",
+   "en": "Thailand"
+  },
+  "usa": {
+   "slug": "united-states-esim",
+   "emoji": "🇺🇸",
+   "en": "United States"
+  }
+ },
+ "prices": {
+  "japan": {
+   "cheapest": {
+    "gb": 1.0,
+    "days": 7,
+    "price": 3.37,
+    "option": "Japan 1GB 7Days"
+   },
+   "card": {
+    "gb": 5.0,
+    "days": 30,
+    "price": 6.13,
+    "option": "Japan 5GB 30Days"
+   }
+  },
+  "thailand": {
+   "cheapest": {
+    "gb": 1.0,
+    "days": 7,
+    "price": 3.37,
+    "option": "Thailand 1GB 7Days"
+   },
+   "card": {
+    "gb": 5.0,
+    "days": 30,
+    "price": 6.13,
+    "option": "Thailand 5GB 30Days"
+   }
+  },
+  "usa": {
+   "cheapest": {
+    "gb": 1.0,
+    "days": 7,
+    "price": 3.37,
+    "option": "United States 1GB 7Days"
+   },
+   "card": {
+    "gb": 5.0,
+    "days": 30,
+    "price": 7.71,
+    "option": "United States 5GB 30Days"
+   }
+  }
+ }
+}

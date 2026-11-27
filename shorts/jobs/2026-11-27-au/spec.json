@@ -1,0 +1,69 @@
+{
+ "lang": "en",
+ "rtl": false,
+ "font_bold": "fonts/Inter-ExtraBold.otf",
+ "font_regular": "fonts/Inter-Regular.otf",
+ "accent": "#00843D",
+ "accent2": "#FFCD00",
+ "hook_emoji": "🇯🇵",
+ "cta_button": "Download the app at yrh.ai",
+ "offers": [
+  {
+   "emoji": "🇯🇵",
+   "label": "Japan",
+   "plan": "5GB · 30 days",
+   "price": "$6.13"
+  },
+  {
+   "emoji": "🇹🇭",
+   "label": "Thailand",
+   "plan": "5GB · 30 days",
+   "price": "$6.13"
+  },
+  {
+   "emoji": "🇺🇸",
+   "label": "United States",
+   "plan": "5GB · 30 days",
+   "price": "$7.71"
+  }
+ ],
+ "steps": [
+  "Go to yrh.ai",
+  "Choose destination and plan",
+  "Pay securely online",
+  "Scan QR from your email"
+ ],
+ "price_note": "Prices from yrh.ai on 27 Nov 2026",
+ "scenes": [
+  {
+   "id": "hook",
+   "voice": "Japan data: one gigabyte, seven days, three dollars thirty-seven US.",
+   "headline": "Japan: 1GB for $3.37 US",
+   "sub": "7 days · no roaming bills"
+  },
+  {
+   "id": "problem",
+   "voice": "Skip the airport SIM queues and those nasty roaming bills.",
+   "headline": "Skip the SIM queues",
+   "sub": "No nasty roaming bill shocks"
+  },
+  {
+   "id": "offers",
+   "voice": "Thailand and the US too, same one-gig, seven-day price.",
+   "headline": "Japan, Thailand, United States",
+   "sub": "1GB · 7 days · $3.37 US"
+  },
+  {
+   "id": "steps",
+   "voice": "Visit Y R H dot A I, choose your plan, pay, scan the emailed QR.",
+   "headline": "Choose, pay, scan the QR",
+   "sub": "Installs in minutes"
+  },
+  {
+   "id": "cta",
+   "voice": "Grab the app at Y R H dot A I.",
+   "headline": "Get the YRH eSIM app",
+   "sub": "Download at yrh.ai today"
+  }
+ ]
+}

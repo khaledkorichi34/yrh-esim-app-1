@@ -1,0 +1,17 @@
+{
+  "scenes": [
+    {"id": "hook", "voice": "Japan data: one gigabyte, seven days, three dollars thirty-seven US.", "headline": "Japan: 1GB for $3.37 US", "sub": "7 days · no roaming bills"},
+    {"id": "problem", "voice": "Skip the airport SIM queues and those nasty roaming bills.", "headline": "Skip the SIM queues", "sub": "No nasty roaming bill shocks"},
+    {"id": "offers", "voice": "Thailand and the US too, same one-gig, seven-day price.", "headline": "Japan, Thailand, United States", "sub": "1GB · 7 days · $3.37 US"},
+    {"id": "steps", "voice": "Visit Y R H dot A I, choose your plan, pay, scan the emailed QR.", "headline": "Choose, pay, scan the QR", "sub": "Installs in minutes"},
+    {"id": "cta", "voice": "Grab the app at Y R H dot A I.", "headline": "Get the YRH eSIM app", "sub": "Download at yrh.ai today"}
+  ],
+  "offer_labels": {"japan": "Japan", "thailand": "Thailand", "usa": "United States"},
+  "steps": ["Go to yrh.ai", "Choose destination and plan", "Pay securely online", "Scan QR from your email"],
+  "cta_button": "Download the app at yrh.ai",
+  "price_note": "Prices from yrh.ai on 27 Nov 2026",
+  "title": "Best eSIM for Japan 2026 🇯🇵 1GB · 7 days for $3.37, no roaming",
+  "description": "Best eSIM for Japan 2026: no roaming fees, activate by QR in minutes.\nHeading to Japan? 1GB · 7 days is just $3.37 US!\nJapan: 1GB · 7 days = $3.37 ; 5GB · 30 days = $6.13\nThailand: 1GB · 7 days = $3.37 ; 5GB · 30 days = $6.13\nUnited States: 1GB · 7 days = $3.37 ; 5GB · 30 days = $7.71\nAll prices in US dollars.\nGo to https://yrh.ai, choose your destination and plan, pay, then scan the QR code from the email.\nDownload the YRH eSIM app from https://yrh.ai.\nPrices checked on yrh.ai, 27 Nov 2026.\n#esimjapan #bestesim #japantravel #noroaming #esim2026",
+  "tags": "esim Japan, best esim for Japan, Japan sim card, internet in Japan, travel esim, no roaming, YRH eSIM, esim 2026, Japan travel tips, holiday eSIM",
+  "tts_style": "Friendly, energetic Australian accent, like a mate giving a genuinely helpful travel tip."
+}

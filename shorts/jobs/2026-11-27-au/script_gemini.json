@@ -1,0 +1,21 @@
+{
+  "scenes": [
+    {"id": "hook", "voice": "Heading to Japan?", "headline": "Heading to Japan?", "sub": ""},
+    {"id": "hook", "voice": "One gigabyte is just three dollars thirty-seven US!", "headline": "1GB for $3.37 US!", "sub": "Unbeatable travel data"},
+    {"id": "problem", "voice": "Skip SIM queues and load a digital Suica card!", "headline": "Skip the SIM queues", "sub": "Load a digital Suica card!"},
+    {"id": "problem", "voice": "No more nasty roaming bills on holiday.", "headline": "Avoid huge roaming bills", "sub": "Keep your cash for sushi!"},
+    {"id": "offers", "voice": "Perfect for Japan, Thailand, or the US.", "headline": "Japan, Thailand, or the US", "sub": "Instant data connections"},
+    {"id": "steps", "voice": "Just head to Y R H dot A I,", "headline": "Go to yrh.ai", "sub": ""},
+    {"id": "steps", "voice": "choose your destination and plan, then pay.", "headline": "Choose your plan and pay", "sub": ""},
+    {"id": "steps", "voice": "Scan the QR code from your email to install.", "headline": "Scan the email QR code", "sub": "Installs in minutes!"},
+    {"id": "cta", "voice": "Download our Android app straight from the website!", "headline": "Get the YRH eSIM app", "sub": "Download at yrh.ai today!"}
+  ],
+  "offer_labels": {"japan": "Japan", "thailand": "Thailand", "usa": "United States"},
+  "steps": ["Go to yrh.ai", "Choose destination and plan", "Pay securely online", "Scan QR from your email"],
+  "cta_button": "Download the app at yrh.ai",
+  "price_note": "Prices from yrh.ai on 27 Nov 2026",
+  "title": "Best eSIM for Japan 2026 🇯🇵 1GB for $3.37 no roaming",
+  "description": "Best eSIM for Japan 2026: no roaming fees, activate by QR in minutes.\nHeading to Japan? 1GB is just $3.37 US!\nJapan: 1GB · 7 days = $3.37 ; 5GB · 30 days = $6.13\nThailand: 1GB · 7 days = $3.37 ; 5GB · 30 days = $6.13\nUnited States: 1GB · 7 days = $3.37 ; 5GB · 30 days = $7.71\nGo to yrh.ai, choose your destination and plan, pay, scan the QR code from the email.\nDownload the YRH eSIM app from yrh.ai.\nPrices checked on yrh.ai, 27 Nov 2026.\n#esimjapan #bestesim #japantravel #noroaming #esim2026",
+  "tags": "esim Japan, best esim for Japan, Japan sim card, internet in Japan, travel esim, no roaming, YRH eSIM, esim 2026, Japan travel tips, holiday eSIM",
+  "tts_style": "Friendly, energetic Australian accent, like a mate giving a genuinely helpful travel tip."
+}
