@@ -1,0 +1,69 @@
+{
+ "lang": "en",
+ "rtl": false,
+ "font_bold": "fonts/Inter-ExtraBold.otf",
+ "font_regular": "fonts/Inter-Regular.otf",
+ "accent": "#D80621",
+ "accent2": "#FF9AA9",
+ "hook_emoji": "🇺🇸",
+ "cta_button": "Download the app at yrh.ai",
+ "offers": [
+  {
+   "emoji": "🇺🇸",
+   "label": "United States",
+   "plan": "5GB · 30 days",
+   "price": "$7.71"
+  },
+  {
+   "emoji": "🇲🇽",
+   "label": "Mexico",
+   "plan": "5GB · 30 days",
+   "price": "$16.97"
+  },
+  {
+   "emoji": "🇪🇺",
+   "label": "Europe",
+   "plan": "5GB · 30 days",
+   "price": "$6.19"
+  }
+ ],
+ "steps": [
+  "1. Go to yrh.ai",
+  "2. Choose destination and plan",
+  "3. Pay securely online",
+  "4. Scan QR from email"
+ ],
+ "price_note": "Prices from yrh.ai on 28 Nov 2026",
+ "scenes": [
+  {
+   "id": "hook",
+   "voice": "Heading down to the States? Get one gigabyte for three dollars and thirty-seven cents!",
+   "headline": "Travelling to the US?",
+   "sub": "1GB · 7 days · $3.37 USD"
+  },
+  {
+   "id": "problem",
+   "voice": "Download offline maps first, and skip those brutal Canadian roaming fees.",
+   "headline": "Skip Canadian roaming fees",
+   "sub": "Download offline maps before you go"
+  },
+  {
+   "id": "offers",
+   "voice": "YRH eSIM covers the US, Mexico, and thirty-five countries across Europe.",
+   "headline": "US · Mexico · Europe",
+   "sub": ""
+  },
+  {
+   "id": "steps",
+   "voice": "Visit y-r-h dot a-i, pick a plan, pay, then scan the emailed QR code.",
+   "headline": "4 quick steps",
+   "sub": "Wi-Fi needed to install"
+  },
+  {
+   "id": "cta",
+   "voice": "Grab the YRH eSIM app at y-r-h dot a-i and stay connected!",
+   "headline": "Download the YRH eSIM app",
+   "sub": "At yrh.ai · Safe travels"
+  }
+ ]
+}
